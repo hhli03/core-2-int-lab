@@ -2,42 +2,35 @@ body{
     background-size: 100% auto; 
     font-family:mysecondfont;
     font-size: 1vw;
--webkit-animation: bgcolor 30s infinite;
-animation: bgcolor 20s infinite;
--webkit-animation-direction: alternate;
-animation-direction: alternate;
+    color: #1f4097;
 cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>✏️</text></svg>") 16 0,auto; /*!emojicursor.app*/
 }
 
-.weektitle{
-    font-family:myfirstfont;
-    font-size:2.5vw;
-}
 
 a{
     cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆</text></svg>") 16 0,auto; /*!emojicursor.app*/
 }
 
-.time{
-    color:red;
-    font-style: italic;
-}
 
 nav{
     line-height: 1.6vw;
 }
 h1{
     font-family:myfirstfont;
-    font-size:3vw;
+    font-size:3.5vw;
 }
 h2{
     font-family:mysecondfont;
-    font-size:1.4vw;
+    font-size:1.5vw;
+    line-height: 2.2vw;
 }
 .title{
     text-align: center;
 }
 
+#yellow{
+    color:#fdd818;
+}
 .grid-container{
     display:grid;
     grid-template-columns: 65vw;
@@ -48,39 +41,19 @@ h2{
 }
 
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color:#aedbe5;
   text-align: center;
+  border-radius: 3vw;
   padding: 30px 50px;
 }
 
-@keyframes bgcolor {
-0% {
-    background-color: #dfeef3
-}
-
-30% {
-    background-color: #c5d9df
-}
-
-60% {
-    background-color: #cee5f6
-}
-
-90% {
-    background-color: #daf1fe
-}
-
-100% {
-    background-color: #c5d6f0
-}
-}
 
 @font-face {
     font-family:myfirstfont;
-    src: url(anthony.woff);
+    src: url(cirruscumulus.ttf);
 }
 
 @font-face {
     font-family:mysecondfont;
-    src: url(sligoilmicro.otf);
+    src: url(lettergothicstd.otf);
 }
