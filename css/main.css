@@ -11,11 +11,6 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
-  color: red;
-  font-size: 1em;
-  line-height: 1.4;
-}
 
 /*
  * Remove text-shadow in selection highlight:
@@ -59,7 +54,10 @@ hr {
 audio,
 canvas,
 iframe,
-img,
+img {
+  max-width: 100%;
+  height: auto;
+}
 svg,
 video {
   vertical-align: middle;
@@ -86,7 +84,55 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+@font-face {
+  font-family: "sligoil-micro";
+  src: url(sligoil-micro.otf);
+}
 
+html{
+  background:black;
+}
+   main{
+  color:#fff;
+    font-family: "sligoil-micro";
+    font-size: 1.2vw;
+  width: 90vw;
+  line-height: 1.7vw;
+  margin: 2.8vw auto;
+}
+
+#cap{
+  font-size: 3vw;
+}
+article {
+  display: grid;
+  width: 90vw;
+  margin: 0.5vw auto;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: minmax(300px, max-content);
+  gap:3vw;
+}
+
+section{
+  background: black;
+  padding:2.3rem;
+}
+
+.title{
+  text-align:center;
+  font-size: 3vw;
+}
+
+.title:hover{
+font-style: italic;
+transition: ease-in-out 80s;
+}
+
+#bigtext{
+  font-size: 4vw;
+  line-height: 5vw;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

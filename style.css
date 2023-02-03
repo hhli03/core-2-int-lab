@@ -1,0 +1,86 @@
+html {
+    margin:2vw;
+  }
+  
+  body{
+    font-family:"sligoil-micro";
+    src: url(sligoil-micro.otf);
+    position:relative;
+    text-align:center;
+    font-size: 1.1vw;
+    background-color:#f6eee3;
+  }
+  
+  .container div{
+    padding:5vw;
+    transition: 0.5s;
+  }
+  
+  .container div:hover{
+    border-radius:20%;
+    padding:5vw;
+  }
+  
+  @font-face {
+    font-family:"sligoil-micro";
+    src: url(sligoil-micro.otf);
+  }
+  
+  h1{
+    font-family:"sligoil-micro";
+    font-size: 3vw;
+    text-align: center;
+  }
+  
+  h2{
+    font-family:"sligoil-micro";
+    font-size: 1.5vw;
+    text-align: center;
+  }
+
+  a{
+    color:white;
+  }
+
+a:link { text-decoration: none; }
+
+
+a:hover { text-decoration: underline; }
+a:active { text-decoration: underline; }
+
+  
+  .container>div:nth-child(1){
+    background-color:#adb5f4;
+    text-align: center;
+  }
+  
+  .container>div:nth-child(2){
+    background-color:#ffcdc6;
+    text-align: center;
+  }
+  
+  .container>div:nth-child(3){
+    background-color:#adb5f4;
+    text-align: center;
+  }
+  
+  @media (min-width: 800px){
+    .container{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        margin:2vw;
+        gap:2vw;
+        justify-items: center;
+        justify-content: center;
+        justify-self: center;
+    }
+    }
+  
+  @media (min-width: 1000px){
+    .container{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        margin:2vw;
+        gap:7vw;
+    }
+    }
