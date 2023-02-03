@@ -16,28 +16,6 @@ body{
     color:white;
 }
 
-/* Variable instances */
-.minerale-italic-variable-regular-extralight-italic {
-    font-variation-settings: "wght" 0;
-}
-
-.minerale-italic-variable-regular-light-italic {
-    font-variation-settings: "wght" 250;
-}
-
-.minerale-italic-variable-regular-medium-italic {
-    font-variation-settings: "wght" 500;
-}
-
-.minerale-italic-variable-regular-bold-italic {
-    font-variation-settings: "wght" 750;
-}
-
-.minerale-italic-variable-regular-black-italic {
-    font-variation-settings: "wght" 1000;
-}
-
-
 h1 {
     font-family: "minerale";
     font-variation-settings: "wght" 0;
@@ -52,7 +30,7 @@ h1 {
 
 h2 {
     font-family: "minerale";
-    font-variation-settings: "wght" 300;
+    font-variation-settings: "wght" 400;
     font-size: 17vw;
     font-weight: normal;
     margin: 0;
