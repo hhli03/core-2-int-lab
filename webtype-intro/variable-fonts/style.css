@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "minerale";
+    src: url("minerale-variable.ttf");
+    font-weight: 0 1000;
+}
+
+@font-face {
+    font-family: "mineraleitalic";
+    src: url("minerale-variable-italic.ttf");
+    font-weight: 0 1000;
+}
+
+body{
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+
+/* Variable instances */
+.minerale-italic-variable-regular-extralight-italic {
+    font-variation-settings: "wght" 0;
+}
+
+.minerale-italic-variable-regular-light-italic {
+    font-variation-settings: "wght" 250;
+}
+
+.minerale-italic-variable-regular-medium-italic {
+    font-variation-settings: "wght" 500;
+}
+
+.minerale-italic-variable-regular-bold-italic {
+    font-variation-settings: "wght" 750;
+}
+
+.minerale-italic-variable-regular-black-italic {
+    font-variation-settings: "wght" 1000;
+}
+
+
+h1 {
+    font-family: "minerale";
+    font-variation-settings: "wght" 0;
+    font-size: 9vw;
+    font-weight: normal;
+    margin: 0;
+    transition: all 600ms ease-in-out;
+  }
+  h1:hover{
+    font-variation-settings: "wght" 250;
+  }
+
+h2 {
+    font-family: "minerale";
+    font-variation-settings: "wght" 268;
+    font-size: 17vw;
+    font-weight: normal;
+    margin: 0;
+    transition: all 1100ms ease-in-out;
+  }
+h2:hover{
+    font-variation-settings: "wght" 800;
+  }
+
+p {
+    font-family: "mineraleitalic";
+    font-variation-settings: "wght" 150;
+    font-size: 4vw;
+    font-weight: normal;
+    margin: 0;
+    transition: all 600ms ease-in-out;
+  }
+p:hover{
+    transition: all 600ms ease-in-out;
+    font-family: "mineraleitalic";
+    font-variation-settings: "wght" 462;
+  }
+
+.type{
+    font-family: "minerale";
+    font-variation-settings: "wght" 150;
+    font-size: 3vw;
+    font-weight: normal;
+    margin: 0;
+    transition: all 600ms ease-in-out;
+}
+
+.type:hover{
+    font-size: 4vw;
+    transition: all 600ms ease-in-out;
+    font-family: "minerale";
+    font-variation-settings: "wght" 500;
+  }
