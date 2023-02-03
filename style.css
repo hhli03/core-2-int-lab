@@ -18,7 +18,7 @@ html {
     height:6.6vw;
     width: 6.6vw;
     padding:4vw 4vw;
-    transition: 0.5s;
+    transition: 0.7s;
     justify-items: center;
     justify-content:center;
     text-align: center;
@@ -95,11 +95,17 @@ a:active { text-decoration: underline; }
       #text3{
         color: #feb58c;
         font-size: 1vw;
-        
       }
+
+      #text4{
+        color: #d3bdec;
+        font-size: 1vw;
+      }
+
+  
   .icon-grid{
     display:grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     justify-items: center;
     justify-content:center;
     text-align: center;
