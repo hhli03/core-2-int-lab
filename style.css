@@ -7,34 +7,47 @@ html {
     src: url(sligoil-micro.otf);
     position:relative;
     text-align:center;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     background-color:#f6eee3;
+    line-height: 2vw;
   }
   
+
+
   .container div{
-    padding:5vw;
+    height:6.6vw;
+    width: 6.6vw;
+    padding:4vw 4vw;
     transition: 0.5s;
+    justify-items: center;
+    justify-content:center;
+    text-align: center;
   }
   
   .container div:hover{
     border-radius:20%;
-    padding:5vw;
   }
   
   @font-face {
     font-family:"sligoil-micro";
     src: url(sligoil-micro.otf);
   }
+
+  @font-face {
+    font-family: "ft88regular";
+    src: url(ft88regular.ttf);
+  }
   
+ 
   h1{
     font-family:"sligoil-micro";
-    font-size: 3vw;
+    font-size: 3.3vw;
     text-align: center;
   }
   
   h2{
     font-family:"sligoil-micro";
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     text-align: center;
   }
 
@@ -64,15 +77,68 @@ a:active { text-decoration: underline; }
     text-align: center;
   }
   
+  .container>div:nth-child(4){
+    background-color:#ffcdc6;
+    text-align: center;
+  }
+  
+      #text1{
+        color: #adb5f4;
+        font-size: 1vw;
+      }
+      
+      #text2{
+        color: #ffcdc6;
+        font-size: 1vw;
+      }
+
+      #text3{
+        color: #feb58c;
+        font-size: 1vw;
+        
+      }
+  .icon-grid{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    justify-content:center;
+    text-align: center;
+    gap:2vw;
+  }
+
+  .dot{
+    font-size: 1.5vw;
+  }
+  .date{
+    color:#ed6954;
+    font-style: bold;
+    font-size: 0.95vw;
+    text-align: center;
+
+  }
+
+
+  @media (min-width: 500px){
+    .container{
+        display:grid;
+        grid-template-columns:1fr;
+        margin:2vw;
+        justify-items: center;
+        justify-content:center;
+        text-align: center;
+    }
+    }
+
+
   @media (min-width: 800px){
     .container{
         display:grid;
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:1fr;
         margin:2vw;
         gap:2vw;
         justify-items: center;
-        justify-content: center;
-        justify-self: center;
+        justify-content:center;
+        text-align: center;
     }
     }
   
@@ -81,6 +147,7 @@ a:active { text-decoration: underline; }
         display:grid;
         grid-template-columns:1fr 1fr 1fr;
         margin:2vw;
-        gap:7vw;
+        column-gap:0vw;
+        row-gap:3vw;
     }
     }
