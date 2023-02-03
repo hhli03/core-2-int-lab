@@ -103,8 +103,12 @@ a:active { text-decoration: underline; }
       }
 
       #text4{
-        color: #d3bdec;
         font-size: 1vw;
+        background-color: #d3bdec;
+        padding:0.12vw 0.4vw;
+        text-align: center;
+        border-radius: 0.6vw;
+        opacity:65%
       }
 
   .icon-grid{
@@ -113,7 +117,7 @@ a:active { text-decoration: underline; }
     justify-items: center;
     justify-content:center;
     text-align: center;
-    gap:2vw;
+    gap:3vw;
   }
 
   .dot{
