@@ -1,0 +1,44 @@
+
+@font-face {
+    font-family: "simplonmono";
+    src: url(simplonmono-regular.otf);
+}
+
+body{
+    font-family: "simplonmono";
+    background-color: #f9f1e4;
+    font-size: 1.3vw;
+    line-height: 1.85vw;
+}
+
+.grid-container{
+display:grid;
+  margin: 2vw 2vw;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: auto;
+  gap:3.5vw;
+}
+section{
+    padding:2vw;
+  }
+
+#white{
+    color: #f9f1e4;
+}
+
+#black{
+color:black;
+}
+
+.red{
+    color:#c92e18;
+}
+
+#rightside{
+   color: #f9f1e4;
+}
+
+.highlight{
+    background-color: black;
+}
