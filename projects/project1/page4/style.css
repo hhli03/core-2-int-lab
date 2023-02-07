@@ -1,0 +1,20 @@
+
+@font-face {
+    font-family: "simplonmono";
+    src: url(simplonmono-regular.otf);
+}
+
+
+.inputbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#input{
+    font-family: "simplonmono";
+    font-size: 1.1vw;
+    line-height:1.4vw;
+}
