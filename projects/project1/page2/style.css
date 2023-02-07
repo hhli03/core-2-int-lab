@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "simplonmono";
+    src: url(simplonmono-regular.otf);
+}
+
+body{
+    font-family: "simplonmono";
+    font-size: 1.3vw;
+    line-height: 1.85vw;
+}
+.grid-container{
+display:grid;
+  margin: 2vw 2vw;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: auto;
+  gap:3.5vw;
+}
+section{
+    padding:2vw;
+  }
+
+.white{
+    color:white;
+}
+
+#red{
+    color:white;
+}
+
+.red{
+    color:#c92e18;
+}
