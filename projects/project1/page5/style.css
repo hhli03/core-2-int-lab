@@ -13,8 +13,8 @@ body{
     border:0.15vw solid black;
     background-color: white;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 24vw;
+    left: 50vw;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -31,4 +31,41 @@ body{
 
 .white{
     color:white;
+}
+
+
+p{
+    font-size: 0.9vw;
+}
+
+#sentence1{
+    position:absolute;
+    left:37.5vw;
+    top:7vw;
+}
+
+#sentence2{
+    position:absolute;
+    left:37.5vw;
+    top:8.5vw;
+}
+
+#sentence3{
+    position:absolute;
+    transform: rotate(90deg);
+    left:55.9vw;
+    top:27vw;
+}
+
+#sentence4{
+    position:absolute;
+    left:37.5vw;
+    top:36.7vw;
+}
+
+#sentence5{
+    position:absolute;
+    transform: rotate(-90deg);
+    left:24vw;
+    top:23.4vw;
 }
