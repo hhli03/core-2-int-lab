@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "simplonmono";
+    src: url(simplonmono-regular.otf);
+}
+
+@font-face {
+    font-family: "simplonmono-regularitalic";
+    src: url(simplonmono-regularitalic.ttf);
+}
+
+body{
+    font-family: "simplonmono";
+    font-size: 1.3vw;
+    line-height: 1.85vw;
+}
+.grid-container{
+    display:grid;
+  margin: 2vw 2vw;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  gap:2vw;
+}
+section{
+    padding:2vw;
+  }
+
+.italic{
+    font-family: "simplonmono-regularitalic";
+  }
