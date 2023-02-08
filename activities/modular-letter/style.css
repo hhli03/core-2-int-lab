@@ -8,18 +8,25 @@
   
   .letter{
     width: 14vw;
-    height: 25vw;
+    height: 24.5vw;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(9, 1fr);
     gap: 0.4vw;
   }
 
-.container{
+#container1{
     display: flex;
-    grid-template-columns: 14vw 14vw;
-    grid-template-rows: 25vw;
+    grid-template-columns: 14vw 14vw 14vw 14vw 14vw 14vw;
+    grid-template-rows: 24.5vw;
 }
+
+#container2{
+    display: flex;
+    grid-template-columns: 14vw 14vw 14vw 14vw 14vw;
+    grid-template-rows: 24.5vw;
+}
+
   .block{
     background: black;
     border-radius: 50% 50% 50% 50%;
