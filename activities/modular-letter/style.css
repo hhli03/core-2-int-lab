@@ -37,7 +37,6 @@
 
 .block:hover{
     border: 0.24vw solid #02bdfd;
-    border-radius: 0%;
 }
   
 
@@ -47,6 +46,7 @@
     }
     100%{
         background-color:#fcdcf1 ;
+        border-radius: 0%;
     }
     }
 
