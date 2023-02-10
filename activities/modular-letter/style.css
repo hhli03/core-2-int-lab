@@ -4,6 +4,7 @@
 
   body{
     margin: 3vw 3vw;
+    background-color: #c6cbce;
   }
   
   .letter{
@@ -30,10 +31,27 @@
   .block{
     background: black;
     border-radius: 50% 50% 50% 50%;
+    animation: changebg 1.8s infinite alternate;
+  }
 
+
+.block:hover{
+    border: 0.24vw solid #02bdfd;
+    border-radius: 0%;
+}
   
+
+@keyframes changebg{
+    0%{
+        background-color:white ;
+    }
+    100%{
+        background-color:#fcdcf1 ;
+    }
+    }
+
   /*  border-radius: 50% 0 0 0;*/
   /*  transform: skew(10deg);*/
   /*  mix-blend-mode: multiply; */
   /*  filter: drop-shadow(15px 15px yellow);*/
-  }
+  
