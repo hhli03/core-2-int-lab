@@ -1,0 +1,192 @@
+html {
+    margin:2vw;
+  }
+  
+  body{
+    font-family:"sligoil-micro";
+    src: url(sligoil-micro.otf);
+    position:relative;
+    text-align:center;
+    font-size: 1.2vw;
+    background-color:cornflowerblue;
+    color:cornsilk;
+    line-height: 2vw;
+  }
+  
+
+
+  .container div{
+    height:6.6vw;
+    width: 6.6vw;
+    padding:4vw 4vw;
+    transition: 0.7s;
+    justify-items: center;
+    justify-content:center;
+    text-align: center;
+  }
+  
+  .container div:hover{
+    border-radius:20%;
+  }
+  
+  @font-face {
+    font-family:"sligoil-micro";
+    src: url(sligoil-micro.otf);
+  }
+
+  @font-face {
+    font-family: "ft88regular";
+    src: url(ft88regular.ttf);
+  }
+  
+ 
+  h1{
+    font-family:"sligoil-micro";
+    font-size: 3.3vw;
+    text-align: center;
+  }
+  
+  h2{
+    font-family:"sligoil-micro";
+    font-size: 1.3vw;
+    text-align: center;
+  }
+
+  a{
+    color:cornsilk;
+  }
+
+
+
+a:link { text-decoration: none; }
+
+
+a:hover {
+    text-decoration: underline;
+color:cornflowerblue;}
+a:active { text-decoration: underline; }
+
+  
+  .container>div:nth-child(1){
+    background-color:cornflowerblue;
+    border:0.2vw solid cornsilk;
+    text-align: center;
+  }
+  
+  .container>div:nth-child(1):hover{
+background-color: cornsilk;
+color:cornflowerblue;
+  }
+
+  .container>div:nth-child(2){
+    background-color:cornflowerblue;
+    border:0.2vw solid cornsilk;
+    text-align: center;
+  }
+  
+    
+  .container>div:nth-child(2):hover{
+    background-color: cornsilk;
+    color:cornflowerblue;
+      }
+
+  .container>div:nth-child(3){
+    background-color:cornflowerblue;
+    border:0.2vw solid cornsilk;
+    text-align: center;
+  }
+  
+  .container>div:nth-child(4){
+    background-color:cornflowerblue;
+    border:0.2vw solid cornsilk;
+    text-align: center;
+  }
+
+  .container>div:nth-child(5){
+    background-color:cornflowerblue;
+    border:0.2vw solid cornsilk;
+    text-align: center;
+  }
+
+  .container>div:nth-child(6){
+    background-color:cornflowerblue;
+    border:0.2vw solid cornsilk;
+    text-align: center;
+  }
+  
+
+      #text4{
+        font-size: 1vw;
+        background-color: cornflowerblue;
+        border: 0.2vw solid cornsilk;
+        padding:0.12vw 0.4vw;
+        text-align: center;
+        border-radius: 0.6vw;
+        opacity:65%;
+      }
+
+      #text4:hover{
+        background-color: cornsilk;
+      }
+
+  .icon-grid{
+    display:grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    justify-content:center;
+    text-align: center;
+    gap:3vw;
+  }
+
+  .dot{
+    font-size: 1.5vw;
+  }
+  .date{
+    font-style: bold;
+    font-size: 0.95vw;
+    text-align: center;
+
+  }
+
+  .name{
+    font-style: bold;
+    font-size: 0.95vw;
+    text-align: center;
+    line-height: 0.8vw;
+
+  }
+
+
+  @media (min-width: 500px){
+    .container{
+        display:grid;
+        grid-template-columns:1fr;
+        margin:2vw;
+        justify-items: center;
+        justify-content:center;
+        text-align: center;
+    }
+    }
+
+
+  @media (min-width: 800px){
+    .container{
+        display:grid;
+        grid-template-columns:1fr;
+        margin:2vw;
+        gap:2vw;
+        justify-items: center;
+        justify-content:center;
+        text-align: center;
+    }
+    }
+  
+  @media (min-width: 1000px){
+    .container{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        margin:2vw;
+        column-gap:0vw;
+        row-gap:3vw;
+    }
+    }
