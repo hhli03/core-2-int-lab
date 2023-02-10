@@ -1,0 +1,239 @@
+body {
+    color: #222;
+    padding-top: 2rem;
+    font-family: "Graphik Regular", Arial, sans-serif;
+  }
+
+
+  :root {
+    /* body font size */
+    --text-base-size: 1rem;
+    --text-scale-ratio: 1.2;
+    --text-size-small: .875rem;
+    --text-size-xsmall: .75rem;
+    /* type scale */
+    --text-x1: calc(var(--text-base-size) * var(--text-scale-ratio));
+    --text-x2: calc(var(--text-x1) * var(--text-scale-ratio));
+    --text-x3: calc(var(--text-x2) * var(--text-scale-ratio));
+    --text-x4: calc(var(--text-x3) * var(--text-scale-ratio));
+    --text-x5: calc(var(--text-x4) * var(--text-scale-ratio));
+    --text-x6: calc(var(--text-x5) * var(--text-scale-ratio));
+  }
+  
+  @media (min-width: 40em) {
+    :root {
+      --text-base-size: 1.125rem;
+      --text-scale-ratio: 1.25;
+      --text-size-small: 1rem;
+      --text-size-xsmall: .813rem;
+      /* type scale */
+      --text-x1: calc(var(--text-base-size) * var(--text-scale-ratio));
+      --text-x2: calc(var(--text-x1) * var(--text-scale-ratio));
+      --text-x3: calc(var(--text-x2) * var(--text-scale-ratio));
+      --text-x4: calc(var(--text-x3) * var(--text-scale-ratio));
+      --text-x5: calc(var(--text-x4) * var(--text-scale-ratio));
+      --text-x6: calc(var(--text-x5) * var(--text-scale-ratio));
+    }
+  }
+
+main {
+  background: #fff;  
+  width: 80vw;
+  margin: 0 auto;
+}
+
+article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  
+  grid-template-rows: auto;  
+  gap: 1rem;
+}
+
+.type-grid {
+  display: grid;
+  grid-template-columns: auto;  
+  grid-template-rows: auto;  
+  gap: 1rem;
+}
+
+@media (min-width: 40em) {
+  .type-grid {
+    display: grid;
+    grid-template-columns: 2fr 8fr;  
+    grid-template-rows: auto;  
+    gap: 1rem;
+  }
+}
+
+section {
+  padding:1rem;
+}
+
+nav ul {
+  display: flex;
+  background-color: #222;
+  padding:1rem;
+  flex-direction: row-reverse;
+}
+
+nav li {
+  flex: auto ;
+  padding:1rem;
+  margin:1rem;
+  background-color: #f5f5f5;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 200px;
+  padding:1rem;
+  margin:1rem;
+  background-color: #f5f5f5;
+  border: 1px solid #999; 
+}
+.box>*:first-child {
+    align-self: stretch;
+}
+.box .selected {
+    align-self: center;
+}
+
+.flex-item {
+  padding:1rem;
+  margin:1rem;
+  background-color: yellow;
+  border: 1px solid #999; 
+}
+
+
+p {
+  font-family: 'Yuji Syuku', serif;
+  font-size: var(--text-base-size);
+  margin-bottom: 1 rem;
+  line-height: 150%;
+}
+
+.typescale-x6 {
+  font-size: var(--text-x6);
+}
+
+.typescale-x5 {
+  font-size: var(--text-x5);
+}
+
+.typescale-x4 {
+  font-size: var(--text-x4);
+}
+
+.typescale-x3 {
+  font-size: var(--text-x3);
+}
+
+.typescale-x2 {
+  font-size: var(--text-x2);
+}
+
+.typescale-x1 {
+  font-size: var(--text-x1);
+}
+
+.typescale-base {
+  font-size: var(--text-base-size);
+  line-height: 150%;
+}
+
+.typescale-small {
+  font-size: var(--text-size-small);
+  line-height: 150%;
+}
+
+.typescale-xsmall {
+  font-size: var(--text-size-xsmall);
+  line-height: 150%;
+}
+
+.all-caps {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.eye-brow {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: var(--text-base-size);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: var(--text-x6);
+  line-height: 110%;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--text-x5);
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  line-height: 110%;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--text-x4);
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: var(--text-x3);
+  font-family: 'Murecho', sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: var(--text-x2);
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: var(--text-x1);
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+.core-lab-sans-medium {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  line-height: 100%;
+
+}
+
+.core-lab-sans {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+
+}
+
+.core-lab-serif {
+  font-family: 'Yuji Syuku', serif;
+  font-weight: 900;
+  line-height: 100%;
+
+}

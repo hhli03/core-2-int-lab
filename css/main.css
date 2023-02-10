@@ -148,7 +148,6 @@ nav ul{
 }
 
 nav li{
-  felx-auto;
   padding: 1rem;
   margin:1rem;
   background-color: #f5f5f5;
@@ -179,6 +178,7 @@ nav li{
   background-color:yellow;
   border: 1px solid #999;
 }
+
 
 /* ==========================================================================
    Helper classes
