@@ -8,6 +8,42 @@ body{
     font-size: 1.2vw;
     line-height: 1.85vw;
 }
+
+.grid-container-2{
+display:flex;
+justify-content:center;
+align-items: center;
+padding-bottom: 2vw;
+}
+
+.circle{
+  height: 2vw;
+  width: 2vw;
+  background-color: white;
+  border:#C92E18 0.1vw solid;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+.circle figcaption{
+    font-family: "simplonmono";
+  color:#C92E18;
+  font-size:1.5vw;
+  text-align:center;
+}
+
+.circle:hover figcaption{
+color:white;
+}
+.circle:hover {
+  color:white;
+  background-color: #C92E18;
+}
+
+a:link { text-decoration: none; }
+
+
 .grid-container{
 display:grid;
   margin: 2vw 2vw;
