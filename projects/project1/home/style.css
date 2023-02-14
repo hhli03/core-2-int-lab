@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "neuzeitgro-reg";
+    src: url(neuzeitgro-reg.ttf);
+}
+
+@font-face {
+    font-family: "simplonmono-regular";
+    src: url(simplonmono-regular.otf);
+}
+
+.title{
+    font-family: "neuzeitgro-reg";
+    font-size:6vw;
+}
+
+#yellow{
+    color:#E6C95B;
+}
+
+.author{
+    font-family: "simplonmono-regular";
+    font-size: 1.2vw;
+    line-height: 1.85vw;
+    text-align:right;
+}
+
+.flex-container-title{
+    display:flex;
+    margin: 2vw 2vw;
+    gap:5vw;
+    padding-top:23vw;
+    padding-bottom:8vw;
+}
+.flex-container-author{
+    display:flex;
+    margin: 2vw 2vw;
+    gap:5vw;
+    justify-content: flex-end;
+ 
+  }
+
+
+
