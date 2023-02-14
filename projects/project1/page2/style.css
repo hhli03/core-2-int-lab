@@ -20,6 +20,19 @@ section{
     padding:2vw;
   }
 
+#spaghettiwhite1{
+    color:white;
+}
+
+#spaghettired1{
+display:none;
+color:#c92e18;
+}
+
+#spaghettiwhite1:hover #spaghettired1{
+display:block;
+}
+
 .white{
     color:white;
 }

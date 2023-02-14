@@ -18,3 +18,19 @@
     font-size: 1.1vw;
     line-height:1.4vw;
 }
+
+body{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:cetner;
+}
+
+img{
+height:45vw;
+position: absolute;
+top: 47.2%;
+left: 54.4%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
