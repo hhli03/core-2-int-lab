@@ -4,6 +4,19 @@
     src: url(simplonmono-regular.otf);
 }
 
+#highlight1{
+    background-color: black;
+}
+
+#red1{
+    color:#c92e18;
+    display:none;
+}
+
+#highlight1:hover~#red1{
+    display:block;
+}
+
 body{
     font-family: "simplonmono";
     background-color: #f9f1e4;
