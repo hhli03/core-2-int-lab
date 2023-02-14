@@ -4,24 +4,75 @@
     src: url(simplonmono-regular.otf);
 }
 
-#highlight1{
-    background-color: black;
-}
-
-#red1{
-    color:#c92e18;
-    display:none;
-}
-
-#highlight1:hover~#red1{
-    display:block;
+@font-face {
+    font-family: "simplonmono-italic";
+    src: url(simplonmono-italic.otf);
 }
 
 body{
     font-family: "simplonmono";
     background-color: #f9f1e4;
     font-size: 1.2vw;
-    line-height: 1.85vw;
+    line-height: 1.88vw;
+}
+
+#highlight1{
+    background-color: black;
+}
+
+#red1{
+color:#c92e18;
+display:none;
+}
+
+#highlight1:hover ~ #red1{
+    display:block;
+}
+
+.underline:hover{
+
+border-style:solid;
+border-width: 0.12vw;
+
+}
+
+.hover-text-animation{
+    display:inline-block;
+}
+
+.hover-text-animation:hover{
+    font-family: "simplonmono-italic";
+    transition: all .5s ease;
+}
+.hover-text-animation:after{
+    content: '';
+    display: block;
+    height: 0.15vw;
+    width: 0;
+    background: transparent;
+    transition: all .5s ease;
+}
+
+.hover-text-animation:hover:after{
+    background: black;
+    width: 100%;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .grid-container-2{
