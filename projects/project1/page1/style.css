@@ -4,16 +4,20 @@
 }
 
 @font-face {
-    font-family: "simplonmono-regularitalic";
-    src: url(simplonmono-regularitalic.ttf);
+    font-family: "simplonmono-italic";
+    src: url(simplonmono-italic.otf);
 }
 
+@font-face {
+  font-family: "simplonmono-bold";
+  src: url(simplonmono-bold.otf);
+}
 
 .nextbutton{
-  font-family: "simplonmono";
+  font-family: "simplonmono-bold";
   color:#C92E18;
-  font-size:1.2vw;
-  text-align:right;
+  font-size:1.5vw;
+  text-align:center;
 }
 
 .red{
@@ -23,7 +27,7 @@
 .red:hover{
   background:#C92E18;
   color:white;
-  transition: ease-in-out 0.6s;
+  transition: linear 0.6s;
 }
 
 .red:hover{
@@ -48,5 +52,5 @@ section{
   }
 
 .italic{
-    font-family: "simplonmono-regularitalic";
+  font-family: "simplonmono-italic";
   }
