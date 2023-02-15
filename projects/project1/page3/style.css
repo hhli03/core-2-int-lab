@@ -20,13 +20,51 @@ body{
     background-color: black;
 }
 
-#red1{
+.red1{
 color:#c92e18;
-display:none;
+opacity:0;
 }
 
-#highlight1:hover ~ #red1{
-    display:block;
+.active{
+opacity:1;
+}
+
+#highlight1:hover ~ .red1{
+ opacity:1;
+}
+
+#highlight2{
+    background-color: black;
+}
+
+.red2{
+color:#c92e18;
+opacity:0;
+}
+
+.active{
+opacity:1;
+}
+
+#highlight2:hover ~ .red2{
+ opacity:1;
+}
+
+#highlight3{
+    background-color: black;
+}
+
+.red3{
+color:#c92e18;
+opacity:0;
+}
+
+.active{
+opacity:1;
+}
+
+#highlight3:hover ~ .red3{
+ opacity:1;
 }
 
 .underline:hover{
