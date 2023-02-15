@@ -20,6 +20,176 @@ align-items: center;
 padding-bottom: 2vw;
 }
 
+#clockContainer{
+  width: 70px;
+  height: 70px;
+  left: 5px;
+  top: 5px;
+  margin-right: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+#vertical{
+  width: 12px;
+  height: 70px;
+  background-color: #C92E18;
+  position: absolute;
+  left: 29px;
+  rotate:0deg
+  animation: rotate-pause 30s infinite;
+}
+
+#horizontal{
+  width: 70px;
+  height: 12px;
+  position: absolute;
+  top: 29px;
+  background-color: #C92E18;
+  animation: rotate-pause 30s infinite;
+  rotate: 20deg;
+}
+
+
+@keyframes rotate-pause{
+  0%{
+    transform: rotate(0deg);
+  }
+  3%{
+    transform: rotate(10deg);
+  }
+  6%{
+    transform: rotate(20deg);
+  }
+  9%{
+    transform: rotate(30deg);
+  }
+
+  12%{
+    transform: rotate(40deg);
+  }
+
+  15%{
+    transform: rotate(50deg);
+  }
+
+  18%{
+    transform: rotate(60deg);
+  }
+
+  21%{
+    transform: rotate(70deg);
+  }
+
+  24%{
+    transform: rotate(80deg);
+  }
+
+  27%{
+    transform: rotate(90deg);
+  }
+  
+  30%{
+    transform: rotate(100deg);
+  }
+
+  33%{
+    transform: rotate(110deg);
+  }
+
+  36%{
+    transform: rotate(120deg);
+  }
+
+  39%{
+    transform: rotate(130deg);
+  }
+
+  42%{
+    transform: rotate(140deg);
+  }
+
+  45%{
+    transform: rotate(150deg);
+  }
+
+  48%{
+    transform: rotate(160deg);
+  }
+
+  51%{
+    transform: rotate(170deg);
+  }
+
+  54%{
+    transform: rotate(180deg);
+  }
+
+  57%{
+    transform: rotate(190deg);
+  }
+
+  60%{
+    transform: rotate(200deg);
+  }
+
+  63%{
+    transform: rotate(210deg);
+  }
+
+  66%{
+    transform: rotate(220deg);
+  }
+
+  69%{
+    transform: rotate(230deg);
+  }
+
+  72%{
+    transform: rotate(240deg);
+  }
+
+  75%{
+    transform: rotate(250deg);
+  }
+
+  78%{
+    transform: rotate(260deg);
+  }
+
+  81%{
+    transform: rotate(270deg);
+  }
+
+  84%{
+    transform: rotate(280deg);
+  }
+
+  87%{
+    transform: rotate(290deg);
+  }
+
+  90%{
+    transform: rotate(300deg);
+  }
+
+  93%{
+    transform: rotate(310deg);
+  }
+
+  96%{
+    transform: rotate(320deg);
+  }
+
+  99%{
+    transform: rotate(330deg);
+  }
+
+  100%{
+    transform: rotate(340deg);
+  }
+}
+
 .circle{
   height: 2vw;
   width: 2vw;
@@ -65,7 +235,7 @@ a:link { text-decoration: none; }
 body{
     font-family: "simplonmono";
     font-size: 1.2vw;
-    line-height: 1.85vw;
+    line-height: 1.88vw;
 }
 .grid-container{
     display:grid;
