@@ -21,173 +21,165 @@ padding-bottom: 2vw;
 }
 
 #clockContainer{
-  width: 70px;
-  height: 70px;
-  left: 5px;
-  top: 5px;
+  width: 4.5vw;
+  height: 4.5vw;
   margin-right: 20px;
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+
 }
 
 #vertical{
-  width: 12px;
-  height: 70px;
+  width: 0.6vw;
+  height: 4.5vw;
   background-color: #C92E18;
   position: absolute;
-  left: 29px;
   rotate:0deg
-  animation: rotate-pause 30s infinite;
 }
 
 #horizontal{
-  width: 70px;
-  height: 12px;
+  width: 0.6vw;
+  height: 4.5vw;
   position: absolute;
-  top: 29px;
   background-color: #C92E18;
-  animation: rotate-pause 30s infinite;
+  animation: rotate-pause 35s infinite;
   rotate: 20deg;
 }
 
+
+
+@keyframes rotate-btn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes rotate-pause{
   0%{
     transform: rotate(0deg);
   }
-  3%{
-    transform: rotate(10deg);
+  3.3%{
+    transform: rotate(12deg);
   }
-  6%{
-    transform: rotate(20deg);
+  6.6%{
+    transform: rotate(24deg);
   }
-  9%{
-    transform: rotate(30deg);
-  }
-
-  12%{
-    transform: rotate(40deg);
+  9.9%{
+    transform: rotate(36deg);
   }
 
-  15%{
-    transform: rotate(50deg);
+  13.2%{
+    transform: rotate(48deg);
   }
 
-  18%{
+  16.5%{
     transform: rotate(60deg);
   }
 
-  21%{
-    transform: rotate(70deg);
+  19.8%{
+    transform: rotate(72deg);
   }
 
-  24%{
-    transform: rotate(80deg);
+  23.1%{
+    transform: rotate(84deg);
   }
 
-  27%{
-    transform: rotate(90deg);
+  26.4%{
+    transform: rotate(96deg);
+  }
+
+  29.7%{
+    transform: rotate(108deg);
   }
   
-  30%{
-    transform: rotate(100deg);
-  }
-
   33%{
-    transform: rotate(110deg);
-  }
-
-  36%{
     transform: rotate(120deg);
   }
 
-  39%{
-    transform: rotate(130deg);
+  36.3%{
+    transform: rotate(132deg);
   }
 
-  42%{
-    transform: rotate(140deg);
+  39.6%{
+    transform: rotate(144deg);
   }
 
-  45%{
-    transform: rotate(150deg);
+  42.9%{
+    transform: rotate(156deg);
   }
 
-  48%{
-    transform: rotate(160deg);
+  46.2%{
+    transform: rotate(168deg);
   }
 
-  51%{
-    transform: rotate(170deg);
-  }
-
-  54%{
+  49.5%{
     transform: rotate(180deg);
   }
 
-  57%{
-    transform: rotate(190deg);
+  52.8%{
+    transform: rotate(192deg);
   }
 
-  60%{
-    transform: rotate(200deg);
+  56.1%{
+    transform: rotate(204deg);
   }
 
-  63%{
-    transform: rotate(210deg);
+  59.4%{
+    transform: rotate(216deg);
+  }
+
+  62.7%{
+    transform: rotate(228deg);
   }
 
   66%{
-    transform: rotate(220deg);
-  }
-
-  69%{
-    transform: rotate(230deg);
-  }
-
-  72%{
     transform: rotate(240deg);
   }
 
-  75%{
-    transform: rotate(250deg);
+  69.3%{
+    transform: rotate(252deg);
   }
 
-  78%{
-    transform: rotate(260deg);
+  72.6%{
+    transform: rotate(264deg);
   }
 
-  81%{
-    transform: rotate(270deg);
+  75.9%{
+    transform: rotate(276deg);
   }
 
-  84%{
-    transform: rotate(280deg);
+  79.2%{
+    transform: rotate(288deg);
   }
 
-  87%{
-    transform: rotate(290deg);
-  }
-
-  90%{
+  82.5%{
     transform: rotate(300deg);
   }
 
-  93%{
-    transform: rotate(310deg);
+  85.8%{
+    transform: rotate(312deg);
   }
 
-  96%{
-    transform: rotate(320deg);
+  89.1%{
+    transform: rotate(324deg);
   }
 
-  99%{
-    transform: rotate(330deg);
+  92.4%{
+    transform: rotate(336deg);
+  }
+
+  95.7%{
+    transform: rotate(348deg);
   }
 
   100%{
-    transform: rotate(340deg);
+    transform: rotate(360deg);
   }
+
 }
 
 .circle{
@@ -217,21 +209,33 @@ color:white;
 
 a:link { text-decoration: none; }
 
+#vertical:hover~#horizontal{
+  border: 0.15vw solid #C92E18;
+  background-color:white;
+}
+
+#vertical:hover{
+  border: 0.15vw solid #C92E18;
+  background-color:white;
+}
+
 
 .red{
   color:#C92E18;
+  border: 0.15vw solid #C92E18;
+  padding:0.12vw;
 }
 
 .red:hover{
   background:#C92E18;
   color:white;
-  transition: linear 0.6s;
+  transition: ease-in-out 0.4s;
+  border: 0.15vw solid #C92E18;
+   border-radius: 0.7vw;
+   font-family: "simplonmono-italic";
 }
 
-.red:hover{
-  font-size:1.5vw;
-  transition: ease-in-out 0.6s;
-}
+
 body{
     font-family: "simplonmono";
     font-size: 1.2vw;
