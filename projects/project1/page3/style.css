@@ -14,10 +14,46 @@ body{
     background-color: #f9f1e4;
     font-size: 1.2vw;
     line-height: 1.88vw;
+    animation: bodycolorchange 1.5s forwards;
+    animation-delay:10s;
+}
+
+@keyframes bodycolorchange{
+    100%{
+        background-color:black;
+        color:#f9f1e4;
+    }
 }
 
 #highlight1{
     background-color: black;
+    animation: highlightcolorchange 1.5s forwards;
+    animation-delay:10s;
+}
+
+
+@keyframes highlightcolorchange{
+    100%{
+        background-color:#f9f1e4;
+    }
+}
+
+@keyframes rightsidecolorchange{
+    100%{
+        color:black;
+    }
+}
+
+@keyframes blackcolorchange{
+    100%{
+        color:#f9f1e4;
+    }
+}
+
+@keyframes whitecolorchange{
+    100%{
+        color:black;
+    }
 }
 
 .red1{
@@ -35,6 +71,8 @@ opacity:1;
 
 #highlight2{
     background-color: black;
+    animation: highlightcolorchange 1.5s forwards;
+    animation-delay:10s;
 }
 
 .red2{
@@ -52,6 +90,8 @@ opacity:1;
 
 #highlight3{
     background-color: black;
+    animation: highlightcolorchange 1.5s forwards;
+    animation-delay:10s;
 }
 
 .red3{
@@ -162,10 +202,14 @@ section{
 
 #white{
     color: #f9f1e4;
+    animation: whitecolorchange 1.5s forwards;
+    animation-delay:10s;
 }
 
 #black{
 color:black;
+animation: blackcolorchange 1.5s forwards;
+animation-delay:10s;
 }
 
 .red{
@@ -174,8 +218,12 @@ color:black;
 
 #rightside{
    color: #f9f1e4;
+   animation: rightsidecolorchange 1.5s forwards;
+   animation-delay:10s;
 }
 
 .highlight{
     background-color: black;
+    animation: highlightcolorchange 1.5s forwards;
+    animation-delay:10s;
 }
