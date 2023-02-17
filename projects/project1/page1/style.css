@@ -219,14 +219,34 @@ a:link { text-decoration: none; }
   background-color:white;
 }
 
-
-.red{
+.active{
+  font-size:2vw;
+  transition: ease-in-out 0.4s;
   color:#C92E18;
   border: 0.15vw solid #C92E18;
-  padding:0.12vw;
+     border-radius: 0.7vw;
 }
 
-.red:hover{
+
+#red1{
+  color:#C92E18;
+  border: 0.15vw solid #C92E18;
+  padding:0.11vw;
+}
+
+#red2{
+  color:#C92E18;
+  border: 0.15vw solid #C92E18;
+  padding:0.11vw;
+}
+
+#red3{
+  color:#C92E18;
+  border: 0.15vw solid #C92E18;
+  padding:0.11vw;
+}
+
+#red1:hover{
   background:#C92E18;
   color:white;
   transition: ease-in-out 0.4s;
@@ -235,6 +255,23 @@ a:link { text-decoration: none; }
    font-family: "simplonmono-italic";
 }
 
+#red2:hover{
+  background:#C92E18;
+  color:white;
+  transition: ease-in-out 0.4s;
+  border: 0.15vw solid #C92E18;
+   border-radius: 0.7vw;
+   font-family: "simplonmono-italic";
+}
+
+#red3:hover{
+  background:#C92E18;
+  color:white;
+  transition: ease-in-out 0.4s;
+  border: 0.15vw solid #C92E18;
+   border-radius: 0.7vw;
+   font-family: "simplonmono-italic";
+}
 
 body{
     font-family: "simplonmono";
