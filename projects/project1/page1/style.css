@@ -183,7 +183,6 @@ padding-bottom: 2vw;
 }
 
 
-
 .yellow:hover{
   font-family: "simplonmono-italic";
   color:#C92E18;
@@ -206,26 +205,42 @@ a:link { text-decoration: none; }
   transition: ease-in-out 0.4s;
   color:#C92E18;
   border: 0.15vw solid #C92E18;
-     border-radius: 0.7vw;
+  border-radius: 0.7vw;
 }
+
+@keyframes animate{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
 
 
 #red1{
   color:#C92E18;
   border: 0.15vw solid #C92E18;
   padding:0.11vw;
+  animation: animate 1.3s linear infinite;
 }
 
 #red2{
   color:#C92E18;
   border: 0.15vw solid #C92E18;
   padding:0.11vw;
+  animation: animate 1.3s linear infinite;
 }
 
 #red3{
   color:#C92E18;
   border: 0.15vw solid #C92E18;
   padding:0.11vw;
+  animation: animate 1.3s linear infinite;
 }
 
 #red1:hover{
