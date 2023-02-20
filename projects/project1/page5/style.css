@@ -3,6 +3,9 @@
     src: url(simplonmono-regular.otf);
 }
 
+
+
+
 body{
     font-family: "simplonmono";
         min-height: 100%;
@@ -246,11 +249,21 @@ a:link { text-decoration: none; }
     color:#c92e18; 
 }
 
-.red{
-    color:#c92e18;
-    opacity:0%;
-    animation: appear 1s forwards;
-    animation-delay:12s;
+#redl{
+  color:#c92e18;
+  opacity:0%;
+  animation: appear 1s forwards;
+  animation-delay:11s;
+}
+
+#redl:hover~#colorchange{
+  color:#c92e18;
+}
+
+#questionmark{
+  opacity:0%;
+  animation: appear 1s forwards;
+  animation-delay:12s;
 }
 
 .white{
