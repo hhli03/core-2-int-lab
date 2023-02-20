@@ -353,8 +353,9 @@ section{
 }
 
 .grid-container{
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 5fr;
   margin: 1vw 1vw;
+  gap:2vw;
 }
 
 }
