@@ -232,15 +232,12 @@ a:link { text-decoration: none; }
     line-height:1.4vw;
     resize: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 52.5%;
+    left: 45.6%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     outline:none;
     overflow: auto;
-
-  
-
 }
 
 
@@ -254,8 +251,8 @@ body{
 img{
 height:24vw;
 position: absolute;
-top: 47.5%;
-left: 54.4%;
+top: 50%;
+left: 50%;
 -ms-transform: translate(-50%, -50%);
 transform: translate(-50%, -50%);
 }
@@ -263,4 +260,23 @@ transform: translate(-50%, -50%);
 ::selection{
     background:#C92E18;
     color:white;
+}
+
+@media screen and (max-width: 500px) {
+  img{
+    height:40vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    }
+  
+    #input{
+      font-size: 1.5vw;
+      line-height:1.8vw;
+      width:30vw;
+      height:30vw;
+      position: absolute;
+      top: 51.5%;
+      left: 42.8%;
+  }
 }
