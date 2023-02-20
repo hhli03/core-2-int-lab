@@ -371,39 +371,3 @@ color:#c92e18;
     color:#c92e18;
 }
 
-@media screen and (max-width: 500px) {
-
-  body{
-    font-size: 2.5vw;
-    line-height: 4vw;
-}
-
-#clockContainer{
-  width: 10vw;
-  height: 10vw;
-}
-
-#vertical{
-  width: 1.2vw;
-  height: 10vw;
-}
-
-#horizontal{
-  width: 1.2vw;
-  height: 10vw;
-
-}
-
-#vertical:hover~#horizontal{
-  border: 0.3vw solid #C92E18;
-}
-
-#vertical:hover{
-  border: 0.3vw solid #C92E18;
-}
-
-.grid-container{
-    gap:3vw;
-  }
-
-}
