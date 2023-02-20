@@ -11,8 +11,7 @@ html {
   body {
     min-height: 100%;
     background-color: black;
-    animation: colorchange 1s forwards;
-    animation-delay:7.5s;
+
   }
 
 .grid-container-2{
@@ -226,11 +225,7 @@ html {
 a:link { text-decoration: none; }
     
 
-@keyframes colorchange{
-  100%{
-    background-color: white;
-  }
-}
+
 .inputbox{
     position: absolute;
     top: 50%;
