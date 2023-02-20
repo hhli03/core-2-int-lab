@@ -2,7 +2,9 @@ body{
     background-size: 100% auto; 
     font-family:mysecondfont;
     font-size: 1.1vw;
+    line-height: 1.5vw;
     color: #1f4097;
+    margin: 3vw 3vw 3vw 3vw;
 cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>✏️</text></svg>") 16 0,auto; /*!emojicursor.app*/
 }
 
@@ -33,9 +35,9 @@ h2{
 }
 .grid-container{
     display:grid;
-    grid-template-columns: 65vw;
+    grid-template-columns: 63vw;
     grid-template-rows: auto;
-    gap: 10px;
+    gap: 30px;
     padding: 10px;
     justify-content: center;
 }
