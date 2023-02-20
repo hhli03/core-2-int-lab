@@ -226,19 +226,23 @@ a:link { text-decoration: none; }
     
 
 
-.inputbox{
+#input{
+    font-family: "simplonmono";
+    font-size: 1.1vw;
+    line-height:1.4vw;
+    resize: none;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    outline:none;
+    overflow: auto;
+
+  
+
 }
 
-#input{
-    font-family: "simplonmono";
-    font-size: 1.1vw;
-    line-height:1.4vw;
-}
 
 body{
     width: 100%;
@@ -248,9 +252,9 @@ body{
 }
 
 img{
-height:45vw;
+height:24vw;
 position: absolute;
-top: 47.2%;
+top: 47.5%;
 left: 54.4%;
 -ms-transform: translate(-50%, -50%);
 transform: translate(-50%, -50%);
