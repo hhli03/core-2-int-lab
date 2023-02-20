@@ -323,5 +323,10 @@ section{
     height: 6vw;
 
   }
+
+  .active{
+    font-size:3vw;
+    border: 0.2vw solid #C92E18;
+  }
   
   }
