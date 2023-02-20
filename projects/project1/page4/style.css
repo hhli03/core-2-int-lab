@@ -264,19 +264,54 @@ transform: translate(-50%, -50%);
 
 @media screen and (max-width: 500px) {
   img{
-    height:40vw;
+    height:60vw;
     position: absolute;
     top: 50%;
     left: 50%;
     }
   
     #input{
-      font-size: 1.5vw;
-      line-height:1.8vw;
-      width:30vw;
-      height:30vw;
+      font-size: 1.8vw;
+      line-height:2.3vw;
+      width:46vw;
+      height:46vw;
       position: absolute;
-      top: 51.5%;
-      left: 42.8%;
+      top: 52%;
+      left: 39%;
   }
+  #clockContainer{
+    width: 7vw;
+    height: 7vw;
+    display: flex;
+    justify-content: center;
+    bottom:2vw;
+  }
+  
+  #vertical{
+    width: 0.9vw;
+    height: 7vw;
+    background-color: #C92E18;
+    position: absolute;
+    rotate:0deg
+  }
+  
+  #horizontal{
+    width: 0.9vw;
+    height: 7vw;
+    position: absolute;
+    background-color: #C92E18;
+    animation: rotate-pause 35s infinite;
+    rotate: 20deg;
+  }
+
+  #vertical:hover~#horizontal{
+    border: 0.2vw solid #C92E18;
+
+  }
+  
+  #vertical:hover{
+    border: 0.2vw solid #C92E18;
+
+  }
+
 }
