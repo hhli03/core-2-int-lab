@@ -184,6 +184,11 @@ padding-bottom: 2vw;
 
 
 
+.yellow:hover{
+  font-family: "simplonmono-italic";
+  color:#C92E18;
+}
+
 a:link { text-decoration: none; }
 
 #vertical:hover~#horizontal{
