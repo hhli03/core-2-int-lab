@@ -189,12 +189,12 @@ body{
   
   #vertical:hover~#horizontal{
     border: 0.15vw solid #C92E18;
-    background-color:white;
+    background-color:#f9f1e4;
   }
   
   #vertical:hover{
     border: 0.15vw solid #C92E18;
-    background-color:white;
+    background-color:#f9f1e4;
   }
   
 .red1{
