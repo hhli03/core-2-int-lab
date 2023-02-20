@@ -300,33 +300,6 @@ border-width: 0.12vw;
     padding-top: 2vw;
     }
     
-.circle{
-      height: 2vw;
-      width: 2vw;
-      background-color: #f9f1e4;
-      border:#C92E18 0.1vw solid;
-      border-radius: 50%;
-      display: inline-block;
-    }
-    
-    
-.circle figcaption{
-        font-family: "simplonmono";
-      color:#C92E18;
-      font-size:1.5vw;
-      text-align:center;
-    }
-    
-.circle:hover figcaption{
-    color:white;
-    }
-    .circle:hover {
-      color:white;
-      background-color: #C92E18;
-    }
-    
-    a:link { text-decoration: none; }
-    
     
 .grid-container{
 display:grid;
@@ -362,4 +335,49 @@ color:black;
 .highlight{
     background-color: black;
 
+}
+
+@media screen and (max-width: 500px) {
+
+  #clockContainer{
+    width: 7vw;
+    height: 7vw;
+  }
+  
+  #vertical{
+    width: 0.9vw;
+    height: 7vw;
+    background-color: #C92E18;
+    position: absolute;
+    rotate:0deg
+  }
+  
+  #horizontal{
+    width: 0.9vw;
+    height: 7vw;
+    position: absolute;
+    background-color: #C92E18;
+    animation: rotate-pause 35s infinite;
+    rotate: 20deg;
+  }
+
+  #vertical:hover~#horizontal{
+    border: 0.2vw solid #C92E18;
+
+  }
+  
+  #vertical:hover{
+    border: 0.2vw solid #C92E18;
+}
+
+body{
+  font-size: 2.3vw;
+  line-height: 3.2vw;
+}
+
+      .grid-container{
+        display:grid;
+          margin: 1vw 1vw;
+          gap:2vw;
+        }
 }

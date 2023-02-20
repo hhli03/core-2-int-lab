@@ -412,39 +412,6 @@ body{
   line-height: 3.2vw;
 }
 
-#vertical{
-  width: 0.9vw;
-  height: 7vw;
-  background-color: #C92E18;
-  position: absolute;
-  rotate:0deg
-}
-
-#horizontal{
-  width: 0.9vw;
-  height: 7vw;
-  position: absolute;
-  background-color: #C92E18;
-  animation: rotate-pause 35s infinite;
-  rotate: 20deg;
-}
-
-#vertical:hover~#horizontal{
-  border: 0.2vw solid #C92E18;
-
-}
-
-#vertical:hover{
-  border: 0.2vw solid #C92E18;
-
-
-}
-
-.grid-container-2{
-  padding-bottom: 2vw;
-  padding-top: 2vw;
-  }
-
   .grid-container{
     display:grid;
       margin: 1vw 1vw;

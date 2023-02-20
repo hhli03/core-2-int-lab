@@ -354,6 +354,7 @@ section{
 
 .grid-container{
   grid-template-columns: 1fr 5fr 1fr;
+  margin: 1vw 1vw;
 }
 
 }
