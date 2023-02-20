@@ -274,7 +274,7 @@ body{
     line-height: 1.88vw;
 }
 .grid-container{
-    display:grid;
+  display:grid;
   margin: 2vw 2vw;
   grid-template-columns: repeat(auto-fill, 100px);
   grid-template-columns: 1fr 2fr 1fr;
@@ -289,4 +289,67 @@ section{
   font-family: "simplonmono-italic";
   }
 
+  @media screen and (max-width: 500px) {
+
+    #clockContainer{
+      width: 7vw;
+      height: 7vw;
+      display: flex;
+      justify-content: center;
+      bottom:2vw;
+    }
+    
+    #vertical{
+      width: 0.9vw;
+      height: 7vw;
+      background-color: #C92E18;
+      position: absolute;
+      rotate:0deg
+    }
+    
+    #horizontal{
+      width: 0.9vw;
+      height: 7vw;
+      position: absolute;
+      background-color: #C92E18;
+      animation: rotate-pause 35s infinite;
+      rotate: 20deg;
+    }
+  
+    #vertical:hover~#horizontal{
+      border: 0.2vw solid #C92E18;
+  
+    }
+    
+    #vertical:hover{
+      border: 0.2vw solid #C92E18;
+  
  
+  }
+
+  body{
+    font-size: 2.3vw;
+    line-height: 3.2vw;
+}
+
+
+.active{
+  font-size:3.1vw;
+}
+
+#red1{
+  border: 0.2vw solid #C92E18;
+
+}
+
+#red2{
+  border: 0.2vw solid #C92E18;
+
+}
+
+#red3{
+  border: 0.2vw solid #C92E18;
+
+}
+
+}
