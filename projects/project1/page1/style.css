@@ -293,8 +293,8 @@ section{
     grid-template-columns: 1fr 6fr 1fr;
     }
     body{
-      font-size: 3vw;
-      line-height: 4.5vw;
+      font-size: 4vw;
+      line-height: 6vw;
   }
   #red1{
     border: 0.3vw solid #C92E18;
@@ -309,23 +309,23 @@ section{
   }
 
   #clockContainer{
-    width: 10vw;
-    height: 10vw;
+    width: 12vw;
+    height: 12vw;
   }
   
   #vertical{
-    width: 1.2vw;
-    height: 10vw;
+    width: 1.5vw;
+    height: 12vw;
   }
   
   #horizontal{
-    width: 1.2vw;
-    height: 10vw;
+    width: 1.5vw;
+    height: 12vw;
 
   }
 
   .active{
-    font-size:4.5vw;
+    font-size:5.5vw;
     border: 0.2vw solid #C92E18;
   }
 
