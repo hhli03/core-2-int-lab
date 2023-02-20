@@ -4,8 +4,6 @@
 }
 
 
-
-
 body{
     font-family: "simplonmono";
         min-height: 100%;
@@ -197,33 +195,7 @@ html {
         background-color:white;
       }
     
-.circle{
-      height: 2vw;
-      width: 2vw;
-      background-color: white;
-      border:#C92E18 0.1vw solid;
-      border-radius: 50%;
-      display: inline-block;
-      position:absolute;
-      bottom:2vw;
-    }
-    
-    
-.circle figcaption{
-        font-family: "simplonmono";
-      color:#C92E18;
-      font-size:1.5vw;
-      text-align:center;
-    }
-    
-.circle:hover figcaption{
-    color:white;
-    }
 
-    .circle:hover {
-      color:white;
-      background-color: #C92E18;
-    }
     
 a:link { text-decoration: none; }
     
@@ -334,3 +306,85 @@ opacity:0%;
 }
 
 
+@media screen and (max-width: 500px) {
+
+  #clockContainer{
+    width: 7vw;
+    height: 7vw;
+    display: flex;
+    justify-content: center;
+    bottom:2vw;
+  }
+  
+  #vertical{
+    width: 0.9vw;
+    height: 7vw;
+    background-color: #C92E18;
+    position: absolute;
+    rotate:0deg
+  }
+  
+  #horizontal{
+    width: 0.9vw;
+    height: 7vw;
+    position: absolute;
+    background-color: #C92E18;
+    animation: rotate-pause 35s infinite;
+    rotate: 20deg;
+  }
+
+  #vertical:hover~#horizontal{
+    border: 0.2vw solid #C92E18;
+
+  }
+  
+  #vertical:hover{
+    border: 0.2vw solid #C92E18;
+
+  }
+
+.square{
+    height:55vw;
+    width:55vw;
+    border:0.3vw solid black;
+    top: 60vw;
+    left: 50vw;
+ 
+}
+
+#middletext{
+    font-size: 5.5vw;
+    padding:23.5vw 7vw;
+    text-align: center;
+}
+
+p{
+  font-size: 2vw;
+}
+
+#sentence1{
+  left:23vw;
+  top:22.5vw;
+}
+
+#sentence2{
+  left:23vw;
+  top:26vw;
+}
+
+#sentence3{
+right:-9vw;
+  top:55vw;
+}
+#sentence4{
+  left:23vw;
+  top:88vw;
+}
+
+#sentence5{
+  left:-7vw;
+  top:58vw;
+}
+
+
+}
