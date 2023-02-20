@@ -44,7 +44,7 @@
 border-left: 0.53vw solid #E6C95B;
   height: 26.8vw;
   position: absolute;
-  left: 43vw;
+  left: 42.95vw;
   margin-left: -3px;
   top: 0;
   }
@@ -99,7 +99,7 @@ border-left: 0.53vw solid #E6C95B;
                     border-left: 0.53vw solid #E6C95B;
                       height: 27vw;
                       position: absolute;
-                      left: 60.9vw;
+                      left: 60.85vw;
                       margin-left: -3px;
                       top: 0;
                       }
@@ -130,6 +130,25 @@ border-left: 0.53vw solid #E6C95B;
  left: 40.7vw;
  top:8vw;
 }
+
+#circle1:hover{
+    border: 0.15vw solid #C92E18;
+}
+#circle2:hover{
+    border: 0.15vw solid #C92E18;
+}
+#circle3:hover{
+    border: 0.15vw solid #C92E18;
+}
+#circle4:hover{
+    border: 0.15vw solid #C92E18;
+}
+#circle5:hover{
+
+    border: 0.15vw solid #C92E18;
+}
+
+
 #circle2{
     height: 3vw;
   width: 3vw;
