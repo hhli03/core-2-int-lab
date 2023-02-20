@@ -352,4 +352,8 @@ section{
 
 }
 
+.grid-container{
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
 }
