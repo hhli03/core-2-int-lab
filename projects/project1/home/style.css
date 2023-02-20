@@ -342,3 +342,110 @@ height: 3vw;
   border: 0.15vw solid #C92E18;
   background-color:white;
 }
+
+@media screen and (max-width: 500px) {
+    .title{
+        font-family: "neuzeitgro-reg";
+        font-size:9vw;
+      
+    }
+    #line1{
+        opacity:0;
+    }
+    #line2{
+        opacity:0;
+    }
+    #line3{
+        opacity:0;
+    }
+    #line4{
+        opacity:0;
+    }
+    #line5{
+        opacity:0;
+    }
+    #line6{
+        opacity:0;
+    }
+    #line7{
+        opacity:0;
+    }
+    #line8{
+        opacity:0;
+    }
+    #line9{
+        opacity:0;
+    }
+
+    #circle1{
+        opacity:0;
+    }
+
+    #circle2{
+        opacity:0;
+    }
+    #circle3{
+        opacity:0;
+    }
+    #circle4{
+        opacity:0;
+    }
+    #circle5{
+        opacity:0;
+    }
+
+    .author{
+
+        font-size: 2vw;
+        line-height: 2.8vw;
+        text-align:center;
+    }
+    
+    #clockContainer{
+        width: 7vw;
+        height: 7vw;
+        display: flex;
+        justify-content: center;
+      
+        padding:0.5vw;
+      
+      }
+      
+      #vertical{
+        width: 0.9vw;
+        height: 7vw;
+        background-color: #C92E18;
+        position: absolute;
+        rotate:0deg
+      }
+      
+      #horizontal{
+        width: 0.9vw;
+        height: 7vw;
+        position: absolute;
+        background-color: #C92E18;
+        animation: rotate-pause 35s infinite;
+        rotate: 20deg;
+      }
+
+      .flex-container-author{
+        justify-content: center;
+     
+      }
+
+      #vertical:hover~#horizontal{
+        border: 0.2vw solid #C92E18;
+
+      }
+      
+      #vertical:hover{
+        border: 0.2vw solid #C92E18;
+   
+      }
+ 
+      .parent{
+        position:absolute;
+        top:20%;
+
+      }
+  }
