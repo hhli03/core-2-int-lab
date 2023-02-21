@@ -372,6 +372,9 @@ color:#c92e18;
 }
 
 
+.redcolor{
+  color:#c92e18;
+}
 @media screen and (max-width: 500px) {
 
   #clockContainer{
