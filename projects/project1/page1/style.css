@@ -296,9 +296,6 @@ section{
     #clockContainer{
       width: 7vw;
       height: 7vw;
-      display: flex;
-      justify-content: center;
-      bottom:2vw;
     }
     
     #vertical{

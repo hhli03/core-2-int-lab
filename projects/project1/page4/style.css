@@ -20,8 +20,8 @@ html {
   left:46.5%;
   width: 4.5vw;
   height: 4.5vw;
-
     }
+    
 
     #clockContainer{
       width: 4.5vw;
@@ -29,9 +29,10 @@ html {
       position: relative;
       display: flex;
       justify-content: center;
-    
+    padding-bottom: 2vw;
     }
     
+  
     #vertical{
       width: 0.6vw;
       height: 4.5vw;
@@ -282,9 +283,7 @@ transform: translate(-50%, -50%);
   #clockContainer{
     width: 7vw;
     height: 7vw;
-    display: flex;
-    justify-content: center;
-    bottom:2vw;
+
   }
   
   #vertical{
