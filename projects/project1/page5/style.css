@@ -225,7 +225,7 @@ a:link { text-decoration: none; }
   color:#c92e18;
   opacity:0%;
   animation: appear 1s forwards;
-  animation-delay:11s;
+  animation-delay:12s;
 }
 
 #redl:hover~#colorchange{
@@ -235,7 +235,7 @@ a:link { text-decoration: none; }
 #questionmark{
   opacity:0%;
   animation: appear 1s forwards;
-  animation-delay:12s;
+  animation-delay:14s;
 }
 
 .white{
