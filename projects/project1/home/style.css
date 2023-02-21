@@ -371,7 +371,7 @@ height: 3vw;
   background-color:white;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1024px) {
     .title{
         font-family: "neuzeitgro-reg";
         font-size:9vw;
