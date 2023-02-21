@@ -183,12 +183,14 @@ height: 3vw;
 
 }
 
+
+
 #vertical{
   width: 0.6vw;
   height: 4.5vw;
   background-color: #C92E18;
   position: absolute;
-  rotate:0deg
+  rotate:0deg;
 }
 
 #horizontal{
