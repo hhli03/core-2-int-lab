@@ -207,7 +207,7 @@ a:link { text-decoration: none; }
   color:#C92E18;
   border: 0.15vw solid #C92E18;
   border-radius: 0.7vw;
-  animation: animate 1.4s linear infinite;
+  animation: animate 1.5s linear infinite;
 }
 
 @keyframes animate{
