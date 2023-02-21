@@ -279,7 +279,7 @@ opacity:0%;
 #sentence3{
     position:absolute;
     transform: rotate(90deg);
-    left:55.9vw;
+    left:56vw;
     top:26.6vw;
     opacity:0%;
     animation: appear 1s forwards;
@@ -298,7 +298,7 @@ opacity:0%;
 #sentence5{
     position:absolute;
     transform: rotate(-90deg);
-    left:24vw;
+    left:25vw;
     top:23.4vw;
     opacity:0%;
     animation: appear 1s forwards;
