@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+  }
+
+  body{
+    margin: 3vw 3vw;
+    background-color: white;
+  }
+  
+  .design{
+    width: 60vw;
+    height: 42vw;
+    display: grid;
+    grid-template-columns: repeat(31, 1fr);
+    grid-template-rows: repeat(22, 1fr);
+  }
+
+#container{
+    display: flex;
+    grid-template-columns: 60vw;
+    grid-template-rows: 60vw;
+    justify-content: center;
+}
+
+  .white{
+    background: white;
+  }
+
+  .black{
+    background: black;
+  }
+
+  .brown{
+    background:#CE835B;
+  }
+
+  .pink{
+    background: #F67B9E;
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .brown{
+        background: #ABC1EF;
+    }
+    
+    .black{
+        background:#4057C6;
+    }
+    
+    
+    .pink{
+        background:#F9C7FF;
+    }
+      }

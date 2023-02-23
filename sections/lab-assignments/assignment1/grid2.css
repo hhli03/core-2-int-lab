@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+  }
+
+  body{
+    margin: 3vw 3vw;
+    background-color: white;
+  }
+  
+  .design{
+    width: 60vw;
+    height: 41vw;
+    display: grid;
+    grid-template-columns: repeat(31, 1fr);
+    grid-template-rows: repeat(22, 1fr);
+  }
+
+#container{
+    display: flex;
+    grid-template-columns: 60vw;
+    grid-template-rows: 60vw;
+    justify-content: center;
+}
+
+  .white{
+    background: white;
+  }
+
+  .black{
+    background: black;
+  }
+
+  .black1{
+    background: black;
+  }
+
+  .yellow{
+    background:#FDBC2E;
+  }
+
+  @media screen and (max-width: 600px) {
+    .yellow{
+        background: #ABC1EF;
+    }
+    
+    .black{
+        background:#4057C6;
+    }
+    
+    .black1{
+        background:#F9C7FF;
+    }
+      }
+
