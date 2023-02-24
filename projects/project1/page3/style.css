@@ -9,9 +9,10 @@
     src: url(simplonmono-italic.otf);
 }
 
+
 body{
     font-family: "simplonmono";
-    background-color: #f9f1e4;
+    background-color: white;
     font-size: 1.2vw;
     line-height: 1.88vw;
 }
@@ -189,12 +190,12 @@ body{
   
   #vertical:hover~#horizontal{
     border: 0.15vw solid #C92E18;
-    background-color:#f9f1e4;
+    background-color:white;
   }
   
   #vertical:hover{
     border: 0.15vw solid #C92E18;
-    background-color:#f9f1e4;
+    background-color:white;
   }
   
 .red1{
@@ -247,9 +248,8 @@ opacity:1;
 }
 
 .underline:hover{
-
-border-style:solid;
-border-width: 0.12vw;
+  font-family: "simplonmono-italic";
+  color:#C92E18;
 
 }
 
@@ -314,7 +314,7 @@ section{
   }
 
 #white{
-    color: #f9f1e4;
+    color: white;
  
 }
 
@@ -328,7 +328,7 @@ color:black;
 }
 
 #rightside{
-   color: #f9f1e4;
+   color: white;
 
 }
 
