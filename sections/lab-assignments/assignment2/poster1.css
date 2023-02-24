@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "neuzeitgro-reg";
+    src: url(neuzeitgro-reg.ttf);
+}
+
+body{
+    background-color: lightgray;
+    margin:5vw 8vw;
+    font-family: "neuzeitgro-reg";
+}
+
+#grid-container{
+    background-color: whitesmoke;
+    display:grid;
+    justify-content: center;
+    grid-template-columns: 5fr 5fr 5fr 5fr 5fr 5fr;
+    grid-template-rows: 0.7fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 0.7fr;
+}
+
+.smalltext{
+    color:#0032ff;
+    font-size: 1.1vw;
+}
+.bigtext{
+    color:#0032ff;
+    font-size: 10vw;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    align-self: center;
+
+}
+
+.bigtext1{
+    color:#0032ff;
+    grid-column-start: 1 ;
+    grid-column-end: 5;
+    font-size: 10vw;
+    justify-content: center;
+    align-items:center;
+    align-self: center;
+}
+
+.mediumtext{
+    color:#0032ff;
+    font-size: 1.6vw;
+}
+
+.mediumtext1{
+    color:#0032ff;
+    font-size: 1.6vw;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 5;
+    grid-column-end: 7;
+
+}
+
+.blank{
+    background-color: whitesmoke;
+}
+
+.div{
+    border:#0032ff 2px solid;
+}
+
+.circle{
+    background-color: #0032ff;
+    border-radius: 50%;
+    width: 100%;
+    height:100%;
+}
+
+
+.square{
+    background-color: #0032ff;
+}
+
+.halfcircle{
+    background-color: #0032ff;
+        border-radius: 50% 0 0 50%;
+}
+
+
