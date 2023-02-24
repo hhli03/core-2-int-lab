@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "yarorg";
+    src: url(yarorg.ttf);
+}
+
+@font-face {
+    font-family: "yarorg-thin";
+    src: url(yarorg-thin.ttf);
+}
+
+body{
+    background-color: #102179;
+    margin:8vw 16vw;
+}
+
+.underline{
+    text-decoration: underline dotted #ba5b3d 0.3vw;
+}
+.bigtexto{
+    border:#102179 0.4vw solid;
+    border-radius: 50%;
+    height:70%;
+    width:90%;
+    justify-self: center;
+    align-self: center;
+}
+
+.bigtexto:hover{
+    border:#ba5b3d 0.4vw solid;
+}
+#grid-container{
+    background-color: #dcd8cf;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
+    grid-template-rows: 0.5fr 0.05fr 0.05fr 0.3fr 0.1fr 0.3fr 0.3fr 0.3fr;
+    padding:0.5vw 0.5vw 0.5vw 0.5vw;
+    gap:0.5vw;
+    border: 2vw #ba5b3d solid;
+}
+
+.red{
+    color:#ba5b3d;
+}
+.mediumtextred{
+    font-family: 'Noto Sans JP', sans-serif;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color:#ba5b3d;
+    font-size:1.8vw;
+    align-self: center;
+    border:#ba5b3d 0.2vw solid;
+}
+
+.mediumtextblack{
+    color:black;
+    font-family: "yarorg-thin";
+font-size:1.8vw;
+grid-row-start: 3;
+grid-row-end: 3;
+grid-column-start: 1;
+grid-column-end: 4;
+align-self: center;
+white-space: nowrap;
+}
+
+.smalltext{
+    font-family: "yarorg-thin";
+    font-size: 1.2vw;
+    justify-self: center;
+    align-self: center;
+}
+
+
+.smallsmalltext{
+    font-family: "yarorg-thin";
+    color:#dcd8cf;
+    font-size: 0.7vw;
+    align-self: center;
+    line-height: 2.6vw;
+    justify-self: center;
+    background-color: #102179;
+    padding:0vw 0.7vw;
+}
+
+.smallsmalltext:hover{
+    background-color: #ba5b3d;
+}
+.smalltext2{
+    font-family: "yarorg-thin";
+    font-size: 1.2vw;
+    align-self: center;
+    font-size:1.8vw;
+grid-row-start: 5;
+grid-row-end: 5;
+grid-column-start: 1;
+grid-column-end: 4;
+}
+
+.smalltext1{
+    font-family: "yarorg-thin";
+    font-size: 1.2vw;
+    align-self: center;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.bigtext{
+    font-family: "yarorg";
+    font-size: 15vw;
+   line-height: 15vw;
+   color:#102179;
+   justify-self: center;
+   align-self: center;
+}
+
+.bigbigtext{
+    font-family: "yarorg";
+    font-size: 17vw;
+   line-height: 15vw;
+   color:#102179;
+   justify-self: center;
+   align-self: center;
+}
+
+.mediumtextblue{
+
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 5vw;
+    line-height: 4vw;
+    color:#dcd8cf;
+  
+}
+
+.mediumtext{
+    font-family: "yarorg";
+    font-size: 3vw;
+    color:#102179;
+}
