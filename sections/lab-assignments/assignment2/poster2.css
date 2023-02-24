@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "yarorg";
+    src: url(yarorg.ttf);
+}
+
+@font-face {
+    font-family: "yarorg-thin";
+    src: url(yarorg-thin.ttf);
+}
+
+body{
+    background-color: #102179;
+    margin:8vw 16vw;
+}
+
+
+#grid-container{
+    background-color: #dcd8cf;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-rows: 2fr 1fr 4fr 1fr 2fr ;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.circleoutline{
+border:#102179 0.3vw solid;
+border-radius: 50%;
+    width:91%;
+    height:100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.circleoutline:hover{
+    background-color: #102179;
+}
+.bigtext{
+    font-family: "yarorg";
+    font-size: 5.5vw;
+   color:#102179;
+   grid-column-start: 1;
+   grid-column-end: 4;
+   line-height: 4vw;
+   justify-self: center;
+   align-self: center;
+   justify-content: center;
+   justify-items: center;
+ 
+}
+.small{
+    color:#102179;
+    font-family: "yarorg";
+    font-size: 2vw;
+    line-height: 2vw;
+    justify-self: center;
+    align-self: center;
+}
+.japanese{
+    font-family: 'Noto Sans JP', sans-serif;
+    color:#102179;
+    font-size:2vw;
+    justify-self: flex-start;
+}
+
+.circle2{
+    border:#ba5b3d 0.3vw solid;
+border-radius: 50%;
+height:41%;
+width:150%;
+grid-column-start: 3;
+grid-column-end: 4;
+justify-self: flex-end;
+align-self:flex-end;
+}
+
+
+
+.mediumtext{
+    color:#102179;
+    font-family: "yarorg";
+    justify-self: center;
+    align-self: center;
+    font-size:2.6vw;
+    line-height:3.2vw ;
+}
+
+.date{
+    color:#102179;
+    font-family: "yarorg";
+    justify-self:flex-end;
+    align-self: center;
+    font-size:5.5vw;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
