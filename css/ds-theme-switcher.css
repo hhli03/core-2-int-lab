@@ -1,0 +1,738 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Oswald:wght@300;500&display=swap');
+
+ /* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: disc;
+  padding:1rem;
+}
+
+ul li {
+    margin-bottom:1rem;
+    line-height: 1.2;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, textarea {
+  margin: 0;
+  border: none;
+  font-family: "happy-times-ng_regular";
+  font-size: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   @font-face {
+    font-family: "abordage-regular";
+    src: url(abordage-regular.otf);
+   }
+
+   @font-face {
+    font-family: "happy-times-ng_regular";
+    src: url(happy-times-ng_regular_master.otf);
+   }
+   body {
+    color: black;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+   font-family: "abordage-regular";
+  }
+
+
+  :root {
+    --bg-color: #F9F1EF;
+    --font-color: black;
+    --title-color: #0067e6;
+    --title-background: white;
+    --main-border: 1px solid rgba(255, 255, 255, 0.4);
+    --main-bg: #F9F1EF;
+
+    --wf-gray: #177AA7;
+    --wf-light-gray: #F9F1EF;
+    --wf-bright-yellow: #ECC31D;
+    --wf-medium-yellow: #F28C9A;
+    --wf-medium-brown: #F4520F;
+    --wf-deep-brown: #2D7B1C;
+    --body-text-color: var(--wf-medium-brown);
+
+    /* body font size */
+    --text-base-size: 1rem;
+    --text-scale-ratio: 1.125;
+    --text-size-small: .875rem;
+    --text-size-xsmall: .75rem;
+    /* type scale */
+    --text-x1: calc(var(--text-base-size) * var(--text-scale-ratio));
+    --text-x2: calc(var(--text-x1) * var(--text-scale-ratio));
+    --text-x3: calc(var(--text-x2) * var(--text-scale-ratio));
+    --text-x4: calc(var(--text-x3) * var(--text-scale-ratio));
+    --text-x5: calc(var(--text-x4) * var(--text-scale-ratio));
+    --text-x6: calc(var(--text-x5) * var(--text-scale-ratio));
+  }
+
+  [data-theme="dark"] {
+    --bg-color: #111;
+    --font-color: #F9F1EF;
+    --title-color: #ECC31D;
+    --title-background: #222;
+    --main-border: 1px solid rgba(255, 255, 255, 0.2);
+    --main-bg: rgba(25, 25, 25, 0.4);
+  }
+  
+  @media (min-width: 30em) {
+    :root {
+      --text-base-size: 1rem;
+      --text-scale-ratio: 1.25;
+      --text-size-small: 1rem;
+      --text-size-xsmall: .813rem;
+      /* type scale */
+      --text-x1: calc(var(--text-base-size) * var(--text-scale-ratio));
+      --text-x2: calc(var(--text-x1) * var(--text-scale-ratio));
+      --text-x3: calc(var(--text-x2) * var(--text-scale-ratio));
+      --text-x4: calc(var(--text-x3) * var(--text-scale-ratio));
+      --text-x5: calc(var(--text-x4) * var(--text-scale-ratio));
+      --text-x6: calc(var(--text-x5) * var(--text-scale-ratio));
+    }
+  }
+
+main {
+  display: grid;
+  grid-template-rows: auto; 
+  gap: 1rem; 
+  width: 80vw;
+  margin: 0 auto;
+}
+
+title-background{
+border-radius: 30%;
+}
+.color-grid {
+    display: grid;
+    grid-template-rows: auto;  
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+
+
+@media (min-width: 30em) {
+    main {
+      display: grid;
+      grid-template-columns: 3fr 5fr;  
+      grid-template-rows: auto;  
+      gap: 2rem;
+      width: 90vw;
+      margin: 0 auto;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);  
+      grid-template-rows: auto;  
+      gap: 1rem;
+    }
+
+    .switcher {
+        grid-column: 1 /3;
+      }
+
+  }
+
+  .color-block {
+    min-height:100px;
+}
+  
+
+section {
+  padding:1rem;
+}
+
+
+/* this is code example for typography */
+
+p {
+    font-family: "happy-times-ng_regular";
+  font-size: var(--text-base-size);
+  margin-bottom: 1.5rem;
+  line-height: 150%;
+}
+
+.typescale-x6 {
+  font-size: var(--text-x6);
+}
+
+.typescale-x5 {
+  font-size: var(--text-x5);
+}
+
+.typescale-x4 {
+  font-size: var(--text-x4);
+}
+
+.typescale-x3 {
+  font-size: var(--text-x3);
+}
+
+.typescale-x2 {
+  font-size: var(--text-x2);
+}
+
+.typescale-x1 {
+  font-size: var(--text-x1);
+}
+
+.typescale-base {
+  font-size: var(--text-base-size);
+  line-height: 150%;
+}
+
+.typescale-small {
+  font-size: var(--text-size-small);
+  line-height: 150%;
+}
+
+.typescale-xsmall {
+  font-size: var(--text-size-xsmall);
+  line-height: 150%;
+}
+
+.all-caps {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.eye-brow {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: var(--text-base-size);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: var(--text-x6);
+  line-height: 110%;
+  font-family: "abordage-regular";
+  font-weight: 500;
+}
+
+h2 {
+  font-size: var(--text-x5);
+  font-family: "abordage-regular";
+  font-weight: 500;
+  line-height: 110%;
+}
+
+h3 {
+  font-size: var(--text-x4);
+  font-family: "abordage-regular";
+  font-weight: 500;
+  line-height: 120%;
+}
+
+h4 {
+  font-size: var(--text-x3);
+  font-family: "abordage-regular";
+  font-weight: 500;
+  line-height: 120%;
+}
+
+h5 {
+  font-size: var(--text-x2);
+  font-family: "abordage-regular";
+  font-weight: 500;
+  line-height: 120%;
+}
+
+h6 {
+  font-size: var(--text-x1);
+  font-family: "abordage-regular";
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.core-lab-sans-medium {
+    font-family: "abordage-regular";
+  font-weight: 500;
+  line-height: 100%;
+
+}
+
+.core-lab-sans {
+    font-family: "abordage-regular";
+  font-weight: 300;
+  line-height: 100%;
+}
+
+.core-lab-serif {
+    font-family: "happy-times-ng_regular";
+  font-weight: 900;
+  line-height: 100%;
+}
+
+/* end code example for typography */
+
+/* colors */
+
+
+.color-gray {
+    background-color: #177AA7;
+    border-radius: 50%;
+  }
+    .color-light-gray {
+    background-color: #F9F1EF;
+    border-radius: 50%;
+  }
+    .color-bright-yellow {
+    background-color: #ECC31D;
+    border-radius: 50%;
+  }
+    .color-medium-yellow {
+    background-color: #F28C9A;
+    border-radius: 50%;
+  }
+    .color-medium-brown {
+    background-color: #F4520F;
+    border-radius: 50%;
+  }
+    .color-deep-brown {
+    background-color: #2D7B1C;
+    border-radius: 50%;
+  }
+
+/* theme switcher code */
+
+
+
+
+  
+  body {
+    color: var(--font-color);
+    background-color: var(--bg-color);
+  
+    /* OTHER STYLING */
+    margin: 0 2rem 0;
+    transition: background-image 0.2s ease;
+
+  }
+  
+  main {
+    border: var(--main-border);
+    background: var(--main-bg);
+
+  }
+  
+  section {
+    background: var(--title-background);
+  }
+  
+
+  
+  /* TOGGLE  */
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .theme-switch-wrapper em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+  
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display: none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #ECC31D;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider svg {
+    color: #222;
+    position: absolute;
+    transition: opacity 0.2s ease 0s, transform 0.35s ease 0s;
+    pointer-events: none;
+  }
+  
+  .feather-moon {
+    opacity: 0;
+    left: 9px;
+    bottom: 9px;
+    transform: translateX(4px);
+  }
+  
+  .feather-sun {
+    opacity: 1;
+    right: 10px;
+    bottom: 9px;
+    transform: translateX(0px);
+  }
+  
+  input:checked + .slider .feather-moon {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  input:checked + .slider .feather-sun {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+  
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

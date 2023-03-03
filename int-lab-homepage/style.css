@@ -136,6 +136,18 @@ color:cornflowerblue;
         color:cornflowerblue;
           }
 
+          .container>div:nth-child(7){
+            background-color:cornflowerblue;
+            border:0.2vw solid cornsilk;
+            text-align: center;
+          }
+        
+          .container>div:nth-child(7):hover{
+            background-color: cornsilk;
+            color:cornflowerblue;
+              }
+    
+
       #text4{
         font-size: 1vw;
         background-color: cornflowerblue;
