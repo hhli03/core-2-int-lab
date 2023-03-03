@@ -3,6 +3,7 @@ body{
 }
 h1{
   font-weight: normal;
+  text-align: center;
 }
 
 #container{
@@ -12,28 +13,33 @@ h1{
 .icon{
   margin: 20px;
 }
-/*.emoji{
+.emoji{
   font-size: 50px;
-}*/
+}
 .category{
   font-weight: bold;
 }
-/*.phrase{
-  font-size: 40px;
-}*/
+.year{
+  font-size: 30px;
+}
+
+.description{
+  font-size: 20px;
+}
+
 img{
   width: 100%;
 }
 
 .food{
-  background: yellow;
+  color:purple;
 }
 .animal{
-  background: red;
+  color:palevioletred;
 }
 .smiley{
-  background: green;
+  color:pink;
 }
 .travel{
-  background: blue;
+  color:powderblue;
 }

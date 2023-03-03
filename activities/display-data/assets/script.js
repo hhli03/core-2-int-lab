@@ -45,6 +45,8 @@ function processEmojis( data ){
     let newItem = document.createElement("div");
     newItem.classList.add("icon");
     newItem.classList.add(item.categorykey);
+    newItem.classList.add(item.year);
+    newItem.classList.add(item.description);
     // newItem.style.cssText = `font-size: ${usage}px`;
     newItem.innerHTML = `
       <!--commenting out <div class="image"><img src="assets/images/${item.img}.jpg"></div>-->
