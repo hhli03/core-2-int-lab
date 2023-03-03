@@ -51,6 +51,7 @@ function processEmojis( data ){
     newItem.innerHTML = `
       <!--commenting out <div class="image"><img src="assets/images/${item.img}.jpg"></div>-->
       <div class="category">${item.category}</div>
+      <div class="category">${item.year}</div>
       <div class="emoji">${item.emoji}</div>`;
     container.appendChild(newItem);    
   });
