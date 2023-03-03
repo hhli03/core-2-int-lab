@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JSON Demo</title>
+        <style type="text/css">            
+            .myshape{
+                width: 200px;
+                height: 200px;
+                background: black;
+                padding: 50px;
+                text-align: center;
+            }
+            .circle{
+                border-radius: 50%;
+            }
+            .oval{
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+      <button id="trigger">Click</button>
+      <div id="container"> </div>
+      <script>
+        // JSON object
+        let myshape = {
+            "name": "myshape", 
+            "code": {
+              "r": 255,
+              "g": 0,
+              "b": 0 
+            },
+            "shapes" : ["circle", "square", "oval"] 
+        };
+
+        let button = document.getElementById('trigger');
+
+        button.addEventListener('click', function(){
+            let div = document.createElement("div");
+            div.classList.add("myshape");
+            div.classList.add(myshape.shapes[0]);
+            div.innerText = myshape.name;
+            div.style.backgroundColor = `rgb(${myshape.code.r}, ${myshape.code.g}, ${myshape.code.b})`;
+            container.appendChild(div); 
+        });
+     </script>
+    </body>
+</html>

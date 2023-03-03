@@ -1,0 +1,45 @@
+body{
+  font-family: 'PingFang TC', Arial, sans-serif;
+}
+h1{
+  font-weight: normal;
+  text-align: center;
+  font-size:40px;
+}
+
+#container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin:2em;
+  gap:2em;
+}
+.icon{
+  margin: 20px;
+}
+.emoji{
+  font-size: 60px;
+}
+.category{
+  font-weight: bold;
+  font-size:20px;
+  font-style: italic;
+}
+.phrase{
+  font-size: 15px;
+}
+img{
+  width: 100%;
+}
+
+.icon{
+  margin: 20px;
+}
+/*.emoji{
+  font-size: 50px;
+}*/
+.category{
+  font-weight: bold;
+}
+/*.phrase{
+  font-size: 40px;
+}*/
