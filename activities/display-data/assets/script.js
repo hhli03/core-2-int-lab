@@ -30,6 +30,7 @@ fetch('./assets/emojis-v3.json')
     console.log(data);
     processEmojis(data);
   })
+
   .catch(error => console.log(error));
 
 
@@ -48,7 +49,9 @@ function processEmojis( data ){
     // newItem.style.cssText = `font-size: ${usage}px`;
     newItem.innerHTML = `
       <!--commenting out <div class="image"><img src="assets/images/${item.img}.jpg"></div>-->
+      <div class="year">${item.year}</div>
       <div class="category">${item.category}</div>
+      <div class="description">${item.description}</div>
       <div class="emoji">${item.emoji}</div>`;
     container.appendChild(newItem);    
   });
