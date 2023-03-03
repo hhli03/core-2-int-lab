@@ -91,6 +91,11 @@ a:active { text-decoration: underline; }
     background-color:#adb5f4;
     text-align: center;
   }
+
+  .container>div:nth-child(7){
+    background-color:#adb5f4;
+    text-align: center;
+  }
   
       #text1{
         color: #adb5f4;
