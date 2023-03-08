@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "neuzeitgro-reg";
+    src: url(neuzeitgro-reg.ttf);
+}
+
+@font-face {
+    font-family: "utopia-bold-italic";
+    src: url(utopia-bold-italic.ttf);
+}
+
+@font-face {
+    font-family: "compagnon-roman";
+    src: url(compagnon-roman.otf);
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap:2vw;
+    margin:1.5vw;
+  }
+
+
+  #leftbox{
+    border:#E16D31 0.2vw solid;
+    border-radius: 5%;
+    height:100%;
+    justify-content: center;
+    display:grid;
+  }
+
+
+
+
+
+.snackno{
+    background:#E16D31;
+    width:6vw;
+    height:1.5vw;
+    font-size:1.3vw;
+    color:#F3EAE1;
+    padding:0.3vw;
+    font-family: "neuzeitgro-reg";
+}
+  
+.scroll {
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+
+    height: 43vw;
+    overflow-y: scroll;
+}
+  body{
+    background-color:#F3EAE1;
+  }
