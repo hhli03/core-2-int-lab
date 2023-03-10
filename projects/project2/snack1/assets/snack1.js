@@ -49,6 +49,7 @@ function processSnacks( data ){
       <!--commenting out <div class="image"><img src="assets/images/${item.img}.jpg"></div>-->
       <div class="snacknameeng">${item.snacknameeng}</div>
       <div class="cantonesepronunciation">${item.cantonesepronunciation}</div>
+      <div class="snack1img">${item.img}</div>
       <div class="snacknamechi">${item.snacknamechi}</div>`;
 
     leftbox.appendChild(newItem);    

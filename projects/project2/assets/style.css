@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "neuzeitgro-reg";
+    src: url(../assets/neuzeitgro-reg.ttf);
+}
+
+@font-face {
+    font-family: "utopia-bold-italic";
+    src: url(../assets/utopia-bold-italic.ttf);
+}
+
+@font-face {
+    font-family: "compagnon-roman";
+    src: url(../assets/compagnon-roman.otf);
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap:2vw;
+    margin:1.5vw;
+  }
+
+
+  #leftbox{
+    border:#E16D31 0.2vw solid;
+    border-radius: 5%;
+    height:100%;
+    justify-content: center;
+    display:grid;
+    padding-bottom: 2vw;
+  }
+
+.snackno{
+    background:#E16D31;
+    width:6vw;
+    height:1.5vw;
+    font-size:1.3vw;
+    color:#F3EAE1;
+    padding:0.3vw;
+    font-family: "neuzeitgro-reg";
+    justify-self: center;
+    margin-bottom:2vw;
+}
+  
+#rightbox {
+    display: block;
+    padding: 5px;
+    margin:1vw;
+    height: 43vw;
+    overflow-y: scroll;
+}
+
+  body{
+    background-color:#F3EAE1;
+  }
+
+.snackimg img{
+  height:30vw;
+}
+
+
+.snacknameeng{
+  font-family: "compagnon-roman";
+  font-size:2.6vw;
+  color: #104877;
+}
+
+
+.cantonesepronunciation{
+  font-family: "neuzeitgro-reg";
+  color: #E16D31;
+  font-size:1.3vw;
+}
+
+.snacknamechi{
+  font-family: "source-han-sans-traditional", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size:2.8vw;
+color:#104877;
+}
+
+.story{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  text-align: left;
+  font-size:1.4vw;
+  line-height:1.9vw;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.brand{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  font-size:1.4vw;
+  text-align: left;
+}
+
+.category{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  font-size:1.4vw;
+  text-align: left;
+}
+
+.origin{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  font-size:1.4vw;
+  text-align: left;
+}
+
+.flavors{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  font-size:1.4vw;
+  text-align: left;
+}
+
+.personalrating{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  font-size:1.4vw;
+  text-align: left;
+}
+
+.smallcontainer{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:4vw;
+  margin:0.8vw;
+}
+
+
+#buttongrid{
+  display:grid;
+  grid-template-columns: 5vw 5vw;
+  color:#E16D31;
+  font-family: "neuzeitgro-reg";
+  gap:1vw;
+  justify-content: end;
+  margin:0.5vw;
+}
+
+.nextbutton{
+  border:#E16D31 0.1vw solid;
+  padding-top:0.4vw;
+  padding-bottom:0.2vw;
+  border-radius:2vw;
+  font-size:1.2vw;
+}
+
+.homebutton{
+  border:#E16D31 0.1vw solid;
+  padding-top:0.4vw;
+  padding-bottom:0.2vw;
+  border-radius:2vw;
+  font-size:1.2vw;
+}
