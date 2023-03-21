@@ -18,10 +18,11 @@ body{
     justify-content: center;
     align-items: center;
     gap:2vw;
-    margin:1.5vw;
+    margin:2vw;
     border:#E16D31 0.2vw solid;
-    border-radius: 5%;
+    border-radius: 2vw;
     height:100%;
+    padding-bottom:2vw;
   }
 
 .about{
@@ -44,7 +45,7 @@ body{
 
 #cantonese-title{
     font-family: "neuzeitgro-reg";
-    font-size:1.2vw;
+    font-size:1.25vw;
     color:#E16D31;
 }
 
@@ -52,14 +53,15 @@ body{
 font-family: "source-han-sans-traditional", sans-serif;
 font-weight: 400;
 font-style: normal;
-font-size:3.1vw;
+font-size:3.2vw;
 color:#E16D31;
 }
 
 #english-title{
     color:#104877;
     font-family: "compagnon-roman";
-    font-size:2.2vw;
+    font-size:2.4vw;
+padding:0.6vw;
 }
 
 .snacknames{
@@ -74,6 +76,7 @@ display:grid;
 grid-template-rows: auto;
 text-align: left;
 gap:5vw;
+margin:1vw;
 grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -82,6 +85,55 @@ a:link{
     color:#104877;
 }
 
-a:hover {
+
+
+a:visited{
+    text-decoration: none;
+    color:#104877;
+}
+
+
+
+  a:hover {
     color:#E16D31;
+    text-decoration: none;
+  }
+
+  a:active {
+    color:#E16D31;
+    text-decoration: none;
+  }
+
+  .photogrid{
+    display:grid;
+grid-template-columns: auto auto auto;
+    grid-template-rows: repeat auto-fill;
+    align-items: center;
+    gap:5vw;
+    padding:2vw;
+  }
+
+.snackimg img{
+    width:20vw;
+  }
+
+  .number{
+    color:#E16D31;
+    font-family: "neuzeitgro-reg";
+    border: solid #E16D31 0.1vw;
+    border-radius: 50%;
+    width:1.3vw;
+    height:1.3vw;
+    font-size:1.1vw;
+    padding:0.1vw;
+  }
+
+  .individualsnackgrid{
+  display:grid;
+  grid-template-columns:auto auto;
+  }
+
+  .line{
+  height: 0.17vw;
+  background:#E16D31;;
   }

@@ -6,7 +6,7 @@ let container = document.getElementById("container");
 // see Python instructions here:
 // https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_python
 
-fetch('/assets/snack.json')
+fetch('/assets/snacks.json')
   .then(response => response.json())
   .then(data => {
     console.log(data);
@@ -27,7 +27,7 @@ function processSnacks( data ){
         // newItem.style.cssText = `font-size: ${usage}px`;
         newItem.innerHTML = `
         <div id="leftbox">
-          <div class="snackno">SNACK 1</div>
+          <div class="snackno">${item.snackno}</div>
           <div class="snacknameeng">${item.snacknameeng}</div>
           <div class="snackimg"><img src="${item.img}"></div>
           <div class="cantonesepronunciation">${item.cantonesepronunciation}</div>
