@@ -12,6 +12,8 @@ body{
     src: url(compagnon-roman.otf);
 }
 
+
+
 .parent-container{
     display: grid;
     text-align: center;
@@ -97,6 +99,7 @@ a:visited{
   a:hover {
     color:#E16D31;
     text-decoration: none;
+    font-style:italic;
   }
 
   a:active {
@@ -233,4 +236,8 @@ grid-template-columns: auto auto auto;
   height: 0.17vw;
   background:#E16D31;;
   }
+
+.active{
+    color:#E16D31;
+}
 
