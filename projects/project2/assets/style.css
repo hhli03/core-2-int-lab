@@ -13,7 +13,7 @@
     src: url(../assets/compagnon-roman.otf);
 }
 
-#container{
+.grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);

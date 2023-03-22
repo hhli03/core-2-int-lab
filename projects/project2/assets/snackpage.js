@@ -10,7 +10,7 @@ fetch('/assets/snacks.json')
   .then(response => response.json())
   .then(data => {
     console.log(data);
-    processEmojis(data);
+    processSnacks(data);
   })
   .catch(error => console.log(error));
 
@@ -25,6 +25,7 @@ function processSnacks( data ){
     if ( item.id == key ){
         let newItem = document.createElement("div");
         // newItem.style.cssText = `font-size: ${usage}px`;
+        newItem.classList.add('grid');
         newItem.innerHTML = `
         <div id="leftbox">
           <div class="snackno">${item.snackno}</div>
@@ -35,8 +36,8 @@ function processSnacks( data ){
         </div>
         <div id="rightbox">
         <div class="smallcontainer">
-        <div class="story">${item.story}</div>
-        <div class="brand">${item.brand}</div>
+        <div class="story">${item.story.replace('\n\n', '<br>')}</div>
+        <div class="brand"><span class="label">Brand:</span> ${item.brand}</div>
         <div class="category">${item.category}</div>
         <div class="origin">${item.origin}</div>
         <div class="flavors">${item.flavors}</div>
