@@ -164,3 +164,30 @@ color:#104877;
   border-radius:2vw;
   font-size:1.2vw;
 }
+
+.label{
+  color:#E16D31;
+  font-family: "neuzeitgro-reg";
+}
+
+a:link{
+  text-decoration:none;
+  color:#E16D31;
+}
+
+a:visited{
+    text-decoration: none;
+    color:#E16D31;
+}
+
+
+
+  a:hover {
+    text-decoration: none;
+    color:#104877;
+  }
+
+  a:active {
+    text-decoration: none;
+    color:#104877;
+  }

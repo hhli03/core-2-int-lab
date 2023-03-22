@@ -36,17 +36,17 @@ function processSnacks( data ){
         </div>
         <div id="rightbox">
         <div class="smallcontainer">
-        <div class="story">${item.story.replace('\n\n', '<br>')}</div>
-        <div class="brand"><span class="label">Brand:</span> ${item.brand}</div>
-        <div class="category">${item.category}</div>
-        <div class="origin">${item.origin}</div>
-        <div class="flavors">${item.flavors}</div>
-        <div class="personalrating">${item.personalrating}</div>
+        <div class="story">${item.story.replace('\n\n', '<br><br>')}</div>
+        <div class="brand"><span class="label">Brand<br></span>${item.brand}</div>
+        <div class="category"><span class="label">Category<br></span>${item.category}</div>
+        <div class="origin"><span class="label">Origin<br></span>${item.origin}</div>
+        <div class="flavors"><span class="label">Flavors<br></span>${item.flavors}</div>
+        <div class="personalrating"><span class="label">Personal Rating<br></span>${item.personalrating}</div>
         </div>
 
         <div id="buttongrid">
-        <div class="nextbutton">NEXT</div>
-        <div class="homebutton">HOME</div>
+        <div class="nextbutton"><a href="/snack2/">NEXT</a></div>
+        <div class="homebutton"><a href="../index.html">HOME</div>
         </div>
         </div>`;
 
