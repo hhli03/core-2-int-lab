@@ -59,3 +59,31 @@ h2{
     font-family:mysecondfont;
     src: url(lettergothicstd.otf);
 }
+
+
+.bodytext{
+    text-align: left;
+    line-height:1.4vw;
+}
+
+a:link{
+    text-decoration:none;
+    color: #1f4097;
+  }
+  
+  a:visited{
+      text-decoration: none;
+      color: #1f4097;
+  }
+  
+    a:hover {
+      text-decoration: none;
+      color:#fdd818;
+
+    }
+  
+    a:active {
+      text-decoration: none;
+      color:#fdd818;
+
+    }
