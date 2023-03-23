@@ -25,6 +25,8 @@ a{
 
 nav{
     line-height: 1.6vw;
+    margin-top:1vw;
+    padding:1vw;
 }
 h1{
     font-family:myfirstfont;
@@ -84,3 +86,30 @@ h2{
     font-family:mysecondfont;
     src: url(sligoilmicro.otf);
 }
+
+.bodytext{
+    text-align: left;
+    line-height:1.4vw;
+}
+
+a:link{
+    text-decoration:none;
+    color:black;
+  }
+  
+  a:visited{
+      text-decoration: none;
+      color:black;
+  }
+  
+    a:hover {
+      text-decoration: none;
+      color:black;
+      font-style: italic;
+    }
+  
+    a:active {
+      text-decoration: none;
+      color:black;
+      font-style: italic;
+    }

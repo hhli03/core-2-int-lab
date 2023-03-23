@@ -40,7 +40,7 @@ function processSnacks( data ){
         <div class="brand"><span class="label">Brand<br></span>${item.brand}</div>
         <div class="category"><span class="label">Category<br></span>${item.category}</div>
         <div class="origin"><span class="label">Origin<br></span>${item.origin}</div>
-        <div class="flavors"><span class="label">Flavors<br></span>${item.flavors}</div>
+        <div class="flavors"><span class="label">Flavors<br></span>${item.flavors.replace('\n', '<br>')}</div>
         <div class="personalrating"><span class="label">Personal Rating<br></span>${item.personalrating}</div>
         </div>
 

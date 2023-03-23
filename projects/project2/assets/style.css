@@ -27,11 +27,11 @@
 
   #leftbox{
     border:#E16D31 0.2vw solid;
-    border-radius: 5%;
-    height:100%;
+    border-radius: 2vw;
+    height:91%;
     justify-content: center;
     display:grid;
-    padding-bottom: 2vw;
+    padding-bottom: 2.4vw;
   }
 
 .snackno{
@@ -48,9 +48,9 @@
   
 #rightbox {
     display: block;
-    padding: 5px;
-    margin:1vw;
-    height: 43vw;
+    margin:0.5vw;
+    padding:0.2vw;
+    height: 45vw;
     overflow-y: scroll;
 }
 
