@@ -75,11 +75,15 @@ padding:0.6vw;
 
 .snacklistgrid{
 display:grid;
-grid-template-rows: auto;
 text-align: left;
-gap:5vw;
+gap:1fr;
 margin:1vw;
-grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: 1.5fr 1.5fr 1.5fr;
+grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+color:#104877;
+font-family: "neuzeitgro-reg";
+font-size:1.32vw;
+line-height:1.8vw;
 }
 
 a:link{
@@ -355,13 +359,17 @@ grid-template-columns: auto auto;
 
 
   .snacklistgrid{
-    display:block;
-    grid-template-rows: auto;
+    display:grid;
     text-align: left;
-    gap:5vw;
-    margin:1vw;
-    grid-template-columns: 1fr 1fr 1fr;
+    gap:1.5fr;
+    margin:1.5vw;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    color:#104877;
+    font-family: "neuzeitgro-reg";
+    font-size:1.4vw;
+    line-height:1.8vw;
     }
 
-    
 }

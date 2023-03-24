@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "colorname": "Rich Blue",
+        "hexcode": "#645CA3",
+        "color":""
+    },
+    {
+        "id":2,
+        "colorname":"Cornflower Blue",
+        "hexcode":"#8577F2",
+        "color":""
+    },
+    {
+        "id":3,
+        "colorname":"Sulu Green",
+        "hexcode":"#D5F26B",
+        "color":""
+    },
+    {
+        "id":4,
+        "colorname":"Royal Heath",
+        "hexcode":"#A6387C",
+        "color":""
+    },
+    {
+        "id":5,
+        "colorname":"Brilliant Rose",
+        "hexcode":"#F25EBB",
+        "color":""
+    }
+]
