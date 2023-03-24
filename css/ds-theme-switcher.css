@@ -57,7 +57,7 @@ a {
 input, textarea {
   margin: 0;
   border: none;
-  font-family: "happy-times-ng_regular";
+  font-family: "lettergothicstd";
   font-size: 100%;
 }
 
@@ -172,25 +172,41 @@ textarea {
     src: url(abordage-regular.otf);
    }
 
+
    @font-face {
-    font-family: "happy-times-ng_regular";
-    src: url(happy-times-ng_regular_master.otf);
+    font-family: "lettergothicstd";
+    src: url(lettergothicstd.otf);
+   }
+
+   @font-face {
+    font-family: "compagnon-roman";
+    src: url(compagnon-roman.otf);
+   }
+
+   @font-face {
+    font-family: "cliftontrial-regular";
+    src: url(cliftontrial-regular.otf);
+   }
+
+   @font-face {
+    font-family: "madeleinasansf";
+    src: url(madeleinasans.ttf);
    }
    body {
     color: black;
     padding-top: 2rem;
     padding-bottom: 2rem;
-   font-family: "abordage-regular";
+    font-family: "lettergothicstd";
   }
 
 
   :root {
-    --bg-color: #F9F1EF;
+    --bg-color: white;
     --font-color: black;
     --title-color: #0067e6;
     --title-background: white;
-    --main-border: 1px solid rgba(255, 255, 255, 0.4);
-    --main-bg: #F9F1EF;
+    --main-border: 0px solid white;
+    --main-bg: white;
 
     --wf-gray: #177AA7;
     --wf-light-gray: #F9F1EF;
@@ -215,12 +231,12 @@ textarea {
   }
 
   [data-theme="dark"] {
-    --bg-color: #111;
+    --bg-color: black;
     --font-color: #F9F1EF;
     --title-color: #ECC31D;
-    --title-background: #222;
-    --main-border: 1px solid rgba(255, 255, 255, 0.2);
-    --main-bg: rgba(25, 25, 25, 0.4);
+    --title-background: black;
+    --main-border: 0px solid rgba(255, 255, 255, 0.2);
+    --main-bg: black;
   }
   
   @media (min-width: 30em) {
@@ -252,8 +268,8 @@ border-radius: 30%;
 }
 .color-grid {
     display: grid;
-    grid-template-rows: auto;  
-    gap: 2rem;
+    grid-template-rows: 1fr 1fr;  
+    gap: 1rem;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -266,7 +282,8 @@ border-radius: 30%;
       display: grid;
       grid-template-columns: 3fr 5fr;  
       grid-template-rows: auto;  
-      gap: 2rem;
+      gap: 0.1rem;
+      padding:0.1em;
       width: 90vw;
       margin: 0 auto;
     }
@@ -276,6 +293,7 @@ border-radius: 30%;
       grid-template-columns: repeat(6, 1fr);  
       grid-template-rows: auto;  
       gap: 1rem;
+
     }
 
     .switcher {
@@ -297,7 +315,7 @@ section {
 /* this is code example for typography */
 
 p {
-    font-family: "happy-times-ng_regular";
+  font-family: "lettergothicstd";
   font-size: var(--text-base-size);
   margin-bottom: 1.5rem;
   line-height: 150%;
@@ -360,60 +378,60 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: var(--text-x6);
   line-height: 110%;
-  font-family: "abordage-regular";
+  font-family: "cliftontrial-regular";
   font-weight: 500;
 }
 
 h2 {
   font-size: var(--text-x5);
-  font-family: "abordage-regular";
+  font-family: "cliftontrial-regular";
   font-weight: 500;
   line-height: 110%;
 }
 
 h3 {
   font-size: var(--text-x4);
-  font-family: "abordage-regular";
+  font-family: "cliftontrial-regular";
   font-weight: 500;
   line-height: 120%;
 }
 
 h4 {
   font-size: var(--text-x3);
-  font-family: "abordage-regular";
+  font-family: "cliftontrial-regular";
   font-weight: 500;
   line-height: 120%;
 }
 
 h5 {
   font-size: var(--text-x2);
-  font-family: "abordage-regular";
+  font-family: "cliftontrial-regular";
   font-weight: 500;
   line-height: 120%;
 }
 
 h6 {
   font-size: var(--text-x1);
-  font-family: "abordage-regular";
+  font-family: "cliftontrial-regular";
   font-weight: 500;
   line-height: 120%;
 }
 
 .core-lab-sans-medium {
-    font-family: "abordage-regular";
+  font-family: "cliftontrial-regular";
   font-weight: 500;
   line-height: 100%;
 
 }
 
 .core-lab-sans {
-    font-family: "abordage-regular";
+  font-family: "cliftontrial-regular";
   font-weight: 300;
   line-height: 100%;
 }
 
 .core-lab-serif {
-    font-family: "happy-times-ng_regular";
+  font-family: "lettergothicstd";
   font-weight: 900;
   line-height: 100%;
 }
