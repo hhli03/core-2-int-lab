@@ -75,11 +75,15 @@ padding:0.6vw;
 
 .snacklistgrid{
 display:grid;
-grid-template-rows: auto;
 text-align: left;
-gap:5vw;
+gap:1fr;
 margin:1vw;
-grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: 1.5fr 1.5fr 1.5fr;
+grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+color:#104877;
+font-family: "neuzeitgro-reg";
+font-size:1.32vw;
+line-height:1.8vw;
 }
 
 a:link{
@@ -241,3 +245,131 @@ grid-template-columns: auto auto auto;
     color:#E16D31;
 }
 
+@media screen and (max-width: 1024px) {
+  .photogrid{
+grid-template-columns: auto auto;
+    grid-template-rows: repeat auto-fill;
+    align-items: center;
+    gap:5vw;
+    padding:2vw;
+  }
+
+
+
+#snackimg1 img{
+    width:30vw;
+  }
+
+  #snackimg2 img{
+    width:30vw;
+  }
+
+
+  #snackimg3 img{
+    width:30vw;
+  }
+
+  #snackimg4 img{
+    width:30vw;
+  }
+  #snackimg5 img{
+    width:30vw;
+  }
+  #snackimg6 img{
+    width:30vw;
+  }
+  #snackimg7 img{
+    width:30vw;
+  }
+  #snackimg8 img{
+    width:30vw;
+  }
+  #snackimg9 img{
+    width:30vw;
+  }
+  #snackimg10 img{
+    width:30vw;
+  }
+
+  #snackimg11 img{
+    width:30vw;
+  }
+  #snackimg12 img{
+    width:30vw;
+  }
+  #snackimg13 img{
+    width:30vw;
+  }
+  #snackimg14 img{
+    width:30vw;
+  }
+  #snackimg15 img{
+    width:30vw;
+  }
+  #snackimg16 img{
+    width:30vw;
+  }
+  #snackimg17 img{
+    width:30vw;
+  }
+  #snackimg18 img{
+    width:30vw;
+  }
+  #snackimg19 img{
+    width:30vw;
+  }
+  #snackimg20 img{
+    width:30vw;
+  }
+
+  #snackimg21 img{
+    width:30vw;
+  }
+
+  #snackimg22 img{
+    width:30vw;
+  }
+
+  #snackimg23 img{
+    width:30vw;
+  }
+
+  #snackimg24 img{
+    width:30vw;
+  }
+
+  #snackimg25 img{
+    width:30vw;
+  }
+  #snackimg26 img{
+    width:30vw;
+  }
+  #snackimg27 img{
+    width:30vw;
+  }
+  #snackimg28 img{
+    width:30vw;
+  }
+  #snackimg29 img{
+    width:30vw;
+  }
+  #snackimg30 img{
+    width:30vw;
+  }
+
+
+  .snacklistgrid{
+    display:grid;
+    text-align: left;
+    gap:1.5fr;
+    margin:1.5vw;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    color:#104877;
+    font-family: "neuzeitgro-reg";
+    font-size:1.4vw;
+    line-height:1.8vw;
+    }
+
+}

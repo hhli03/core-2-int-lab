@@ -59,7 +59,7 @@
   }
 
 .snackimg img{
-  height:30vw;
+  height:27vw;
   margin:1vw;
 }
 
@@ -192,3 +192,41 @@ a:visited{
     text-decoration: none;
     color:#104877;
   }
+
+  @media screen and (max-width: 1024px) {
+    .grid{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      gap:0vw;
+      margin:2vw;
+
+    }
+
+
+  #leftbox{
+    border:#E16D31 0.2vw solid;
+    border-radius: 2vw;
+    height:100%;
+    justify-content: center;
+    display:grid;
+    margin:0vw;
+  }
+
+  #rightbox {
+    margin:0.5vw;
+    padding:0vw;
+
+    padding:2vw;
+
+    overflow-y: none;
+    
+}
+
+
+.snackimg img{
+  height:50vw;
+  margin:1vw;
+}
+
+  }  
