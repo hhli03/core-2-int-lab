@@ -1,0 +1,62 @@
+/* I always reset all the html elements */
+
+@font-face {
+    font-family: "cliftontrial-regular.otf";
+    src: url(cliftontrial-regular.otf);
+}
+
+@font-face {
+    font-family: "lettergothicstd";
+    src: url(lettergothicstd.otf);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    font-family: "lettergothicstd";
+	min-height: 100vh;
+	color: black;
+    font-size:1.15vw;
+}
+
+table{
+	width:  70vw;
+	margin: 2vw auto;
+}
+
+table th{
+	padding: 1.2vw 0;
+	background-color: white;
+
+    color:#F28C9A;
+
+    font-family: "lettergothicstd";
+    font-size:1.2vw;
+}
+
+table td{
+	padding: 1vw;
+	width: 10vw;
+	text-align: center;
+	background-color: #fff;
+}
+table th:hover{
+    color: #F28C9A;
+	background-color: #F9F1EF;
+    border-radius: 1.2vw;
+}
+
+table td:hover{
+    color:#177AA7;
+}
+
+table img{
+	width:  8vw;
+}
+
+
+
