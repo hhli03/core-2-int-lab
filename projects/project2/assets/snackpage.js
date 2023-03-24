@@ -6,7 +6,7 @@ let container = document.getElementById("container");
 // see Python instructions here:
 // https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_python
 
-fetch('./snacks.json')
+fetch('../assets/snacks.json')
   .then(response => response.json())
   .then(data => {
     console.log(data);
