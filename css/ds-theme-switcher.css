@@ -382,6 +382,10 @@ h1 {
   font-weight: 500;
 }
 
+h1:hover{
+  color:#F28C9A;
+}
+
 h2 {
   font-size: var(--text-x5);
   font-family: "cliftontrial-regular";
@@ -389,6 +393,9 @@ h2 {
   line-height: 110%;
 }
 
+h2:hover{
+  color:#F4520F;
+}
 h3 {
   font-size: var(--text-x4);
   font-family: "cliftontrial-regular";
@@ -396,6 +403,9 @@ h3 {
   line-height: 120%;
 }
 
+h3:hover{
+  color:#ECC31D;
+}
 h4 {
   font-size: var(--text-x3);
   font-family: "cliftontrial-regular";
@@ -403,11 +413,19 @@ h4 {
   line-height: 120%;
 }
 
+h4:hover{
+  color:#177AA7;
+}
+
 h5 {
   font-size: var(--text-x2);
   font-family: "cliftontrial-regular";
   font-weight: 500;
   line-height: 120%;
+}
+
+h5:hover{
+  color:#2D7B1C;
 }
 
 h6 {
