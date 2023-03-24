@@ -6,7 +6,7 @@ let container = document.getElementById("container");
 // see Python instructions here:
 // https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_python
 
-fetch('snacks.json')
+fetch('../assets/snacks.json')
   .then(response => response.json())
   .then(data => {
     console.log(data);
@@ -16,13 +16,17 @@ fetch('snacks.json')
 
 
 function processSnacks( data ){
-    let key = document.querySelector('body').dataset.snackid;
+    let key = parseInt( document.querySelector('body').dataset.snackid );
     console.log(key);
 
   data.forEach( function(item, index){
-    console.log(item, index);
+    // console.log(item, index);
 
     if ( item.id == key ){
+
+        let nextno = key+1;
+        console.log('NEXT PAGE NUMBER', nextno);
+
         let newItem = document.createElement("div");
         // newItem.style.cssText = `font-size: ${usage}px`;
         newItem.classList.add('grid');
@@ -45,7 +49,7 @@ function processSnacks( data ){
         </div>
 
         <div id="buttongrid">
-        <div class="nextbutton"><a href="/snack2/">NEXT</a></div>
+        <div class="nextbutton"><a href="../snack${nextno}/">NEXT</a></div>
         <div class="homebutton"><a href="../index.html">HOME</div>
         </div>
         </div>`;
