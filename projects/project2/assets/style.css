@@ -204,7 +204,7 @@ a:hover {
       grid-template-columns: auto;
       grid-template-rows: auto auto;
       gap:6vw;
-      margin:3vw;
+      margin:4vw;
 
     }
 
@@ -215,20 +215,22 @@ a:hover {
     height:100%;
     justify-content: center;
     display:grid;
+    padding-left:1.6vw;
+    padding-right:1.6vw;
     margin:0vw;
   }
 
   #rightbox {
-    margin:0.2vw;
-    padding:2vw;
+    margin:0vw;
+    padding:0vw;
     overflow-y: hidden;
     height:100%;
     
 }
 
 .snackimg img{
-  height:60vw;
-  margin:1vw;
+  height:65vw;
+  margin:2.5vw;
 }
 
 .snackno{
@@ -337,6 +339,11 @@ color:#104877;
   width:10vw;
 }
 
+.nextbutton:hover{
+  background:#E16D31;
+  color:#F3EAE1;
+}
+
 .homebutton{
   border:#E16D31 0.25vw solid;
   padding-top:0.4vw;
@@ -345,6 +352,13 @@ color:#104877;
   font-size:2.76vw;
   width:10vw;
 }
+
+
+.homebutton:hover{
+  background:#E16D31;
+  color:#F3EAE1;
+}
+
 
 .label{
   color:#E16D31;

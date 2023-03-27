@@ -52,8 +52,8 @@ function processSnacks( data ){
         </div>
 
         <div id="buttongrid">
-        <a href="../snack${nextno}/"><div class="nextbutton">NEXT</div></a>
-        <a href="../index.html"><div class="homebutton">HOME</div></a>
+        <div class="nextbutton"><a href="../snack${nextno}/">NEXT</a></div>
+        <div class="homebutton"><a href="../index.html">HOME</a></div>
         </div>
         </div>`;
 
