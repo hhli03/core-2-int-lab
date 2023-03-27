@@ -356,7 +356,7 @@ grid-template-columns: auto;
     gap:2vw;
     margin:3vw;
     margin-bottom:1.5vw;
-    border:#E16D31 0.3vw solid;
+    border:#E16D31 0.32vw solid;
     border-radius: 2vw;
     height:100%;
     padding-bottom:4vw;
@@ -403,14 +403,14 @@ font-weight: 400;
 font-style: normal;
 font-size:7.36vw;
 color:#E16D31;
-padding:0.7vw;
+padding:0.5vw;
 }
 
 #english-title{
   color:#104877;
   font-family: "compagnon-roman";
   font-size:5.52vw;
-padding:0.7vw;
+padding:0.5vw;
 }
 
 #snackimg1 img{
