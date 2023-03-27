@@ -53,7 +53,7 @@ body{
 
 .child-containter{
     display:grid;
-    text-align: center;
+    text-align: left;
     justify-content: center;
     align-items: center;
 }
@@ -343,12 +343,75 @@ grid-template-columns: auto auto auto;
 grid-template-columns: auto;
     grid-template-rows: repeat auto-fill;
     align-items: center;
-    gap:2vw;
-    padding:1vw;
+    gap:6vw;
+    margin:2.5vw;
     justify-items: center;
   }
 
+  #parent-container{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap:2vw;
+    margin:3vw;
+    margin-bottom:1.5vw;
+    border:#E16D31 0.3vw solid;
+    border-radius: 2vw;
+    height:100%;
+    padding-bottom:4vw;
+  }
 
+  .about{
+    background:#E16D31;
+    width:11vw;
+    height:3.2vw;
+    font-size:3vw;
+    color:#F3EAE1;
+    padding:0.5vw;
+    justify-self: center;
+    font-family: "neuzeitgro-reg";
+}
+
+.about:hover{
+  background:#E16D31;
+  color:#F3EAE1;
+  border-bottom-left-radius: 1.2vw;
+  border-bottom-right-radius: 1.2vw;
+    transition: 0.3s;
+}
+
+.child-containter{
+  display:grid;
+  text-align: left;
+  justify-content:left;
+  align-items:flex-end;
+  gap:8vw;
+  margin:10vw;
+}
+
+#cantonese-title{
+  font-family: "neuzeitgro-reg";
+  font-size:2.875vw;
+  color:#E16D31;
+  padding-top:2vw;
+}
+
+#chinese-title{
+font-family: "source-han-sans-traditional", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size:7.36vw;
+color:#E16D31;
+padding:0.7vw;
+}
+
+#english-title{
+  color:#104877;
+  font-family: "compagnon-roman";
+  font-size:5.52vw;
+padding:0.7vw;
+}
 
 #snackimg1 img{
     width:60vw;
@@ -364,108 +427,106 @@ grid-template-columns: auto;
   }
 
   #snackimg4 img{
-    width:50vw;
+    width:60vw;
   }
   #snackimg5 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg6 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg7 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg8 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg9 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg10 img{
-    width:30vw;
+    width:60vw;
   }
 
   #snackimg11 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg12 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg13 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg14 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg15 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg16 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg17 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg18 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg19 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg20 img{
-    width:30vw;
+    width:60vw;
   }
 
   #snackimg21 img{
-    width:30vw;
+    width:60vw;
   }
 
   #snackimg22 img{
-    width:30vw;
+    width:60vw;
   }
 
   #snackimg23 img{
-    width:30vw;
+    width:60vw;
   }
 
   #snackimg24 img{
-    width:30vw;
+    width:60vw;
   }
 
   #snackimg25 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg26 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg27 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg28 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg29 img{
-    width:30vw;
+    width:60vw;
   }
   #snackimg30 img{
-    width:30vw;
+    width:60vw;
   }
 
 
   .snacklistgrid{
     display:block;
-    grid-template-rows: auto;
     text-align: left;
-    gap:5vw;
-    margin:1vw;
+    margin:3vw;
     justify-items: center;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
     }
 
     .snacklistgridmobile{
       display:grid;
       justify-items: center;
+      margin:1vw;
     }
   
 
@@ -473,7 +534,49 @@ grid-template-columns: auto;
       color:#104877;
       font-family: "neuzeitgro-reg";
       font-size:3vw;
-      line-height:3.6vw;
+      line-height:3.7vw;
   }
+  .name{
+    color:#E16D31;
+    font-family: "neuzeitgro-reg";
+    font-size:3vw;
+  text-align:right;
+  padding-right:3.5vw;
+  padding-bottom:1vw;
+  }
+
+  .number{
+    color:#E16D31;
+    font-family: "neuzeitgro-reg";
+    border: solid #E16D31 0.25vw;
+    border-radius: 50%;
+    width:2.8vw;
+    height:2.8vw;
+    font-size:2.53vw;
+    padding:0.3vw;
+  }
+
+  .line{
+    height: 0.3vw;
+    background:#E16D31;;
+    }
+  
+  .active{
+      color:#E16D31;
+  }
+  
+  
+  .backtotop{
+    font-family: "neuzeitgro-reg";
+    color:#E16D31;
+      border:#E16D31 0.28vw solid;
+      padding-top:0.6vw;
+      padding-bottom:0.25vw;
+      border-radius:2.5vw;
+      font-size:3vw;
+    width:23.5vw;
+    justify-self: center;
+  }
+  
 }
 
