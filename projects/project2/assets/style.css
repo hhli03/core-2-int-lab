@@ -31,13 +31,14 @@
     height:91%;
     justify-content: center;
     display:grid;
-    padding-bottom: 2.4vw;
+    padding-bottom: 2.3vw;
+
   }
 
 .snackno{
     background:#E16D31;
     width:6vw;
-    height:1.5vw;
+    height:1.4vw;
     font-size:1.3vw;
     color:#F3EAE1;
     padding:0.3vw;
@@ -66,7 +67,7 @@
 
 .snacknameeng{
   font-family: "compagnon-roman";
-  font-size:2.6vw;
+  font-size:2.4vw;
   color: #104877;
 }
 
@@ -74,14 +75,14 @@
 .cantonesepronunciation{
   font-family: "neuzeitgro-reg";
   color: #E16D31;
-  font-size:1.3vw;
+  font-size:1.2vw;
 }
 
 .snacknamechi{
   font-family: "source-han-sans-traditional", sans-serif;
 font-weight: 400;
 font-style: normal;
-font-size:2.8vw;
+font-size:2.7vw;
 color:#104877;
 }
 
@@ -89,8 +90,8 @@ color:#104877;
   font-family: "neuzeitgro-reg";
   color:#104877;
   text-align: left;
-  font-size:1.4vw;
-  line-height:1.9vw;
+  font-size:1.3vw;
+  line-height:1.7vw;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -100,35 +101,35 @@ color:#104877;
 .brand{
   font-family: "neuzeitgro-reg";
   color:#104877;
-  font-size:1.4vw;
+  font-size:1.3vw;
   text-align: left;
 }
 
 .category{
   font-family: "neuzeitgro-reg";
   color:#104877;
-  font-size:1.4vw;
+  font-size:1.3vw;
   text-align: left;
 }
 
 .origin{
   font-family: "neuzeitgro-reg";
   color:#104877;
-  font-size:1.4vw;
+  font-size:1.3vw;
   text-align: left;
 }
 
 .flavors{
   font-family: "neuzeitgro-reg";
   color:#104877;
-  font-size:1.4vw;
+  font-size:1.3vw;
   text-align: left;
 }
 
 .personalrating{
   font-family: "neuzeitgro-reg";
   color:#104877;
-  font-size:1.4vw;
+  font-size:1.3vw;
   text-align: left;
 }
 
@@ -169,6 +170,7 @@ color:#104877;
 .label{
   color:#E16D31;
   font-family: "neuzeitgro-reg";
+  font-size:1.3vw;
 }
 
 a:link{

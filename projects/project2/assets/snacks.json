@@ -19,7 +19,7 @@
   {
     "id": 2,
     "snackno": "SNACK 2",
-    "snacknameeng": "DAHFA Fish snack",
+    "snacknameeng": "DAHFA Fish Snack",
     "snacknamechi": "大發鱈魚香絲",
     "cantonesepronunciation": "daai6 faat3 syut3 jyu2 hoeng1 si1",
     "origin": "Malaysia",
@@ -172,7 +172,7 @@
   {
     "id": 11,
     "snackno": "SNACK 11",
-    "snacknameeng": "CALBEE GRILL A CORN",
+    "snacknameeng": "CALBEE Grill A Corn",
     "snacknamechi": "卡樂B粟一燒",
     "cantonesepronunciation": "kaa1 lok6 B suk1 jat1 siu1",
     "origin": "Japan",
@@ -189,7 +189,7 @@
   {
     "id": 12,
     "snackno": "SNACK 12",
-    "snacknameeng": "BRILLIANT Indonesia Shrimp Chips",
+    "snacknameeng": "BRILLIANT Shrimp Chips",
     "snacknamechi": "明輝蝦片",
     "cantonesepronunciation": "ming4 fai1 haa1 pin3",
     "origin": "Indonesia",
@@ -291,7 +291,7 @@
   {
     "id": 18,
     "snackno": "SNACK 18",
-    "snacknameeng": "Haw flakes",
+    "snacknameeng": "Haw Flakes",
     "snacknamechi": "山楂餅",
     "cantonesepronunciation": "saan1 caa4 beng2",
     "origin": "China",
@@ -470,7 +470,7 @@
     "netweight": "210g, 14g each",
     "category": "Candy",
     "priceusd": "$14.99",
-    "flavors": "Strawberry, Blue Raspberry, Blue Raspberry Watermelon, Sour Cherry, Watermelon and Berry Blast.",
+    "flavors": "Strawberry, Blue Raspberry, Watermelon, Sour Cherry, Watermelon, Berry Blast",
     "brand": "Ring Pop",
     "personalrating": "★★★",
     "story": "I remember the first time I tried a Ring Pop. When I was young, my mom had brought me to the local convenience store. I was browsing through the candy section, and my eyes landed on a bright, colorful display of Ring Pops. I was immediately drawn to them and begged my mom to buy me one.\n\nShe reluctantly agreed, and I eagerly tore open the packaging to reveal the candy ring. The Ring Pop was a plastic ring with a large, translucent gem on top, which was actually a hard candy that you could suck on. The candy came in a variety of flavors, including strawberry, blue raspberry, and watermelon.\n\nI was completely captivated by the Ring Pop. I loved how I could wear it on my finger like a piece of jewelry and how it slowly dissolved in my mouth, leaving behind a sweet and fruity taste. It quickly became my favorite snack, and I would ask my mom to buy me one every time we went to the store."
@@ -478,7 +478,7 @@
   {
     "id": 29,
     "snackno": "SNACK 29",
-    "snacknameeng": "WHITE RABBIT milk candy",
+    "snacknameeng": "WHITE RABBIT Milk Candy",
     "snacknamechi": "大白兔奶糖",
     "cantonesepronunciation": "daai6 baak6 tou3 naai5 tong4",
     "origin": "China",

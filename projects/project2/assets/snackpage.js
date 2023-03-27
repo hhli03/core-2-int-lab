@@ -22,11 +22,14 @@ function processSnacks( data ){
   data.forEach( function(item, index){
     // console.log(item, index);
 
+ 
+
     if ( item.id == key ){
 
         let nextno = key+1;
         console.log('NEXT PAGE NUMBER', nextno);
 
+       
         let newItem = document.createElement("div");
         // newItem.style.cssText = `font-size: ${usage}px`;
         newItem.classList.add('grid');
@@ -56,6 +59,8 @@ function processSnacks( data ){
 
         container.appendChild(newItem);    
     }
+    
   });
+  
 }
 
