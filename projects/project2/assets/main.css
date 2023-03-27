@@ -43,6 +43,14 @@ body{
     font-family: "neuzeitgro-reg";
 }
 
+.about:hover{
+  background:#E16D31;
+  color:#F3EAE1;
+  border-bottom-left-radius: 0.8vw;
+  border-bottom-right-radius: 0.8vw;
+    transition: 0.3s;
+}
+
 .child-containter{
     display:grid;
     text-align: center;
@@ -113,14 +121,12 @@ grid-template-columns: 1fr 1fr 1fr;
 
 
 #aboutpage:hover {
-  color:#104877;
+  color:#F3EAE1;
   text-decoration: none;
-
-
 }
 
 #aboutpage:active {
-  color:#104877;
+  color:#F3EAE1;
   text-decoration: none;
 
 
@@ -143,14 +149,13 @@ grid-template-columns: 1fr 1fr 1fr;
 
 
 #red:hover {
-  color:#E16D31;
+  color:#F3EAE1;
   text-decoration: none;
-
   font-family: "neuzeitgro-reg";
 }
 
 #red:active {
-  color:#E16D31;
+  color:#F3EAE1;
   text-decoration: none;
   font-family: "neuzeitgro-reg";
 }
@@ -327,6 +332,11 @@ grid-template-columns: auto auto auto;
   justify-self: center;
 }
 
+.backtotop:hover{
+  background-color: #E16D31;
+  color:#F3EAE1;
+  transition: 0.3s;
+}
 
 @media screen and (max-width: 1024px) {
   .photogrid{

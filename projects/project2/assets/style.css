@@ -90,7 +90,7 @@ color:#104877;
   font-family: "neuzeitgro-reg";
   color:#104877;
   text-align: left;
-  font-size:1.3vw;
+  font-size:1.4vw;
   line-height:1.7vw;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -101,35 +101,35 @@ color:#104877;
 .brand{
   font-family: "neuzeitgro-reg";
   color:#104877;
-  font-size:1.3vw;
+  font-size:1.4vw;
   text-align: left;
 }
 
 .category{
   font-family: "neuzeitgro-reg";
   color:#104877;
-  font-size:1.3vw;
+  font-size:1.4vw;
   text-align: left;
 }
 
 .origin{
   font-family: "neuzeitgro-reg";
   color:#104877;
-  font-size:1.3vw;
+  font-size:1.4vw;
   text-align: left;
 }
 
 .flavors{
   font-family: "neuzeitgro-reg";
   color:#104877;
-  font-size:1.3vw;
+  font-size:1.4vw;
   text-align: left;
 }
 
 .personalrating{
   font-family: "neuzeitgro-reg";
   color:#104877;
-  font-size:1.3vw;
+  font-size:1.4vw;
   text-align: left;
 }
 
@@ -152,7 +152,7 @@ color:#104877;
 }
 
 .nextbutton{
-  border:#E16D31 0.1vw solid;
+  border:#E16D31 0.15vw solid;
   padding-top:0.4vw;
   padding-bottom:0.2vw;
   border-radius:2vw;
@@ -160,7 +160,7 @@ color:#104877;
 }
 
 .homebutton{
-  border:#E16D31 0.1vw solid;
+  border:#E16D31 0.15vw solid;
   padding-top:0.4vw;
   padding-bottom:0.2vw;
   border-radius:2vw;
@@ -170,7 +170,7 @@ color:#104877;
 .label{
   color:#E16D31;
   font-family: "neuzeitgro-reg";
-  font-size:1.3vw;
+  font-size:1.4vw;
 }
 
 a:link{
@@ -187,12 +187,18 @@ a:visited{
 
   a:hover {
     text-decoration: none;
-    color:#104877;
+    background:#E16D31;
+    color:#F3EAE1;
+    border-radius:2vw;
+     
   }
 
   a:active {
     text-decoration: none;
-    color:#104877;
+    background:#E16D31;
+    color:#F3EAE1;
+    border-radius:2vw;
+
   }
 
   @media screen and (max-width: 1024px) {
@@ -224,6 +230,7 @@ a:visited{
     overflow-y: none;
     
 }
+
 
 
 .snackimg img{

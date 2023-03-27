@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "neuzeitgro-reg";
+    src: url(neuzeitgro-reg.ttf);
+}
+
+@font-face {
+    font-family: "compagnon-roman";
+    src: url(compagnon-roman.otf);
+}
+
+@font-face {
+  font-family: "neuzeitgro-bol";
+  src: url(neuzeitgro-bol.ttf);
+}
+
+body{
+    background-color:#F3EAE1;
+}
+
+#parent-container{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items:flex-end;
+    gap:2vw;
+    margin:3vw;
+    margin-bottom:1.5vw;
+    border:#E16D31 0.2vw solid;
+    border-radius: 2vw;
+    height:100%;
+    padding-bottom:2vw;
+    padding-right:7vw;
+    padding-left:8vw;
+  }
+
+
+  .about{
+    background:#E16D31;
+    width:6vw;
+    height:1.5vw;
+    font-size:1.3vw;
+    color:#F3EAE1;
+    padding:0.3vw;
+    justify-self: center;
+    font-family: "neuzeitgro-reg";
+
+}
+
+.content{
+    color:#104877;
+    font-family: "compagnon-roman";
+    font-size:1.6vw;
+    text-align: left;
+    padding-top:1.5vw;
+    padding-bottom:0vw;
+
+}
+
+.homebutton{
+    border:#E16D31 0.15vw solid;
+    padding-top:0.4vw;
+    padding-bottom:0.2vw;
+    border-radius:2vw;
+    font-size:1.2vw;
+    font-family: "neuzeitgro-reg";
+    width:5vw;
+    justify-self:end;
+  }
+
+  a:link{
+    text-decoration:none;
+    color:#E16D31;
+    width:6vw;
+  }
+  
+  a:visited{
+      text-decoration: none;
+      color:#E16D31;
+      width:6vw;
+  }
+  
+  
+  
+    a:hover {
+      text-decoration: none;
+      color:#F3EAE1;
+      width:6vw;
+    }
+  
+    a:active {
+      text-decoration: none;
+      color:#F3EAE1;
+      width:6vw;
+    }
+
+    .homebutton:hover{
+        background-color: #E16D31;
+        color:#F3EAE1;
+        transition: 0.3s;
+    }
