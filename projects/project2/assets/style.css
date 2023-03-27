@@ -198,6 +198,19 @@ a:hover {
 
   }
 
+  .nextbutton:hover{
+    background:#E16D31;
+    color:#F3EAE1;
+  }
+  
+ 
+  
+  .homebutton:hover{
+    background:#E16D31;
+    color:#F3EAE1;
+  }
+  
+
   @media screen and (max-width: 1024px) {
     .grid{
       display: grid;
