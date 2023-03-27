@@ -203,14 +203,14 @@ a:hover {
       display: grid;
       grid-template-columns: auto;
       grid-template-rows: auto auto;
-      gap:0vw;
-      margin:2vw;
+      gap:6vw;
+      margin:3vw;
 
     }
 
 
   #leftbox{
-    border:#E16D31 0.2vw solid;
+    border:#E16D31 0.35vw solid;
     border-radius: 2vw;
     height:100%;
     justify-content: center;
@@ -219,19 +219,161 @@ a:hover {
   }
 
   #rightbox {
-    margin:0.5vw;
-    padding:0vw;
-
+    margin:0.2vw;
     padding:2vw;
-
-    overflow-y: none;
+    overflow-y: hidden;
+    height:100%;
     
 }
 
 .snackimg img{
-  height:50vw;
+  height:60vw;
   margin:1vw;
 }
 
+.snackno{
+  background:#E16D31;
+  color:#F3EAE1;
+  font-family: "neuzeitgro-reg";
+  justify-self: center;
+  margin-bottom:2vw;
+    width:14vw;
+    height:3.2vw;
+    font-size:3vw;
+    padding:0.5vw;
+}
+
+.smallcontainer{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:6vw;
+  margin:2vw;
+}
+.snacknameeng{
+  font-family: "compagnon-roman";
+  font-size:5.52vw;
+  color: #104877;
+}
+
+
+.cantonesepronunciation{
+  font-family: "neuzeitgro-reg";
+  color: #E16D31;
+  font-size:2.76vw;
+
+}
+
+.snacknamechi{
+  font-family: "source-han-sans-traditional", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size:6.21vw;
+color:#104877;
+}
+
+.story{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  text-align: left;
+  font-size:3.22vw;
+  line-height:3.7vw;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.brand{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  font-size:3.22vw;
+  text-align: left;
+}
+
+.category{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  font-size:3.22vw;
+  text-align: left;
+}
+
+.origin{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  font-size:3.22vw;
+  text-align: left;
+}
+
+.flavors{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  font-size:3.22vw;
+  text-align: left;
+}
+
+.personalrating{
+  font-family: "neuzeitgro-reg";
+  color:#104877;
+  font-size:3.22vw;
+  text-align: left;
+}
+
+#buttongrid{
+  display:grid;
+  grid-template-columns: 10vw 10vw;
+  color:#E16D31;
+  font-family: "neuzeitgro-reg";
+  gap:2vw;
+  justify-content: end;
+  margin:0.5vw;
+}
+
+.nextbutton{
+  border:#E16D31 0.25vw solid;
+  padding-top:0.4vw;
+  padding-bottom:0.2vw;
+  border-radius:2.2vw;
+  font-size:2.76vw;
+  width:10vw;
+}
+
+.homebutton{
+  border:#E16D31 0.25vw solid;
+  padding-top:0.4vw;
+  padding-bottom:0.2vw;
+  border-radius:2.2vw;
+  font-size:2.76vw;
+  width:10vw;
+}
+
+.label{
+  color:#E16D31;
+  font-family: "neuzeitgro-reg";
+  font-size:3.22vw;
+}
+
+a:link{
+  text-decoration:none;
+  color:#E16D31;
+}
+
+a:visited{
+    text-decoration: none;
+    color:#E16D31;
+}
+
+a:hover {
+    text-decoration: none;
+    background:#E16D31;
+    color:#F3EAE1;
+    border-radius:2.2vw;
   }
 
+  a:active {
+    text-decoration: none;
+    background:#E16D31;
+    color:#F3EAE1;
+    border-radius:2.2vw;
+
+  }
+  }
