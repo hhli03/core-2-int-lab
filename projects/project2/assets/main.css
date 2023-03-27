@@ -340,30 +340,31 @@ grid-template-columns: auto auto auto;
 
 @media screen and (max-width: 1024px) {
   .photogrid{
-grid-template-columns: auto auto;
+grid-template-columns: auto;
     grid-template-rows: repeat auto-fill;
     align-items: center;
-    gap:5vw;
-    padding:2vw;
+    gap:2vw;
+    padding:1vw;
+    justify-items: center;
   }
 
 
 
 #snackimg1 img{
-    width:30vw;
+    width:60vw;
   }
 
   #snackimg2 img{
-    width:30vw;
+    width:60vw;
   }
 
 
   #snackimg3 img{
-    width:30vw;
+    width:60vw;
   }
 
   #snackimg4 img{
-    width:30vw;
+    width:50vw;
   }
   #snackimg5 img{
     width:30vw;
@@ -457,10 +458,22 @@ grid-template-columns: auto auto;
     text-align: left;
     gap:5vw;
     margin:1vw;
+    justify-items: center;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .snacklistgrid{
+    .snacklistgridmobile{
       display:grid;
+      justify-items: center;
     }
+  
+
+    .snacknames{
+      color:#104877;
+      font-family: "neuzeitgro-reg";
+      font-size:3vw;
+      line-height:3.6vw;
+  }
 }
+
