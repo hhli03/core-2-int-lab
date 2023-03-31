@@ -1,10 +1,31 @@
+html {
+    font-family: 'Ubuntu Mono', monospace;
 
 
-.color1{
-    background:yellow;
-}
+  }
 
-#container{
+  body{
+    margin-top:3em;
+  }
+  
+
+  strong {
+    background-color: #fff;
+    color:#000;
+    padding: 0 3em;
+    margin-left:3em;
+    margin-right:3em;
+  }
+
+  .grid{
     display:grid;
-    
-}
+    gap:2em;
+grid-template-columns: auto;
+
+  }
+
+  color.Hexcode{
+    margin:10em;
+  }
+
+ 
