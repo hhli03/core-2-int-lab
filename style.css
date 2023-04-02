@@ -102,6 +102,10 @@ a:active { text-decoration: underline; }
     text-align: center;
   }
   
+  .container>div:nth-child(9){
+    background-color:#adb5f4;
+    text-align: center;
+  }
       #text1{
         color: #adb5f4;
         font-size: 1vw;

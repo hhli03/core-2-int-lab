@@ -1,0 +1,119 @@
+body{
+    background: white;
+    font-family: 'Jost', sans-serif;
+font-weight: 400;
+hyphens: auto;
+
+}
+
+h4{
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size:1rem;
+
+}
+
+p{
+    font-size:1rem;
+}
+h1{
+    font-size:2rem;
+}
+
+h2{
+    font-size:1.5rem;
+}
+
+p{
+    text-indent: 3rem;
+    line-height: 1.4;
+    hyphens: auto;
+    font-feature-settings: "onum" on;
+}
+h1 + p, h2 + p, h3 + p{
+    text-indent: 0;
+}
+h2, h3, h4{
+    margin-top: var(--pad);
+}
+
+section{
+    background: white;
+    margin: auto;
+    width: 600px;
+    padding: var(--pad);
+
+    box-sizing: border-box;
+}
+
+:root{
+  --GRAD: 0;
+  --wght: 485;
+  --pad: 2.5rem;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+em{
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+blockquote{
+    font-family: 'Jost', sans-serif;
+    font-size: 1.8rem;
+    margin-top: var(--pad);
+    margin-bottom: var(--pad);
+
+    line-height: 1.15;
+    text-indent: -0.4em;
+}
+
+.quotes{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+
+}
+
+.blockquotes{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+
+}
+ul{
+    padding-left: 2rem;
+}
+
+ul li{
+    list-style-type: none;
+    text-indent: -10px;
+    margin-bottom: 1em;
+}
+ul li:before{
+    content: "* ";
+}
+ul li:first-child{
+    margin-top: 1em;
+}
+
+sup{
+
+    margin-right: 3px;
+    font-size:0.8rem;
+}
+
+hr.solid {
+    border-top: 1.2px solid black;
+  }
+
+hr+p{
+    text-indent: 0;
+}
+
