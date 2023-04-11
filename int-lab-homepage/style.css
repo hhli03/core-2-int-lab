@@ -198,6 +198,17 @@ color:cornflowerblue;
     line-height: 0.8vw;
 
   }
+  .box{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+  
+  .box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 
   @media (min-width: 500px){
@@ -234,14 +245,3 @@ color:cornflowerblue;
     }
     }
 
-.box{
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-}
-
-.box1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}

@@ -22,7 +22,10 @@ html {
     justify-items: center;
     justify-content:center;
     text-align: center;
-  }
+      display: grid;
+      grid-template-columns: auto;
+    }
+    
   
   .container div:hover{
     border-radius:20%;
@@ -65,16 +68,23 @@ a:active { text-decoration: underline; }
   .container>div:nth-child(1){
     background-color:#adb5f4;
     text-align: center;
+      justify-content: center;
+      align-items: center;
+    
   }
   
   .container>div:nth-child(2){
     background-color:#ffcdc6;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   
   .container>div:nth-child(3){
     background-color:#adb5f4;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   
   .container>div:nth-child(4){
@@ -85,26 +95,43 @@ a:active { text-decoration: underline; }
   .container>div:nth-child(5){
     background-color:#feb58c;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .container>div:nth-child(6){
     background-color:#adb5f4;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .container>div:nth-child(7){
     background-color:#adb5f4;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .container>div:nth-child(8){
     background-color:#feb58c;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   
   .container>div:nth-child(9){
     background-color:#adb5f4;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container>div:nth-child(10){
+    background-color:#adb5f4;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
       #text1{
         color: #adb5f4;
@@ -164,6 +191,7 @@ a:active { text-decoration: underline; }
         display:grid;
         grid-template-columns:1fr;
         margin:2vw;
+        gap:2vw;
         justify-items: center;
         justify-content:center;
         text-align: center;
@@ -188,7 +216,8 @@ a:active { text-decoration: underline; }
         display:grid;
         grid-template-columns:1fr 1fr 1fr;
         margin:2vw;
-        column-gap:0vw;
-        row-gap:3vw;
+        gap:3vw;
     }
     }
+
+   

@@ -1,0 +1,91 @@
+
+   @font-face {
+    font-family: "sono";
+    font-weight: 200 800;
+    src: url(sonovariablefont.ttf);
+   }
+   
+   body{
+    font-family: "sono";
+animation: bgcolor 20s infinite;
+animation-direction: alternate;
+color:white;
+cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='45' height='54' viewport='0 0 100 100' style='fill:black;font-size:27px;'><text y='50%'>☁️</text></svg>") 16 0,auto; /*!emojicursor.app*/
+   }
+
+   @keyframes bgcolor {
+    0% {
+        background-color: #dfeef3
+    }
+    
+    30% {
+        background-color: #c5d9df
+    }
+    
+    60% {
+        background-color: #cee5f6
+    }
+    
+    90% {
+        background-color: #daf1fe
+    }
+    
+    100% {
+        background-color: #c5d6f0
+    }
+    }
+
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+    padding-top: 8vw;
+    padding-right:8.8vw;
+
+
+}
+
+.currenttemp{
+     text-transform: uppercase;
+       font-size: 2.5vw;
+       text-align: center;
+       line-height:5vw;
+   }
+
+   .city{
+    text-transform: uppercase;
+      font-size: 2.5vw;
+      text-align: center;
+      line-height:5vw;
+  }
+   
+   #temp, #feels{
+       display: inline;
+   }
+   
+   .highlight{
+     --wdth: 100;
+     --wght: 400;
+     --slnt: 0;
+     text-transform: lowercase;
+       font-size: 5.8vw;
+       line-height: .9;
+       letter-spacing: -0.08em;
+     font-variation-settings: 'wdth' var(--wdth), 'wght' var(--wght), 'slnt' var(--slnt);
+   }
+   
+   
+   
+   
+   
+   .cloud{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20vw;
+   }
+   
+   .cloud:hover{
+color: lightslategray;
+    transition:0.8s ease-in-out;
+   }
