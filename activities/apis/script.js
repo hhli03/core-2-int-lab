@@ -1,5 +1,5 @@
 
-fetch('http://api.openweathermap.org/data/2.5/weather?q=Hong Kong&appid=a0be2ca7d3101a5b3e8a3bbf580143f6&units=imperial')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Hong Kong&appid=a0be2ca7d3101a5b3e8a3bbf580143f6&units=imperial')
   .then(response => response.json())
   .then(data => {
     console.log(data);
