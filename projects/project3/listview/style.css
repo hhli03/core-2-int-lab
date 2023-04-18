@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "sonovariablefont";
+    src: url(../sonovariablefont.ttf);
+    font-weight: 200 800;
+}
+body{
+    background-color: #FCFBF6;
+    font-family: "sonovariablefont";
+    margin:1.5vw;
+}
+
+.navigationgrid{
+    display:grid;
+    grid-template-columns: 12vw 15vw 12vw 1fr;
+}
+
+#year{
+    font-family: "sonovariablefont";
+    font-size:1.2vw;
+}
+
+
+#rankby{
+    font-family: "sonovariablefont";
+    font-size:1.2vw;
+ 
+}
+
+#namegenerator{
+    font-family: "sonovariablefont";
+    font-size:1.2vw;
+    border:black 0.15vw solid;
+    padding-left:0.5vw;
+    padding-right:0.5vw;
+    padding-top:0.35vw;
+    padding-bottom:0.35vw;
+    border-radius: 2vw;
+    justify-self: end;
+}
+
+#reset{
+    font-family: "sonovariablefont";
+    font-size:1.2vw;
+    border:black 0.15vw solid;
+    padding-left:0.5vw;
+    padding-right:0.5vw;
+    padding-top:0.35vw;
+    padding-bottom:0.35vw;
+    border-radius: 2vw;
+    justify-self: start;
+
+}
+
+#button{
+    font-family: "sonovariablefont";
+    font-size:2.2vw;
+}
+
+.dropbtn{
+    font-family: "sonovariablefont";
+    font-size:1.2vw;
+      border: none;
+  cursor: pointer;
+  background-color:#FCFBF6;
+}
+
+
+
+.dropdown{
+    float: left;
+    position: relative;
+}
+
+.dropdown-content{
+display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  padding:1.5vw;
+  border-radius: 1.5vw;
+  margin-top: 2vw;
+  margin-left:1.5vw;
+
+  color:#FCFBF6;
+  min-width: 40px;
+  z-index: 1;
+  left: 0;
+  line-height:2.1vw;
+  font-family: "sonovariablefont";
+  font-size:1.2vw;
+  font-weight: 300;
+}
+
+.show {display:block;}
+
+
+.rankbydropbtn{
+    font-family: "sonovariablefont";
+    font-size:1.2vw;
+      border: none;
+  cursor: pointer;
+  background-color:#FCFBF6;
+}
+
+
+
+.rankbydropdown{
+    float: left;
+    position: relative;
+}
+
+.rankbydropdown-content{
+display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  padding:1.5vw;
+  border-radius: 1.5vw;
+  margin-top: 2vw;
+  margin-left:13.5vw;
+  color:#FCFBF6;
+  min-width: 160px;
+  z-index: 1;
+  left: 0;
+  line-height:2vw;
+  font-family: "sonovariablefont";
+  font-size:1.2vw;
+  font-weight: 300;
+}
+
+.rankbyshow {display:block;}
