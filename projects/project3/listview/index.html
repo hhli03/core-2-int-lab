@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="navigationgrid">
-        <div id="year">Year<button onclick="myFunction()" class="dropbtn">▼</button></div>
+        <div id="year">Year<button onclick="toggleDropdown()" class="dropbtn">▼</button></div>
         <div id="myDropdown" class="dropdown-content">
             2011<br>
             2012<br>
@@ -23,16 +23,16 @@
             2019
         </div>
 
-        <div id="rankby">Rank By<button onclick="myFunction()" class="rankbydropbtn">▼</button></div>
+        <div id="rankby">Rank By<button onclick="toggleRankByDropdown()" class="rankbydropbtn">▼</button></div>
         <div id="rankbymyDropdown" class="rankbydropdown-content">
             Popularity<br>
             First Alphabet
         </div>
         
         <div id="reset">Reset</div>
-        <div id="namegenerator">Name Generator</div>
+        <div id="namegenerator"><a href="../index.html">Name Generator</a></div>
         </div>
 
-        <div class="namelist"></div>
+        <div id="names-container"></div>
 </body>
 </html>

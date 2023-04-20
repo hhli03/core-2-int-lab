@@ -38,6 +38,16 @@ body{
     justify-self: end;
 }
 
+#namegenerator:active {
+  background-color: black;
+  color:#F3EAE1;
+}
+
+#namegenerator:hover{
+  background-color: black;
+  color:#F3EAE1; 
+}
+
 #reset{
     font-family: "sonovariablefont";
     font-size:1.2vw;
@@ -127,3 +137,29 @@ display: none;
 }
 
 .rankbyshow {display:block;}
+
+a:link{
+    text-decoration: none;
+    color:black;
+  }
+  
+a:visited{
+    text-decoration: none;
+    color:black;
+  }
+  
+a:hover {
+    color:#F3EAE1;
+    background:black;
+    text-decoration: none;
+  }
+  
+a:active {
+    color:#F3EAE1;
+    background:black;
+    text-decoration: none;
+  }
+
+  #names-container{
+  color:red;
+  }
