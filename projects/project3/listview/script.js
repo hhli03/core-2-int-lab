@@ -3,8 +3,40 @@ function toggleDropdown() {
 }
 
 function toggleRankByDropdown() {
-  document.getElementById("rankbymyDropdown").classList.toggle("rankbyshow");
+  const rankbyDropdown = document.getElementById("rankbymyDropdown");
+  rankbyDropdown.classList.toggle("rankbyshow");
+
+  if (rankbyDropdown.classList.contains('rankbyshow')) {
+    // Add an event listener to the "Alphabetical Order" option
+    rankbyDropdown.children[1].addEventListener('click', () => {
+      const names = document.querySelectorAll('.names');
+      const sortedNames = Array.from(names).sort((a, b) => a.textContent.localeCompare(b.textContent));
+      namesContainer.innerHTML = ''; // clear the names container
+      sortedNames.forEach(name => namesContainer.appendChild(name));
+    });
+    
+    
+  } else {
+    // Remove the event listener when the dropdown is closed
+    rankbyDropdown.children[1].removeEventListener('click');
+  }
+  if (rankbyDropdown.classList.contains('rankbyshow')) {
+    // Add an event listener to the "Popularity" option
+    rankbyDropdown.children[0].addEventListener('click', () => {
+      const names = document.querySelectorAll('.names');
+      const sortedNames = Array.from(names).sort((a, b) => b.style.getPropertyValue('--wght') - a.style.getPropertyValue('--wght'));
+      namesContainer.innerHTML = ''; // clear the names container
+      sortedNames.forEach(name => namesContainer.appendChild(name));
+    });
+  } else {
+    // Remove the event listener when the dropdown is closed
+    rankbyDropdown.children[0].removeEventListener('click');
+  }
+  
 }
+
+
+
 
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -28,21 +60,48 @@ window.onclick = function(event) {
   }
 }
 
+
 function getColorForEthnicity(ethcty) {
   switch (ethcty) {
     case 'HISPANIC':
       return '#FAD281';
     case 'BLACK NON HISPANIC':
       return '#F08584'; 
+      case 'BLACK NON HISP':
+        return '#F08584'; 
     case 'ASIAN AND PACIFIC ISLANDER':
+      return '#94CFB7';
+      case 'ASIAN AND PACI':
       return '#94CFB7';
     case 'WHITE NON HISPANIC':
       return '#B0B8D7'; 
+      case 'WHITE NON HISP':
+        return '#B0B8D7'; 
     default:
       return '#808080'; // gray
   }
 }
+
+const rankbyOptions = document.querySelectorAll('.rankby-option');
+
+
+rankbyOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    const rankby = option.getAttribute('data-rankby');
+    if (rankby === 'alphabetical') {
+      const nameElements = Array.from(namesContainer.children);
+      nameElements.sort((a, b) => a.textContent.localeCompare(b.textContent));
+      nameElements.forEach(nameElement => namesContainer.appendChild(nameElement));
+    }
+  });
+});
+
+// Note: This code assumes that the "Popularity" option is selected by default and the names are already sorted by popularity.
+
+
 const namesContainer = document.getElementById('names-container');
+
+
 
 function processBabynameData(data){
   data.sort((a, b) => b.cnt - a.cnt);
@@ -72,11 +131,21 @@ function processBabynameData(data){
       nameElement.style.color = hoverColor;
     });
 
+    
+
     // Add a mouseout event listener to change the color back to the original color
     nameElement.addEventListener('mouseout', () => {
       nameElement.style.color = '#000000';
     });
 
+      // Check if the name needs to be transformed
+      if (babyname.toLowerCase() !== babyname) {
+        // Transform the name to be lowercase with the first letter capitalized
+        const transformedName = babyname.charAt(0).toUpperCase() + babyname.slice(1).toLowerCase();
+        nameElement.textContent = transformedName;
+      }
+
+      
     return nameElement;
   });
 
@@ -90,9 +159,65 @@ function displayNames(nameElements) {
     namesContainer.appendChild(nameElement);
   }
 }
+const searchButton = document.getElementById('search-button');
+const searchInput = document.getElementById('search-input');
 
-function fetchNames(){
-  fetch('https://data.cityofnewyork.us/resource/25th-nujf.json?brth_yr=2019')
+
+// Define colors for each ethnicity
+const ethnicityColors = {
+  'HISPANIC': '#FAD281', // Yellow
+  'BLACK NON HISPANIC': '#F08584', // Black
+  'BLACK NON HISP': '#F08584', // Orange
+  'ASIAN AND PACIFIC ISLANDER': '#94CFB7', // Blue
+  'ASIAN AND PACI': '#94CFB7', // Grey
+  'WHITE NON HISPANIC': '#B0B8D7', // Grey
+  'WHITE NON HISP': '#B0B8D7' // Grey
+};
+
+
+
+// Function to perform the search
+function performSearch() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const names = document.querySelectorAll('.names');
+  let nameFound = false;
+  for (let i = 0; i < names.length; i++) {
+    const nameText = names[i].textContent.toLowerCase();
+    if (nameText === searchTerm) {
+      nameFound = true;
+      // Get the ethnicity of the name
+      const ethnicity = names[i].getAttribute('data-ethnicity');
+      // Get the corresponding color for the ethnicity
+      const color = ethnicityColors[ethnicity];
+      names[i].style.color = color; // Change the color to the corresponding color for the ethnicity
+      names[i].scrollIntoView(); // Scroll to the name
+      break; // Stop looping as soon as the first occurrence of the name is found
+    } else {
+      names[i].style.color = '#000000'; // Change the color back to black if the name is not found
+    }
+  }
+  if (!nameFound) {
+    searchInput.value = 'Name not found'; // Set the input value to 'Name not found' if the name is not found
+  } else {
+    searchInput.value = ''; // Clear the input value if the name is found
+  }
+}
+
+// Event listener for the search button
+searchButton.addEventListener('click', performSearch);
+
+// Event listener for the input field
+searchInput.addEventListener('keydown', event => {
+  if (event.keyCode === 13) { // Check if the pressed key is the 'enter' key
+    performSearch(); // Trigger the search function
+  }
+});
+
+
+
+
+function fetchNames(year){
+  fetch('https://data.cityofnewyork.us/resource/25th-nujf.json?brth_yr='+year)
     .then(response => response.json())
     .then(data => {
       processBabynameData(data);
@@ -100,4 +225,16 @@ function fetchNames(){
     .catch(error => console.error(error));
 }
 
-fetchNames();
+fetchNames(2019);
+
+
+
+// get the year
+let options = document.querySelectorAll('.year');
+options.forEach(option => {
+  option.addEventListener('click', function(event){
+    let selected_year = event.target.dataset.year;
+    fetchNames(selected_year);
+  });
+});
+

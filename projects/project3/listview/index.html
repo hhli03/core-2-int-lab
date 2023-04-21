@@ -12,28 +12,32 @@
     <div class="navigationgrid">
         <div id="year">Year<button onclick="toggleDropdown()" class="dropbtn">▼</button></div>
         <div id="myDropdown" class="dropdown-content">
-            <a data-year="2011">2011</a><br>
-            <a data-year="2012">2012</a><br>
-            <a data-year="2013">2013</a><br>
-            <a data-year="2014">2014</a><br>
-            <a data-year="2015">2015</a><br>
-            <a data-year="2016">2016</a><br>
-            <a data-year="2017">2017</a><br>
-            <a data-year="2018">2018</a><br>
-            <a data-year="2019">2019</a>
+            <a class="year" data-year="2011">2011</a><br>
+            <a class="year" data-year="2012">2012</a><br>
+            <a class="year" data-year="2013">2013</a><br>
+            <a class="year" data-year="2014">2014</a><br>
+            <a class="year" data-year="2015">2015</a><br>
+            <a class="year" data-year="2016">2016</a><br>
+            <a class="year" data-year="2017">2017</a><br>
+            <a class="year" data-year="2018">2018</a><br>
+            <a class="year" data-year="2019">2019</a>
         </div>
 
 
         <div id="rankby">Rank By<button onclick="toggleRankByDropdown()" class="rankbydropbtn">▼</button></div>
         <div id="rankbymyDropdown" class="rankbydropdown-content">
-            Popularity<br>
-            First Alphabet
+            <a class="rankby-option" data-rankby="popularity">Popularity</a><br>
+            <a class="rankby-option" data-rankby="alphabetical">Alphabetical Order</a>
         </div>
         
-        <div id="reset">Reset</div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for a name...">
+            <button type="button" id="search-button">Search</button>
+          </div>          
         <div id="namegenerator"><a href="../index.html">Name Generator</a></div>
     </div>
         <div id="names-container"></div>
+        <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
+
 </html>
