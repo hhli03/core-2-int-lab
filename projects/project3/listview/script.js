@@ -28,39 +28,76 @@ window.onclick = function(event) {
   }
 }
 
-function processBabynameData(data){
-  // Filter the data array to only include names from 2019
-  data = data.filter(obj => obj.yr === 2019);
+function getColorForEthnicity(ethcty) {
+  switch (ethcty) {
+    case 'HISPANIC':
+      return '#FAD281';
+    case 'BLACK NON HISPANIC':
+      return '#F08584'; 
+    case 'ASIAN AND PACIFIC ISLANDER':
+      return '#94CFB7';
+    case 'WHITE NON HISPANIC':
+      return '#B0B8D7'; 
+    default:
+      return '#808080'; // gray
+  }
+}
+const namesContainer = document.getElementById('names-container');
 
-  // Get the maximum value of the cnt property in the filtered data array
+function processBabynameData(data){
+  data.sort((a, b) => b.cnt - a.cnt);
+  
   let maxCnt = Math.max(...data.map(obj => obj.cnt));
 
-  // Get the container element where the names will be displayed
-  let namesContainer = document.getElementById('names-container');
-  
-  // Clear the container element
-  namesContainer.innerHTML = '';
-
-  // Iterate over the filtered array of objects and process each object
-  for (let i = 0; i < data.length; i++) {
-    let babyname = data[i].nm;
-    let cnt = data[i].cnt;
+  const nameElements = data.map(obj => {
+    let babyname = obj.nm;
+    let cnt = obj.cnt;
     let ratio = cnt / maxCnt;
-    let fontWeight = ratio * (800-200) + 200; // calculate font weight based on count
-    let ethnicity = data[i].ethcty;
-    let rnk = data[i].rnk; // add 'rnk' property
+    let fontWeight = ratio * (800-200) + 200;
+    let ethnicity = obj.ethcty;
+    let rnk = obj.rnk;
 
     let color = getColorForEthnicity(ethnicity);
 
-    // Create a new element for the name
-    let nameElement = document.createElement('div');
-    nameElement.classList.add('name');
-    nameElement.innerText = babyname;
-    nameElement.setAttribute('data-rnk', rnk); // store 'rnk' value as a data attribute
+    const nameElement = document.createElement('div');
+    nameElement.classList.add('names');
+    nameElement.textContent = babyname;
     nameElement.style.setProperty('--wght', fontWeight);
-    nameElement.style.color = color;
+    nameElement.style.color = '#000000';
+    nameElement.setAttribute('data-rnk', rnk);
 
-    // Add the name element to the container
+    // Add a mouseover event listener to change the color when hovered over
+    nameElement.addEventListener('mouseover', () => {
+      let hoverColor = getColorForEthnicity(ethnicity);
+      nameElement.style.color = hoverColor;
+    });
+
+    // Add a mouseout event listener to change the color back to the original color
+    nameElement.addEventListener('mouseout', () => {
+      nameElement.style.color = '#000000';
+    });
+
+    return nameElement;
+  });
+
+  displayNames(nameElements);
+}
+
+
+function displayNames(nameElements) {
+  namesContainer.innerHTML = ''; // clear previous content
+  for (let nameElement of nameElements) {
     namesContainer.appendChild(nameElement);
   }
 }
+
+function fetchNames(){
+  fetch('https://data.cityofnewyork.us/resource/25th-nujf.json?brth_yr=2019')
+    .then(response => response.json())
+    .then(data => {
+      processBabynameData(data);
+    })
+    .catch(error => console.error(error));
+}
+
+fetchNames();

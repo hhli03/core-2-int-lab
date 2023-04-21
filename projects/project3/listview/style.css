@@ -161,5 +161,18 @@ a:active {
   }
 
   #names-container{
-  color:red;
+    font-variation-settings: 'wght' var(--wght);
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+
   }
+
+.names{
+ padding:1.4vw;
+    text-align: center;
+    font-variation-settings: 'wght' var(--wght);
+    font-size:1.65vw;
+    margin-top:3.5vw;
+  }
+
+ 
