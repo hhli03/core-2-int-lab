@@ -1,3 +1,4 @@
+
 function toggleDropdown() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -131,7 +132,10 @@ function processBabynameData(data){
       nameElement.style.color = hoverColor;
     });
 
-    
+    // check if the name matches the search term
+    if (searchTerm.length > 0 && babyname.toLowerCase().includes(searchTerm)) {
+      nameElement.style.textDecoration = 'underline';
+    } 
 
     // Add a mouseout event listener to change the color back to the original color
     nameElement.addEventListener('mouseout', () => {
@@ -161,7 +165,12 @@ function displayNames(nameElements) {
 }
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
+let searchTerm = '';
 
+searchInput.addEventListener('input', () => {
+  searchTerm = searchInput.value.trim().toLowerCase();
+  // Call the function that updates the names container with the new search term
+});
 
 // Define colors for each ethnicity
 const ethnicityColors = {
