@@ -6,12 +6,12 @@
 body{
     background-color: #FCFBF6;
     font-family: "sonovariablefont";
-    margin:1.5vw;
+    margin:2.5vw;
 }
 
 .navigationgrid{
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 12vw 10vw 1fr;
 }
 
 #key{
@@ -19,6 +19,9 @@ body{
     font-size:1.2vw;
 }
 
+#plus{
+    font-size:1.4vw;
+}
 #listview{
 justify-self: end;
     font-family: "sonovariablefont";
@@ -47,7 +50,7 @@ justify-self: end;
     justify-items: center;
     grid-template-columns: auto;
     margin:3vw;
-    gap:4vw;
+    gap:3.5vw;
 }
 
 #title{
@@ -150,23 +153,23 @@ display: none;
 }
 
 
-a:link{
+#listlink{
     text-decoration: none;
     color:black;
   }
   
-a:visited{
+  #listlink:visited{
     text-decoration: none;
     color:black;
   }
   
-a:hover {
+  #listlink:hover {
     color:#F3EAE1;
     background:black;
     text-decoration: none;
   }
   
-a:active {
+  #listlink:active {
     color:#F3EAE1;
     background:black;
     text-decoration: none;
@@ -180,6 +183,39 @@ a:active {
   }
 
 
- 
+  .detail {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
   
-
+  .name:hover + .detail {
+    display: block;
+  }
+  
+  #aboutlink {
+    text-decoration: none;
+    color:black;
+  }
+  
+  #aboutlink:visited {
+    text-decoration: none;
+    color:black;
+  }
+  
+  #aboutlink:hover {
+    text-decoration: none;
+    color:black;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  #aboutlink:active {
+    text-decoration: none;
+    color:black;
+  } 

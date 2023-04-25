@@ -41,7 +41,7 @@ function processBabynameData(data){
 
   // Iterate over the array of objects and process each object
   for (let i = 0; i < data.length; i++) {
-    let babyname = data[i].nm;
+    let babyname = event.target.dataset.name;
     let cnt = data[i].cnt;
     let ratio = cnt / maxCnt;
     let fontWeight = ratio * (800-200) + 200; // calculate font weight based on count
@@ -50,14 +50,28 @@ function processBabynameData(data){
 
     let color = getColorForEthnicity(ethnicity);
 
-    // Update the name element with the current baby name and 'rnk' value
-    let nameElement = document.getElementById('name');
+    // Create a new element to display the baby name and 'rnk' value
+    let nameElement = document.createElement('div');
+    nameElement.classList.add('name');
     nameElement.innerText = babyname;
     nameElement.setAttribute('data-rnk', rnk); // store 'rnk' value as a data attribute
 
     // Update the font weight and color of the name element
     nameElement.style.setProperty('--wght', fontWeight);
     nameElement.style.color = color;
+
+
+    // Add the name element to the container element
+    let containerElement = document.getElementById('container');
+    containerElement.appendChild(nameElement);
+
+nameElement.addEventListener('mouseenter', (event) => {
+  event.target.setAttribute('data-babyname', babyname);
+
+  showDetail(event);
+});
+
+
   }
 }
 
@@ -75,7 +89,9 @@ function generateRandomName() {
       let fontWeight = ratio * (800-200) + 300; // calculate font weight based on count
 
       let nameElement = document.getElementById('name');
+
       nameElement.innerText = babyname;
+      nameElement.addEventListener('mouseenter', showDetail); // add event listener to the name element
 
       nameElement.style.setProperty('--wght', fontWeight);
       nameElement.style.color = getColorForEthnicity(randomObject.ethcty);
@@ -83,4 +99,33 @@ function generateRandomName() {
   })}
 
 
+  function showDetail(event) {
+    // Get the baby name from the data attribute
+    let babyname = event.target.dataset.babyname;
+    // Make an API request to get the 'rnk' and 'cnt' data for the current baby name
+    fetch('https://data.cityofnewyork.us/resource/25th-nujf.json?brth_yr=2019' + babyname + '"')
+      .then(response => response.json())
+      .then(data => {
+        // Check whether the data array is empty
+        if (data.length === 0) {
+          console.log('No data found for ' + babyname);
+          return;
+        }
+        // Get the 'rnk' and 'cnt' values from the data object
+        let rnk = data[0].rnk;
+        let cnt = data[0].cnt;
+  
+        // Create a new element to display the 'rnk' and 'cnt' data
+        let detailElement = document.createElement('div');
+        detailElement.classList.add('detail');
+        detailElement.innerHTML = `
+          <p>Rank: ${rnk}</p>
+          <p>Count: ${cnt}</p>
+        `;
+  
+        // Add the detail element to the container element
+        let containerElement = document.getElementById('container');
+        containerElement.appendChild(detailElement);
+      });
+  }
   

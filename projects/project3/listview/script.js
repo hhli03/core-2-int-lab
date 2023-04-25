@@ -247,3 +247,18 @@ options.forEach(option => {
   });
 });
 
+const scrollToTopButton = document.getElementById('scroll-to-top');
+
+function scrollHandler() {
+  if (window.pageYOffset > 100) {
+    scrollToTopButton.classList.add('show');
+  } else {
+    scrollToTopButton.classList.remove('show');
+  }
+}
+
+scrollToTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', scrollHandler);

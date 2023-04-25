@@ -6,7 +6,7 @@
 body{
     background-color: #FCFBF6;
     font-family: "sonovariablefont";
-    margin:1.5vw;
+    margin:2.5vw;
 }
 
 .navigationgrid{
@@ -138,23 +138,23 @@ display: none;
 
 .rankbyshow {display:block;}
 
-a:link{
+#namegeneratorlink{
     text-decoration: none;
     color:black;
   }
   
-a:visited{
+  #namegeneratorlink:visited{
     text-decoration: none;
     color:black;
   }
   
-a:hover {
+  #namegeneratorlink:hover {
     color:#F3EAE1;
     background:black;
     text-decoration: none;
   }
   
-a:active {
+#namegeneratorlink:active {
     color:#F3EAE1;
     background:black;
     text-decoration: none;
@@ -164,7 +164,7 @@ a:active {
     font-variation-settings: 'wght' var(--wght);
   display:grid;
   grid-template-columns: auto auto auto auto;
-
+  margin-top:2.5vw;
   }
 
 .names{
@@ -200,4 +200,51 @@ border:none;
   padding-top:0.35vw;
   padding-bottom:0.35vw;
   border-radius: 2vw;
+}
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+background-color: #FCFBF6;
+  border: black solid 0.1vw;
+  border-radius: 50%;
+  height:2.2vw;
+  width: 2.2vw;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color:black;
+  font-size:1.3vw;
+  padding-bottom: 0.2vw;
+}
+
+#scroll-to-top.show {
+  opacity: 1;
+}
+
+
+
+
+.year{
+  text-decoration:none;
+  color:#FCFBF6;
+}
+
+.year:visited{
+  color:black;
+  text-decoration:none;
+}
+
+.year:hover {
+  color:#FCFBF6;
+  font-weight:500;
+  text-decoration: underline 0.1vw solid;
+}
+
+.year:active {
+  color:#FCFBF6;
+  font-weight:500;
+  text-decoration: underline 0.1vw solid;
 }
