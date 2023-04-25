@@ -85,10 +85,10 @@ body{
 display: none;
   position: absolute;
   background: rgba(0, 0, 0, 0.7);
-  padding:1.5vw;
+  padding:1.2vw;
   border-radius: 1.5vw;
   margin-top: 2vw;
-  margin-left:1.5vw;
+  margin-left:2.5vw;
 
   color:#FCFBF6;
   min-width: 40px;
@@ -122,10 +122,10 @@ display: none;
 display: none;
   position: absolute;
   background: rgba(0, 0, 0, 0.7);
-  padding:1.5vw;
+  padding:1.2vw;
   border-radius: 1.5vw;
   margin-top: 2vw;
-  margin-left:13.5vw;
+  margin-left:14.5vw;
   color:#FCFBF6;
   min-width: 160px;
   z-index: 1;
@@ -172,7 +172,7 @@ display: none;
     text-align: center;
     font-variation-settings: 'wght' var(--wght);
     font-size:1.65vw;
-    margin-top:3.5vw;
+    margin-top:2.8vw;
   }
 
  
@@ -194,12 +194,19 @@ display: none;
  #search-button{
   font-family: "sonovariablefont";
   font-size:1.2vw;
-border:none;
+border:black 0.15vw solid;
+background:#FCFBF6;
   padding-left:0.5vw;
   padding-right:0.5vw;
   padding-top:0.35vw;
   padding-bottom:0.35vw;
   border-radius: 2vw;
+  cursor: pointer;
+}
+
+#search-button:hover{
+  color:#F3EAE1;
+  background:black;
 }
 
 #scroll-to-top {
@@ -240,11 +247,33 @@ background-color: #FCFBF6;
 .year:hover {
   color:#FCFBF6;
   font-weight:500;
-  text-decoration: underline 0.1vw solid;
+  text-decoration:none;
 }
 
 .year:active {
   color:#FCFBF6;
   font-weight:500;
-  text-decoration: underline 0.1vw solid;
+  text-decoration: none;
+}
+
+.rankby-option{
+  text-decoration:none;
+  color:#FCFBF6;
+}
+
+.rankby-option:visited{
+  color:black;
+  text-decoration:none;
+}
+
+.rankby-option:hover {
+  color:#FCFBF6;
+  font-weight:500;
+  text-decoration: none;
+}
+
+.rankby-option:active {
+  color:#FCFBF6;
+  font-weight:500;
+  text-decoration: none;
 }
