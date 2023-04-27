@@ -1,8 +1,35 @@
 
 
-function toggleDropdown() {
-  document.getElementById("myDropdown").classList.toggle("show");
+function myFunction() {
+  var dropdown = document.getElementById("myDropdown");
+  dropdown.classList.toggle("show");
 }
+
+function toggleYearDropdown() {
+  var dropdown = document.getElementById("yearDropdown");
+  dropdown.classList.toggle("show-year-dropdown");
+}
+
+// Close the dropdowns if the user clicks outside of them
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn') && !event.target.matches('.yeardropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+    var yearDropdowns = document.getElementsByClassName("yeardropdown-content");
+    for (var j = 0; j < yearDropdowns.length; j++) {
+      var openYearDropdown = yearDropdowns[j];
+      if (openYearDropdown.classList.contains('show')) {
+        openYearDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
 
 function toggleEthnicityDropdown() {
   document.getElementById("ethnicityDropdown").classList.toggle("show");

@@ -10,7 +10,6 @@ function toggleYearDropdown() {
   dropdown.classList.toggle("show-year-dropdown");
 }
 
-// Close the dropdowns if the user clicks outside of them
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn') && !event.target.matches('.yeardropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -26,9 +25,13 @@ window.onclick = function(event) {
       if (openYearDropdown.classList.contains('show')) {
         openYearDropdown.classList.remove('show');
       }
+      if (openYearDropdown.classList.contains('show-year-dropdown')) {
+        openYearDropdown.classList.remove('show-year-dropdown');
+      }
     }
   }
 }
+
 
 
 function getColorForEthnicity(ethcty) {
