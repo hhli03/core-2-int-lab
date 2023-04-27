@@ -1,7 +1,20 @@
 
+
 function toggleDropdown() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
+
+function toggleEthnicityDropdown() {
+  document.getElementById("ethnicityDropdown").classList.toggle("show");
+}
+
+window.addEventListener('click', function(event) {
+  // Check if the user clicked outside of the ethnicity dropdown
+  if (!event.target.closest('#ethnicity') && !event.target.closest('.ethnicity-dropdown-content')) {
+    document.getElementById('ethnicityDropdown').style.display = 'none';
+  }
+});
+
 
 function toggleRankByDropdown() {
   const rankbyDropdown = document.getElementById("rankbymyDropdown");
@@ -33,9 +46,27 @@ function toggleRankByDropdown() {
     // Remove the event listener when the dropdown is closed
     rankbyDropdown.children[0].removeEventListener('click');
   }
+
+  if (rankbyDropdown.classList.contains('rankbyshow')) {
+    // Add an event listener to each .rankby-option element
+    const rankbyOptions = rankbyDropdown.querySelectorAll('.rankby-option');
+    rankbyOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        const rankbyName = option.textContent; // get the text of the clicked element
+        const rankbySpan = document.getElementById("rankbyname"); // get the span element
+        rankbySpan.textContent = rankbyName; // replace the text of the span with the clicked element's text
+      });
+    });
+  } else {
+    // Remove the event listener when the dropdown is closed
+    const rankbyOptions = rankbyDropdown.querySelectorAll('.rankby-option');
+    rankbyOptions.forEach(option => {
+      option.removeEventListener('click', () => {});
+    });
+  }
+
   
 }
-
 
 
 
@@ -59,7 +90,17 @@ window.onclick = function(event) {
       }
     }
   }
+
+
 }
+
+
+window.addEventListener('click', function(event) {
+    // Check if the user clicked outside of the ethnicity dropdown
+    if (!event.target.closest('#ethnicity') && !event.target.closest('.ethnicitydropdown-content')) {
+        document.getElementById('ethnicityDropdown').style.display = 'none';
+    }
+});
 
 
 function getColorForEthnicity(ethcty) {
@@ -262,3 +303,12 @@ scrollToTopButton.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', scrollHandler);
+
+const yearElements = document.querySelectorAll('.year');
+yearElements.forEach(yearElement => {
+  yearElement.addEventListener('click', () => {
+    const year = yearElement.textContent;
+    document.getElementById('yearname').textContent = year;
+  });
+});
+

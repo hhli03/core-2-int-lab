@@ -11,22 +11,20 @@ body{
 }
 
 .body-grid{
-    padding-top: 1vw;
     width:48vw;
+    margin: 0 auto;
+    padding-top:2.1vw;
 }
 
 #navigation{
     display:grid;
-    grid-template-columns: 12vw 15vw;
+    grid-template-columns:  auto;
 }
 
-#about{
-    font-weight:500;
-    font-size:1.2vw;
-    font-style: italic;
-}
+
 #home{
     font-size:1.2vw;
+    justify-self: end;
 }
 
 #plus{
@@ -79,11 +77,14 @@ a:link {
 p{
     font-size:1.2vw;
     hyphens: auto;
+    line-height: 1.6vw;
+    font-family: "sonovariablefont";
 }
 
 h1{
     font-size:2.2vw;
-    font-weight:500;
+    font-weight:400;
+    text-align: center;
 }
 
 .details{
@@ -91,4 +92,11 @@ h1{
     grid-template-columns: auto auto;
     font-size:1.1vw;
     color:grey;
+}
+
+#name{
+    font-size:1.2vw;
+    hyphens: auto;
+    line-height: 1.6vw;
+    font-family: "sonovariablefont";
 }

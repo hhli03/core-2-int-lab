@@ -10,7 +10,15 @@
 </head>
 <body>
     <div class="navigationgrid">
-        <div id="year">Year<button onclick="toggleDropdown()" class="dropbtn">▼</button></div>
+        <div id="ethnicity"><span id="ethnicityname">Key</span><button onclick="toggleEthnicityDropdown()" class="dropbtn">●</button></div>
+        <div id="ethnicityDropdown" class="ethnicitydropdown-content">
+            Ethnicity<br>
+            <div id="colorcode1"></div>Black non Hispanic<br>
+            <div id="colorcode2"></div>White non Hispanic<br>
+            <div id="colorcode3"></div>Asian and Pacific Islander<br>
+            <div id="colorcode4"></div>Hispanic
+        </div>
+        <div id="year"><span id="yearname">Year</span><button onclick="toggleDropdown()" class="dropbtn">▼</button></div>
         <div id="myDropdown" class="dropdown-content">
             <a class="year" data-year="2011">2011</a><br>
             <a class="year" data-year="2012">2012</a><br>
@@ -24,7 +32,7 @@
         </div>
 
 
-        <div id="rankby">Rank By<button onclick="toggleRankByDropdown()" class="rankbydropbtn">▼</button></div>
+        <div id="rankby"><span id="rankbyname">Rank By</span><button onclick="toggleRankByDropdown()" class="rankbydropbtn">▼</button></div>
         <div id="rankbymyDropdown" class="rankbydropdown-content">
             <a class="rankby-option" data-rankby="popularity">Popularity</a><br>
             <a class="rankby-option" data-rankby="alphabetical">Alphabetical Order</a>
@@ -36,6 +44,7 @@
             <button type="button" id="search-button">Search</button>
           </div>          
         <div id="namegenerator"><a href="../index.html" id="namegeneratorlink">Name Generator</a></div>
+        <div id="home"><a href="../home/index.html" id="aboutlink">About<span id="plus"> +</span></a></div>
     </div>
         <div id="names-container"></div>
         <button id="scroll-to-top">↑</button>

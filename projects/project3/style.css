@@ -11,7 +11,7 @@ body{
 
 .navigationgrid{
     display:grid;
-    grid-template-columns: 12vw 10vw 1fr;
+    grid-template-columns: 10vw 10vw 65vw auto;
 }
 
 #key{
@@ -114,42 +114,44 @@ display: none;
   font-weight: 300;
 }
 
-.show {display:block;}
+.show {
+  display:block;
+}
 
 #colorcode1{
     background-color:#F08584;
-    width: 2.6vw;
+    width: 1.2vw;
     height:1.2vw;
     border-radius: 1vw;
     display: inline-block;
-    margin-right: 1vw;
+    margin-right: 0.8vw;
 }
 
 #colorcode2{
     background-color:#B0B8D7;
-    width: 2.6vw;
+    width: 1.2vw;
     height:1.2vw;
     border-radius: 1vw;
     display: inline-block;
-    margin-right: 1vw;
+    margin-right: 0.8vw;
 }
 
 #colorcode3{
     background-color:#94CFB7;
-    width: 2.6vw;
+    width: 1.2vw;
     height:1.2vw;
     border-radius: 1vw;
     display: inline-block;
-    margin-right: 1vw;
+    margin-right: 0.8vw;
 }
 
 #colorcode4{
     background-color:#FAD281;
-    width: 2.6vw;
+    width: 1.2vw;
     height:1.2vw;
     border-radius: 1vw;
     display: inline-block;
-    margin-right: 1vw;
+    margin-right: 0.8vw;
 }
 
 
@@ -219,3 +221,50 @@ display: none;
     text-decoration: none;
     color:black;
   } 
+
+  #home{
+    justify-self:end;
+      font-family: "sonovariablefont";
+      font-size:1.2vw;
+  }
+  
+  #year{
+    font-family: "sonovariablefont";
+    font-size:1.2vw;
+}
+
+.yeardropbtn{
+  font-family: "sonovariablefont";
+  font-size:1.2vw;
+    border: none;
+cursor: pointer;
+background-color:#FCFBF6;
+}
+
+.yeardropdown{
+  float: left;
+  position: relative;
+}
+
+.yeardropdown-content{
+display: none;
+position: absolute;
+background: rgba(0, 0, 0, 0.7);
+padding:1.2vw;
+border-radius: 1.5vw;
+margin-top: 2vw;
+margin-left:12.5vw;
+
+color:#FCFBF6;
+min-width: 40px;
+z-index: 1;
+left: 0;
+line-height:2.1vw;
+font-family: "sonovariablefont";
+font-size:1.2vw;
+font-weight: 300;
+}
+
+.show-year-dropdown {
+  display: block;
+}
