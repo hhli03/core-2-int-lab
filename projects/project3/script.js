@@ -106,8 +106,6 @@ function processBabynameData(data) {
   let maxCnt = Math.max(...data.map(obj => obj.cnt));
 
   // Iterate over the array of objects and process each object
-  for (let i = 0; i < data.length; i++) {
-    let babyname = data[i].nm.toLowerCase().charAt(0).toUpperCase() + data[i].nm.slice(1).toLowerCase();
     let cnt = data[i].cnt;
     let ratio = cnt / maxCnt;
     let fontWeight = ratio * (800 - 200) + 200; // calculate font weight based on count
@@ -137,8 +135,6 @@ function processBabynameData(data) {
       showDetail(event);
     });
   }
-}
-
 
 
 
@@ -162,11 +158,6 @@ function generateRandomName(data) {
   nameElement.style.color = getColorForEthnicity(randomObject.ethcty);
 }
 
-let generateButton = document.getElementById('button');
-generateButton.addEventListener('click', function() {
-  generateRandomName(data);
-});
-
 function capitalizeNames(data) {
   for (var i = 0; i < data.length; i++) {
     var name = data[i].nm.toLowerCase();
@@ -176,11 +167,11 @@ function capitalizeNames(data) {
   return data;
 }
 
-// Example usage
-var myData = [{ nm: "JOHN" }, { nm: "doE" }, { nm: "JANE" }];
-var modifiedData = capitalizeNames(myData);
-console.log(modifiedData);
-// Output: [{ nm: "John" }, { nm: "Doe" }, { nm: "Jane" }]
+let generateButton = document.getElementById('button');
+generateButton.addEventListener('click', function() {
+  data = capitalizeNames(data);
+  generateRandomName(data);
+});
 
 
 function showDetail(event) {
@@ -253,3 +244,37 @@ function fetchNames(year) {
 
 fetchNames(2019);
 
+
+function showDetail(event) {
+  let babyname = event.target.dataset.babyname;
+  let rnk = event.target.dataset.rnk;
+  let year = selected_year;
+
+  // Find the data array that matches the baby name, rank, and year
+  let dataArray = data.find(obj => obj.nm === babyname && obj.rnk === rnk && obj.yr === year);
+
+  if (dataArray) {
+    // Display the data array in the .detail div
+    let detailElement = document.querySelector('.detail');
+    detailElement.innerHTML = '';
+
+    let headingElement = document.createElement('h3');
+    headingElement.innerText = `${babyname} (${year})`;
+    detailElement.appendChild(headingElement);
+
+    let listElement = document.createElement('ul');
+
+    Object.entries(dataArray).forEach(([key, value]) => {
+      if (key !== 'nm' && key !== 'rnk' && key !== 'yr' && key !== 'cnt') {
+        let listItemElement = document.createElement('li');
+        listItemElement.innerHTML = `<strong>${key}:</strong> ${value}`;
+        listElement.appendChild(listItemElement);
+      }
+    });
+
+    detailElement.appendChild(listElement);
+
+    // Show the .detail div
+    detailElement.style.display = 'block';
+  }
+}

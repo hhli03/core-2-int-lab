@@ -178,7 +178,7 @@ function processBabynameData(data){
 
     // check if the name matches the search term
     if (searchTerm.length > 0 && babyname.toLowerCase().includes(searchTerm)) {
-      nameElement.style.textDecoration = 'underline';
+
     } 
 
     // Add a mouseout event listener to change the color back to the original color
@@ -201,36 +201,50 @@ function processBabynameData(data){
 
 
 // get elements
-const namesContainer = document.querySelector('.names-container');
+const namesContainer = document.querySelector('.names');
 const detailDiv = document.querySelector('.detail');
 
-// add event listeners to names
-const names = document.querySelectorAll('.name');
-names.forEach(name => {
-  name.addEventListener('click', () => {
-    // get data from the name element
-    const cnt = name.getAttribute('data-cnt');
-    const rnk = name.getAttribute('data-rnk');
-    const ethcty = name.getAttribute('data-ethcty');
-    
-    // update detailDiv content
-    detailDiv.innerHTML = `
-      <p>Count: ${cnt}</p>
-      <p>Rank: ${rnk}</p>
-      <p>Ethnicity: ${ethcty}</p>
-    `;
+// retrieve data from API
+fetch('https://data.cityofnewyork.us/resource/25th-nujf.json?brth_yr='+year)
+  .then(response => response.json())
+  .then(data => {
+    // add event listeners to names
+    const names = document.querySelectorAll('.names');
+    names.forEach((name, index) => {
+      name.addEventListener('click', () => {
+        // get data from the clicked name
+        const cnt = data[index].cnt;
+        const rnk = data[index].rnk;
+        const ethcty = data[index].ethcty;
+
+        // update detailDiv content
+        detailDiv.innerHTML = `
+          <p>Count: ${cnt}</p>
+          <p>Rank: ${rnk}</p>
+          <p>Ethnicity: ${ethcty}</p>
+        `;
+      });
+      // update name element content
+      name.innerHTML = `
+        <p>Count: ${data[index].cnt}</p>
+        <p>Rank: ${data[index].rnk}</p>
+        <p>Ethnicity: ${data[index].ethcty}</p>
+      `;
+    });
   });
-});
 
-// add event listener to show detailDiv on hover
-namesContainer.addEventListener('mouseover', () => {
-  detailDiv.style.display = 'block';
-});
+// add event listener to namesContainer for mouseover
+function showDetails(event) {
+  const nameElement = event.currentTarget;
+  const detailElement = nameElement.closest('.names').querySelector('.detail');
+  detailElement.style.display = 'block';
+}
+function hideDetails(event) {
+  const nameElement = event.currentTarget;
+  const detailElement = nameElement.closest('.names').querySelector('.detail');
+  detailElement.style.display = 'none';
+}
 
-// add event listener to hide detailDiv on hover out
-namesContainer.addEventListener('mouseout', () => {
-  detailDiv.style.display = 'none';
-});
 }
 
 
@@ -306,6 +320,7 @@ function fetchNames(year) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
+      
       const names = data.filter(row => {
         if (seenNames.hasOwnProperty(row.name)) {
           return false;
@@ -364,6 +379,7 @@ yearElements.forEach(yearElement => {
     document.getElementById('yearname').textContent = year;
   });
 });
+
 
 
 

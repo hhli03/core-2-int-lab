@@ -409,6 +409,12 @@ font-weight: 300;
   padding: 10px;
 }
 
-#detail.show {
-  visibility: visible;
+.names:hover + #detail{
+  display: block;
+}
+
+
+#ethnicity{
+  font-family: "sonovariablefont";
+  font-size:1.2vw;
 }
