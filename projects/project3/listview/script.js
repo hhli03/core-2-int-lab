@@ -1,44 +1,15 @@
-
-
 function myFunction() {
   var dropdown = document.getElementById("myDropdown");
   dropdown.classList.toggle("show");
 }
 
+// Get the dropdown element
+var ethnicityDropdown = document.getElementById("ethnicityDropdown");
 
+// Add event listener to toggle the dropdown content
 function toggleEthnicityDropdown() {
-  document.getElementById("ethnicityDropdown").classList.toggle("show-ethnicity-dropdown");
+  ethnicityDropdown.classList.toggle("show-ethnicity-dropdown");
 }
-
-window.addEventListener('click', function(event) {
-  // Check if the user clicked outside of the ethnicity dropdown
-  if (!event.target.closest('#ethnicity') && !event.target.closest('.ethnicity-dropdown-content')) {
-    document.getElementById('ethnicityDropdown').style.display = 'none';
-  }
-});
-
-// Close the dropdowns if the user clicks outside of them
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn') && !event.target.matches('.yeardropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-    var yearDropdowns = document.getElementsByClassName("yeardropdown-content");
-    for (var j = 0; j < yearDropdowns.length; j++) {
-      var openYearDropdown = yearDropdowns[j];
-      if (openYearDropdown.classList.contains('show')) {
-        openYearDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-
-
 
 function toggleRankByDropdown() {
   const rankbyDropdown = document.getElementById("rankbymyDropdown");
@@ -89,9 +60,22 @@ function toggleRankByDropdown() {
     });
   }
 
+
   
 }
 
+// Close the ethnicity dropdown if the user clicks outside of it
+window.addEventListener('click', function(event) {
+  if (!event.target.matches('.ethnicitydropbtn') && !event.target.matches('.ethnicitydropdown-content')) {
+    var ethnicityDropdowns = document.getElementsByClassName('ethnicitydropdown-content');
+    for (var i = 0; i < ethnicityDropdowns.length; i++) {
+      var openEthnicityDropdown = ethnicityDropdowns[i];
+      if (openEthnicityDropdown.classList.contains('show-ethnicity-dropdown')) {
+        openEthnicityDropdown.classList.remove('show-ethnicity-dropdown');
+      }
+    }
+  }
+});
 
 
 window.onclick = function(event) {
@@ -118,13 +102,6 @@ window.onclick = function(event) {
 
 }
 
-
-window.addEventListener('click', function(event) {
-    // Check if the user clicked outside of the ethnicity dropdown
-    if (!event.target.closest('#ethnicity') && !event.target.closest('.ethnicitydropdown-content')) {
-        document.getElementById('ethnicityDropdown').style.display = 'none';
-    }
-});
 
 
 function getColorForEthnicity(ethcty) {

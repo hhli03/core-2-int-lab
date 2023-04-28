@@ -74,7 +74,13 @@ body{
   background-color:#FCFBF6;
 }
 
-
+.ethnicitydropbtn{
+  font-family: "sonovariablefont";
+  font-size:1.2vw;
+    border: none;
+cursor: pointer;
+background-color:#FCFBF6;
+}
 
 .dropdown{
     float: left;
