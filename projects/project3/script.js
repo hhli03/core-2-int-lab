@@ -5,6 +5,22 @@ function myFunction() {
   dropdown.classList.toggle("show");
 }
 
+
+function resetNameGenerator() {
+  // Remove all name elements from the container element
+  let containerElement = document.getElementById('container');
+  containerElement.innerHTML = '';
+
+  // Reset the name element
+  let nameElement = document.getElementById('name');
+  nameElement.innerText = 'Click the button to generate a name!';
+  nameElement.style.setProperty('--wght', '400');
+  nameElement.style.color = '#808080';
+  nameElement.removeAttribute('data-babyname');
+  nameElement.removeAttribute('data-rnk'); // remove data-rnk attribute
+  nameElement.removeEventListener('mouseenter', showDetail);
+}
+
 function toggleYearDropdown() {
   var dropdown = document.getElementById("yearDropdown");
   dropdown.classList.toggle("show-year-dropdown");
@@ -14,10 +30,29 @@ function toggleYearDropdown() {
     yearDropdownItems[i].onclick = function(event) {
       var year = event.target.innerText;
       document.getElementById("yearname").innerText = year;
+
+      // Reset the name generator before updating the selected year
+      resetNameGenerator();
+
+      // Update the selected year
+      selected_year = year;
+
+      // Clear the name element
+let nameElement = document.getElementById('name');
+nameElement.innerText = '';
+
+    
+
+      // Remove the "show-year-dropdown" class from the year dropdown element
       dropdown.classList.remove("show-year-dropdown");
+
+      // Log a message to the console to confirm that the name generator has been reset
+      console.log('Name generator reset.');
     };
   }
 }
+
+
 
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn') && !event.target.matches('.yeardropbtn')) {
@@ -49,16 +84,22 @@ function getColorForEthnicity(ethcty) {
       return '#FAD281';
     case 'BLACK NON HISPANIC':
       return '#F08584'; 
+      case 'BLACK NON HISP':
+      return '#F08584'; 
     case 'ASIAN AND PACIFIC ISLANDER':
       return '#94CFB7';
+      case 'ASIAN AND PACI':
+        return '#94CFB7';
     case 'WHITE NON HISPANIC':
       return '#B0B8D7'; 
+      case 'WHITE NON HISP':
+        return '#B0B8D7'; 
     default:
       return '#808080'; // gray
   }
 }
 
-function processBabynameData(data){
+function processBabynameData(data) {
   console.log(data);
 
   // Get the maximum value of the cnt property in the data array
@@ -66,10 +107,10 @@ function processBabynameData(data){
 
   // Iterate over the array of objects and process each object
   for (let i = 0; i < data.length; i++) {
-    let babyname = event.target.dataset.name;
+    let babyname = data[i].nm.toLowerCase().charAt(0).toUpperCase() + data[i].nm.slice(1).toLowerCase();
     let cnt = data[i].cnt;
     let ratio = cnt / maxCnt;
-    let fontWeight = ratio * (800-200) + 200; // calculate font weight based on count
+    let fontWeight = ratio * (800 - 200) + 200; // calculate font weight based on count
     let ethnicity = data[i].ethcty;
     let rnk = data[i].rnk; // add 'rnk' property
 
@@ -78,27 +119,28 @@ function processBabynameData(data){
     // Create a new element to display the baby name and 'rnk' value
     let nameElement = document.createElement('div');
     nameElement.classList.add('name');
+
     nameElement.innerText = babyname;
+
     nameElement.setAttribute('data-rnk', rnk); // store 'rnk' value as a data attribute
 
     // Update the font weight and color of the name element
     nameElement.style.setProperty('--wght', fontWeight);
     nameElement.style.color = color;
 
-
     // Add the name element to the container element
     let containerElement = document.getElementById('container');
     containerElement.appendChild(nameElement);
 
-nameElement.addEventListener('mouseenter', (event) => {
-  event.target.setAttribute('data-babyname', babyname);
-
-  showDetail(event);
-});
-
-
+    nameElement.addEventListener('mouseenter', (event) => {
+      event.target.setAttribute('data-babyname', babyname);
+      showDetail(event);
+    });
   }
 }
+
+
+
 
 
 function generateRandomName(data) {
@@ -124,6 +166,22 @@ let generateButton = document.getElementById('button');
 generateButton.addEventListener('click', function() {
   generateRandomName(data);
 });
+
+function capitalizeNames(data) {
+  for (var i = 0; i < data.length; i++) {
+    var name = data[i].nm.toLowerCase();
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+    data[i].nm = name;
+  }
+  return data;
+}
+
+// Example usage
+var myData = [{ nm: "JOHN" }, { nm: "doE" }, { nm: "JANE" }];
+var modifiedData = capitalizeNames(myData);
+console.log(modifiedData);
+// Output: [{ nm: "John" }, { nm: "Doe" }, { nm: "Jane" }]
+
 
 function showDetail(event) {
   // Get the baby name from the data attribute
@@ -193,4 +251,5 @@ function fetchNames(year) {
     });
 }
 
+fetchNames(2019);
 
