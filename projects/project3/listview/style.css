@@ -82,7 +82,7 @@ body{
 }
 
 .dropdown-content{
-display: none;
+  display: none;
   position: absolute;
   background: rgba(0, 0, 0, 0.7);
   padding:1.2vw;
@@ -100,7 +100,9 @@ display: none;
   font-weight: 300;
 }
 
-.show {display:block;}
+.show {
+  display:block;
+}
 
 
 .rankbydropbtn{
@@ -340,7 +342,9 @@ font-size:1.2vw;
 font-weight: 300;
 }
 
-.ethnicityshow {display:block;}
+.show-ethnicity-dropdown {
+  display:block;
+}
 
 #colorcode1{
   background-color:#F08584;
