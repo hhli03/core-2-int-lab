@@ -1,3 +1,5 @@
+
+
 function myFunction() {
   var dropdown = document.getElementById("myDropdown");
   dropdown.classList.toggle("show");
@@ -196,6 +198,39 @@ function processBabynameData(data){
   });
 
   displayNames(nameElements);
+
+
+// get elements
+const namesContainer = document.querySelector('.names-container');
+const detailDiv = document.querySelector('.detail');
+
+// add event listeners to names
+const names = document.querySelectorAll('.name');
+names.forEach(name => {
+  name.addEventListener('click', () => {
+    // get data from the name element
+    const cnt = name.getAttribute('data-cnt');
+    const rnk = name.getAttribute('data-rnk');
+    const ethcty = name.getAttribute('data-ethcty');
+    
+    // update detailDiv content
+    detailDiv.innerHTML = `
+      <p>Count: ${cnt}</p>
+      <p>Rank: ${rnk}</p>
+      <p>Ethnicity: ${ethcty}</p>
+    `;
+  });
+});
+
+// add event listener to show detailDiv on hover
+namesContainer.addEventListener('mouseover', () => {
+  detailDiv.style.display = 'block';
+});
+
+// add event listener to hide detailDiv on hover out
+namesContainer.addEventListener('mouseout', () => {
+  detailDiv.style.display = 'none';
+});
 }
 
 
@@ -265,6 +300,23 @@ searchInput.addEventListener('keydown', event => {
 });
 
 
+function fetchNames(year) {
+  const url = 'https://data.cityofnewyork.us/resource/25th-nujf.json?brth_yr=' + year;
+  const seenNames = {};
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const names = data.filter(row => {
+        if (seenNames.hasOwnProperty(row.name)) {
+          return false;
+        }
+        seenNames[row.name] = true;
+        return true;
+      });
+      processBabynameData(names);
+    })
+    .catch(error => console.log(error));
+}
 
 
 function fetchNames(year){
@@ -312,4 +364,6 @@ yearElements.forEach(yearElement => {
     document.getElementById('yearname').textContent = year;
   });
 });
+
+
 
