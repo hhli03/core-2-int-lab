@@ -15,9 +15,9 @@ html {
 
 
   .container div{
-    height:6.6vw;
-    width: 6.6vw;
-    padding:4vw 4vw;
+    height:8vw;
+    width: 8vw;
+    padding:3.3vw;
     transition: 0.7s;
     justify-items: center;
     justify-content:center;
@@ -133,6 +133,14 @@ a:active { text-decoration: underline; }
     justify-content: center;
     align-items: center;
   }
+
+  .container>div:nth-child(11){
+    background-color:#feb58c;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
       #text1{
         color: #adb5f4;
         font-size: 1vw;
