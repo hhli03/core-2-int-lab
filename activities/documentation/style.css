@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "sligoilmicro";
+    src: url(sligoilmicro.otf);
+}
+
+body{
+    font-family: "sligoilmicro";
+    margin:3vw;
+    color:#104877;
+}
+
+.title-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin:3vw;
+    padding:2vw;
+}
+
+.title{
+    font-size: 3vw;
+}
+
+.project-detail{
+    font-size:1vw;
+}
+
+a:link {
+    color:#104877;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color:#104877;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color:#E16D31;
+    text-decoration: none;
+  }
+  
+  /* selected link */
+  a:active {
+    color:#E16D31;
+    text-decoration: none;
+  }
+
+  .text{
+    font-size:1vw;
+    padding-left:5.5vw;
+  }
+
+  .text2{
+    font-size:1vw;
+  }
+
+  .image{
+    display:flex;
+    justify-content: center;
+    margin-top:2vw;
+    margin-bottom:4vw;
+  }
