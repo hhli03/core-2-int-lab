@@ -14,6 +14,7 @@ body{
     grid-template-columns: 1fr 1fr;
     margin:3vw;
     padding:2vw;
+    gap:1.5vw;
 }
 
 .title{
@@ -54,11 +55,43 @@ a:link {
 
   .text2{
     font-size:1vw;
+    padding-left:20.5vw;
   }
 
   .image{
     display:flex;
     justify-content: center;
-    margin-top:2vw;
+    margin-top:1.8vw;
     margin-bottom:4vw;
+  }
+
+  .image2{
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap:4vw;
+    margin-top:1.8vw;
+    margin-bottom:4vw;
+  }
+
+  .image2 img{
+    height:22.2vw;
+  }
+
+  .image3{
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap:4vw;
+    margin-top:1.8vw;
+    margin-bottom:4vw;
+  }
+
+  .image3 img{
+    height:42vw;
+  }
+
+  .rounded-corner1{
+    border-radius: 0.5vw;
+    box-shadow: 3px 3px 5px #dddddd;
   }
