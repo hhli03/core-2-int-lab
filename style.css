@@ -66,6 +66,7 @@ a:active { text-decoration: underline; }
 
   
   .container>div:nth-child(1){
+    display:grid;
     background-color:#adb5f4;
     text-align: center;
       justify-content: center;
@@ -86,10 +87,13 @@ a:active { text-decoration: underline; }
     justify-content: center;
     align-items: center;
   }
+
   
   .container>div:nth-child(4){
     background-color:#ffcdc6;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .container>div:nth-child(5){
