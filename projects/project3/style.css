@@ -296,9 +296,7 @@ font-weight: 300;
 
 
 @media screen and (max-width: 1024px) {
-  @media screen and (max-width: 1024px) {
-    /* Adjust font sizes */
-    
+
     #key {
       font-size: 3.2vw;
     }
@@ -324,6 +322,7 @@ font-weight: 300;
     
     #title {
       font-size: 5vw;
+      white-space:nowrap;
     }
 
     .dropbtn{
@@ -402,13 +401,13 @@ font-weight: 300;
       width: 100%;
       left: 0;
     }
-  }
-
-  .namegenerator{
- 
-    margin:8vw;
-    gap:5.5vw;
-}
   
 
+  .namegenerator{
+ justify-self: center;
+ justify-content: center;
+    margin:10vw;
+    gap:8vw;
+}
+  
 }
