@@ -324,7 +324,7 @@ font-weight: 300;
     
     #listview {
       font-size: 3.2vw;
-      padding: 0.6vw 1.2vw;
+      padding: 0.6vw 0.8vw;
       border-radius: 4vw;
       border:black 0.3vw solid;
     }
@@ -381,6 +381,9 @@ font-weight: 300;
     /* Adjust element widths */
     .navigationgrid {
       grid-template-columns: repeat(4, 1fr);
+      display:grid;
+      margin:0;
+      padding:0;
     }
     
     #colorcode1,

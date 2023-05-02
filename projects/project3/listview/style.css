@@ -526,7 +526,8 @@ input[type="text"], button[type="submit"] {
 
 
 input[type="text"] {
-  border:grey 0.15vw solid;
+  border:grey 0.2vw solid;
+  color:grey;
   background-color: #FCFBF6;
   padding-left:0.5vw;
   padding-right:0.5vw;
@@ -534,6 +535,7 @@ input[type="text"] {
   padding-bottom:0.35vw;
   border-radius: 2vw;
   vertical-align: top;
+  width:22vw;
 }
 
 #search-button{
@@ -589,6 +591,16 @@ margin-left:2.5vw;
 line-height:3vw;
 font-family: "sonovariablefont";
 font-size:2vw;
+}
+
+#colorcode1,
+#colorcode2,
+#colorcode3,
+#colorcode4 {
+  width: 1.8vw;
+  height: 1.8vw;
+  border-radius: 1rem;
+  margin-right: 0.4rem;
 }
 
 #key{
