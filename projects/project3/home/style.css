@@ -100,3 +100,103 @@ h1{
     line-height: 1.6vw;
     font-family: "sonovariablefont";
 }
+
+@media screen and (max-width: 1024px) {
+
+body{
+
+    margin:2.5vw;
+}
+
+.body-grid{
+    width:68vw;
+    margin: 0 auto;
+    padding-top:2.1vw;
+}
+
+#navigation{
+    display:grid;
+    grid-template-columns:  auto;
+}
+
+
+#home{
+    font-size:3.2vw;
+    justify-self: end;
+}
+
+#plus{
+    font-size:3.4vw;
+}
+
+#opendata{
+    text-decoration: underline black 0.2vw;
+    color:black;
+}
+
+#opendata:visited{
+    text-decoration: underline black 0.2vw;
+    color:black; 
+}
+
+#opendata:hover{
+    text-decoration: underline black 0.2vw;
+    color:black; 
+    font-weight:500;
+}
+#opendata:active{
+    text-decoration: underline black 0.2vw;
+    color:black; 
+    font-weight:500;
+}
+
+a:link {
+    text-decoration: none;
+    color:black;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color:black;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color:black;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  a:active {
+    text-decoration: none;
+    color:black;
+  } 
+
+p{
+    font-size:3.2vw;
+    hyphens: auto;
+    line-height: 4.2vw;
+    font-family: "sonovariablefont";
+}
+
+h1{
+    font-size:4.2vw;
+    font-weight:400;
+    text-align: center;
+}
+
+.details{
+    display:grid;
+    grid-template-columns: auto auto;
+    font-size:3.1vw;
+    gap:2.8vw;
+    color:grey;
+}
+
+#name{
+    font-size:3.2vw;
+    hyphens: auto;
+    line-height: 3.6vw;
+    font-family: "sonovariablefont";
+}
+}
