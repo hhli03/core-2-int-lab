@@ -419,55 +419,255 @@ font-weight: 300;
 }
 
 @media screen and (max-width: 1024px) {
+
+#year{
+  font-family: "sonovariablefont";
+  font-size:2vw;
+}
+
+#rankby{
+  font-size:2vw;
+}
+
+
+#namegenerator{
+  font-size:2vw;
+  border:black 0.2vw solid;
+  padding-left:0.5vw;
+  padding-right:0.5vw;
+  padding-top:0.35vw;
+  padding-bottom:0.35vw;
+  border-radius: 4vw;
+  white-space:nowrap;
+}
+
+#button{
+  font-family: "sonovariablefont";
+  font-size:2vw;
+}
+
+.dropbtn{
+  font-size:2vw;
+    border: none;
+cursor: pointer;
+color:black;
+}
+
+.ethnicitydropbtn{
+  font-size:2vw;
+color:black;
+}
+
+.show-ethnicity-dropdown {
+  display:block;
+}
+
+.dropdown{
+  float: left;
+  position: relative;
+}
+
+.dropdown-content{
+padding:2.5vw;
+border-radius: 2vw;
+margin-top: 3vw;
+margin-left:12vw;
+min-width: 5vw;
+line-height:3vw;
+font-size:2vw;
+}
+
+.rankbydropbtn{
+  font-size:2vw;
+color:black;
+}
+
+.rankbydropdown{
+  float: left;
+  position: relative;
+}
+
+.rankbydropdown-content{
+padding:2.5vw;
+border-radius: 2vw;
+margin-top: 3vw;
+margin-left:22.5vw;
+min-width: 5vw;
+line-height:3vw;
+font-size:2vw;
+}
+
+#names-container{
+  font-variation-settings: 'wght' var(--wght);
+display:grid;
+grid-template-columns: auto;
+margin-top:2.5vw;
+}
+
+.names{
+padding:4.2vw;
+  text-align: center;
+  font-variation-settings: 'wght' var(--wght);
+  font-size:4.65vw;
+  margin-top:2.3vw;
+}
+
+
+input[type="text"], button[type="submit"] {
+  font-family: "sonovariablefont";
+  font-size:2vw;
+  vertical-align: top;
+}
+
+
+input[type="text"] {
+  border:grey 0.15vw solid;
+  background-color: #FCFBF6;
+  padding-left:0.5vw;
+  padding-right:0.5vw;
+  padding-top:0.35vw;
+  padding-bottom:0.35vw;
+  border-radius: 2vw;
+  vertical-align: top;
+}
+
+#search-button{
+display:none;
+}
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+background-color: #FCFBF6;
+  border: black solid 0.2vw;
+  border-radius: 50%;
+  height:4vw;
+  width: 4vw;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color:black;
+  font-size:2.5vw;
+  padding-bottom: 0.6vw;
+}
+
+
+
+
+.dropbtn{
+  font-family: "sonovariablefont";
+  font-size:2vw;
+    border: none;
+cursor: pointer;
+background-color:#FCFBF6;
+color:black;
+}
+
+
+.ethnicitydropdown{
+  float: left;
+  position: relative;
+}
+
+
+.ethnicitydropdown-content{
+
+padding:2.5vw;
+border-radius: 1.5vw;
+margin-top: 3vw;
+margin-left:2.5vw;
+line-height:3vw;
+font-family: "sonovariablefont";
+font-size:2vw;
+}
+
+#key{
+  font-family: "sonovariablefont";
+  font-size:2vw;
+}
+
+#home{
+  justify-self:end;
+    font-family: "sonovariablefont";
+    font-size:2vw;
+}
+
+#detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.names:hover + #detail{
+  display: block;
+}
+
+
+#ethnicity{
+  font-family: "sonovariablefont";
+  font-size:2vw;
+}
+
+}
+
+
+
+/*
+@media screen and (max-width: 1024px) 
+
+
+
+
+{
   .navigationgrid{
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
 }
 
 #year{
     font-family: "sonovariablefont";
-    font-size:3.2vw;
+    font-size:2vw;
 }
 
-
 #rankby{
-    font-size:3.2vw;
+    font-size:2vw;
 }
 
 #namegenerator{
-    font-size:3.2vw;
+    font-size:2vw;
     border:black 0.2vw solid;
     padding-left:0.5vw;
     padding-right:0.5vw;
     padding-top:0.35vw;
     padding-bottom:0.35vw;
-    border-radius: 2vw;
-}
-
-
-#search-container{
-    border-radius: 2vw;
-
+    border-radius: 4vw;
+    white-space:nowrap;
 }
 
 #button{
     font-family: "sonovariablefont";
-    font-size:3.2vw;
+    font-size:2vw;
 }
 
 .dropbtn{
-    font-family: "sonovariablefont";
-    font-size:3.2vw;
+    font-size:2vw;
       border: none;
   cursor: pointer;
-  background-color:#FCFBF6;
   color:black;
 }
 
 .ethnicitydropbtn{
-
-  font-size:3.2vw;
-
+  font-size:2vw;
 color:black;
+}
+
+.show-ethnicity-dropdown {
+  display:block;
 }
 
 .dropdown{
@@ -476,23 +676,19 @@ color:black;
 }
 
 .dropdown-content{
-
-  padding:3.2vw;
-  border-radius: 1.5vw;
-  margin-top: 2vw;
-  margin-left:12.5vw;
-  min-width:3vw;
-  line-height:5.1vw;
-  font-size:3.2vw;
+  padding:2.5vw;
+  border-radius: 2vw;
+  margin-top: 3vw;
+  margin-left:12vw;
+  min-width: 5vw;
+  line-height:3vw;
+  font-size:2vw;
 }
 
 .rankbydropbtn{
-    font-size:3.2vw;
-
-  color:blac;
+    font-size:2vw;
+  color:black;
 }
-
-
 
 .rankbydropdown{
     float: left;
@@ -500,18 +696,13 @@ color:black;
 }
 
 .rankbydropdown-content{
-
-  padding:3.2vw;
-  border-radius: 1.5vw;
-  margin-top: 2vw;
+  padding:2.5vw;
+  border-radius: 2vw;
+  margin-top: 3vw;
   margin-left:22.5vw;
-
-  min-width: 10vw;
-  z-index: 1;
-  left: 0;
-  line-height:2vw;
-  font-size:3.2vw;
-  font-weight: 300;
+  min-width: 5vw;
+  line-height:3vw;
+  font-size:2vw;
 }
 
 
@@ -523,17 +714,17 @@ color:black;
   }
 
 .names{
- padding:4.4vw;
+ padding:4.2vw;
     text-align: center;
     font-variation-settings: 'wght' var(--wght);
     font-size:4.65vw;
-    margin-top:2.8vw;
+    margin-top:2.3vw;
   }
 
  
   input[type="text"], button[type="submit"] {
     font-family: "sonovariablefont";
-    font-size:3.2vw;
+    font-size:2vw;
     vertical-align: top;
   }
 
@@ -549,15 +740,7 @@ color:black;
   }
 
  #search-button{
-
-  font-size:3.2vw;
-border:black 0.15vw solid;
-
-  padding-left:0.5vw;
-  padding-right:0.5vw;
-  padding-top:0.35vw;
-  padding-bottom:0.35vw;
-  border-radius: 2vw;
+ display:none;
 }
 
 #scroll-to-top {
@@ -565,34 +748,25 @@ border:black 0.15vw solid;
   bottom: 20px;
   right: 20px;
 background-color: #FCFBF6;
-  border: black solid 0.1vw;
+  border: black solid 0.2vw;
   border-radius: 50%;
-  height:2.2vw;
-  width: 2.2vw;
+  height:4vw;
+  width: 4vw;
   outline: none;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s;
   color:black;
-  font-size:3.3vw;
-  padding-bottom: 0.2vw;
+  font-size:2.5vw;
+  padding-bottom: 0.6vw;
 }
 
 
-.rankby-option{
-  text-decoration:none;
-  color:#FCFBF6;
-  cursor:pointer;
-}
 
-.rankby-option:visited{
-  color:black;
-  text-decoration:none;
-}
 
 .dropbtn{
   font-family: "sonovariablefont";
-  font-size:3.2vw;
+  font-size:2vw;
     border: none;
 cursor: pointer;
 background-color:#FCFBF6;
@@ -609,21 +783,19 @@ color:black;
 display: none;
 position: absolute;
 background: rgba(0, 0, 0, 0.7);
-padding:1.5vw;
+padding:2.5vw;
 border-radius: 1.5vw;
 margin-top: 2vw;
 margin-left:2.5vw;
-
 color:#FCFBF6;
 min-width: 10vw;
 z-index: 1;
 left: 0;
 line-height:5.1vw;
 font-family: "sonovariablefont";
-font-size:3.2vw;
+font-size:2vw;
 font-weight: 300;
 }
-
 
 
 #colorcode1{
@@ -664,13 +836,13 @@ font-weight: 300;
 
 #key{
   font-family: "sonovariablefont";
-  font-size:3.2vw;
+  font-size:2vw;
 }
 
 #home{
   justify-self:end;
     font-family: "sonovariablefont";
-    font-size:3.2vw;
+    font-size:2vw;
 }
 
 #detail {
@@ -690,7 +862,7 @@ font-weight: 300;
 
 #ethnicity{
   font-family: "sonovariablefont";
-  font-size:3.2vw;
+  font-size:2vw;
 }
 
-}
+}*/
