@@ -414,9 +414,7 @@ font-weight: 300;
   
 
   .namegenerator{
- justify-self: center;
- justify-content: center;
-    margin:10vw;
+ margin: 10vw 0;
     gap:8vw;
     align-items: center;
     display: flex;
