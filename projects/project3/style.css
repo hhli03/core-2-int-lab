@@ -105,7 +105,7 @@ display: none;
   margin-left:2.5vw;
 
   color:#FCFBF6;
-  min-width: 160px;
+  min-width: 10vw;
   z-index: 1;
   left: 0;
   line-height:2.1vw;
@@ -256,7 +256,7 @@ margin-top: 2vw;
 margin-left:12.5vw;
 
 color:#FCFBF6;
-min-width: 40px;
+min-width: 3vw;
 z-index: 1;
 left: 0;
 line-height:2.1vw;

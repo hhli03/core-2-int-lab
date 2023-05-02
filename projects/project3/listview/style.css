@@ -12,6 +12,7 @@ body{
 .navigationgrid{
     display:grid;
     grid-template-columns: 10vw 10vw 17vw 1fr 12vw 10vw;
+    align-items: start;
 }
 
 #year{
@@ -51,13 +52,8 @@ body{
 #search-container{
     font-family: "sonovariablefont";
     font-size:1.2vw;
-    border:black 0.15vw solid;
-    padding-left:0.5vw;
-    padding-right:0.5vw;
-    padding-top:0.35vw;
-    padding-bottom:0.35vw;
     border-radius: 2vw;
-    justify-self: start;
+    vertical-align: top;
 
 }
 
@@ -97,7 +93,7 @@ background-color:#FCFBF6;
   margin-left:12.5vw;
 
   color:#FCFBF6;
-  min-width: 40px;
+  min-width:3vw;
   z-index: 1;
   left: 0;
   line-height:2.1vw;
@@ -135,7 +131,7 @@ display: none;
   margin-top: 2vw;
   margin-left:22.5vw;
   color:#FCFBF6;
-  min-width: 160px;
+  min-width: 10vw;
   z-index: 1;
   left: 0;
   line-height:2vw;
@@ -187,6 +183,7 @@ display: none;
   input[type="text"], button[type="submit"] {
     font-family: "sonovariablefont";
     font-size:1.2vw;
+    vertical-align: top;
   }
 
   input[type="text"] {
@@ -197,6 +194,7 @@ display: none;
     padding-top:0.35vw;
     padding-bottom:0.35vw;
     border-radius: 2vw;
+    vertical-align: top;
   }
 
  #search-button{
@@ -210,6 +208,7 @@ background:#FCFBF6;
   padding-bottom:0.35vw;
   border-radius: 2vw;
   cursor: pointer;
+  vertical-align: top;
 }
 
 #search-button:hover{
@@ -339,7 +338,7 @@ margin-top: 2vw;
 margin-left:2.5vw;
 
 color:#FCFBF6;
-min-width: 160px;
+min-width: 10vw;
 z-index: 1;
 left: 0;
 line-height:2.1vw;
