@@ -556,6 +556,9 @@ background-color: #FCFBF6;
   color:black;
   font-size:3vw;
   padding-bottom: 0vw;
+  justify-items: center;
+  justify-content: center;
+  display:grid;
 }
 
 
