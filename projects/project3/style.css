@@ -298,6 +298,7 @@ font-weight: 300;
 @media screen and (max-width: 1024px) {
  
   body {
+    margin:2.5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -357,8 +358,8 @@ font-weight: 300;
     .dropdown-content {
       padding: 3vw;
       border-radius: 3.5vw;
-      margin-top: 5vw;
-      margin-left: 5vw;
+      margin-top: 5.5vw;
+      margin-left: 5.5vw;
       min-width: 10vw;
       line-height: 5.1vw;
       font-size: 3.2vw;
@@ -367,8 +368,8 @@ font-weight: 300;
     .yeardropdown-content {
       padding: 3vw;
       border-radius: 3.5vw;
-      margin-top: 5vw;
-      margin-left: 27vw;
+      margin-top: 5.5vw;
+      margin-left: 27.5vw;
       min-width: 5vw;
       line-height: 5.1vw;
       font-size: 3.2vw;
@@ -392,10 +393,7 @@ font-weight: 300;
       margin-right: 0.8rem;
     }
     
-    /* Adjust padding */
-    body {
-      margin: 2.5vw 2.5vw;
-    }
+
     
     #listlink,
     #aboutlink {
