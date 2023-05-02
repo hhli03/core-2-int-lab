@@ -545,17 +545,17 @@ display:none;
   bottom: 20px;
   right: 20px;
 background-color: #FCFBF6;
-  border: black solid 0.2vw;
+  border: black solid 0.25vw;
   border-radius: 50%;
-  height:4vw;
-  width: 4vw;
+  height:5vw;
+  width: 5vw;
   outline: none;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s;
   color:black;
-  font-size:2.5vw;
-  padding-bottom: 0.6vw;
+  font-size:3vw;
+  padding-bottom: 0vw;
 }
 
 
