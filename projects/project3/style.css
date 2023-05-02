@@ -56,6 +56,8 @@ justify-self: end;
 #title{
     font-family: "sonovariablefont";
     font-size:2.2vw;
+    justify-items: center;
+    text-align: center;
 }
 
 #button{
@@ -290,4 +292,123 @@ font-weight: 300;
   color:#FCFBF6;
   font-weight:600;
   text-decoration: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
+    /* Adjust font sizes */
+    
+    #key {
+      font-size: 3.2vw;
+    }
+    
+    #home{
+      font-size: 3.2vw;
+    }
+    
+    #year{
+
+      font-size:3.2vw;
+  }
+    #plus {
+      font-size: 3.4vw;
+    }
+    
+    #listview {
+      font-size: 3.2vw;
+      padding: 0.6vw 1.2vw;
+      border-radius: 4vw;
+      border:black 0.3vw solid;
+    }
+    
+    #title {
+      font-size: 5vw;
+    }
+
+    .dropbtn{
+      font-size: 3.2vw;
+    }
+
+    .yeardropbtn{
+      font-size: 3.2vw;
+    }
+    
+    #button {
+      font-size: 5vw;
+      padding: 0.6vw 1.2vw;
+      border-radius: 6vw;
+      border:black 0.3vw solid;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 3.2vw;
+    }
+    
+    .dropdown-content {
+      padding: 3vw;
+      border-radius: 3.5vw;
+      margin-top: 5vw;
+      margin-left: 2vw;
+      min-width: 10vw;
+      line-height: 5.1vw;
+      font-size: 3.2vw;
+    }
+    
+    .yeardropdown-content {
+      padding: 3vw;
+      border-radius: 3.5vw;
+      margin-top: 5vw;
+      margin-left: 26vw;
+      min-width: 5vw;
+      line-height: 5.1vw;
+      font-size: 3.2vw;
+    }
+    #name {
+      font-size: 18vw;
+    }
+    
+    /* Adjust element widths */
+    .navigationgrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    #colorcode1,
+    #colorcode2,
+    #colorcode3,
+    #colorcode4 {
+      width: 3.2vw;
+      height: 3.2vw;
+      border-radius: 1rem;
+      margin-right: 0.8rem;
+    }
+    
+    /* Adjust padding */
+    body {
+      margin: 2.5vw 2.5vw;
+    }
+    
+    #listlink,
+    #aboutlink {
+      padding: 0.5vw;
+    }
+    
+    /* Other adjustments */
+    #name {
+      padding-top: 4.5rem;
+    }
+    
+    .detail {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  .namegenerator{
+ 
+    margin:8vw;
+    gap:5.5vw;
+}
+  
+
 }
