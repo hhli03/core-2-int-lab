@@ -296,6 +296,14 @@ font-weight: 300;
 
 
 @media screen and (max-width: 1024px) {
+ 
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; 
+  }
 
     #key {
       font-size: 3.2vw;
@@ -409,6 +417,10 @@ font-weight: 300;
  justify-content: center;
     margin:10vw;
     gap:8vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
   
 }
