@@ -186,19 +186,22 @@ display: none;
     position:relative;
   }
 
+  .name-wrapper{
+    position: relative;
+  }
 
   .detail {
     display: none;
     position: absolute;
-    top: 0;
+top: 0;
     left: 100%;
     width: 200px;
     padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #FCFBF6;
+    border-radius: 1vw;
   }
   
-  .name:hover + .detail {
+  #name:hover + .detail {
     display: block;
   }
   
@@ -411,6 +414,7 @@ font-weight: 300;
     .detail {
       width: 100%;
       left: 0;
+
     }
   
 
@@ -423,4 +427,21 @@ font-weight: 300;
     align-items: center;
 }
   
+
+.detail {
+  display: none;
+  position: absolute;
+top: 0;
+align-items: center;
+align-self: center;
+align-content: center;
+  width: 200px;
+  padding: 10px;
+  background-color: #FCFBF6;
+  border-radius: 1vw;
+}
+
+
+
+
 }

@@ -1,25 +1,12 @@
 console.log('loaded');
+let data = [];
+let selected_year = 2019;
 
 function myFunction() {
   var dropdown = document.getElementById("myDropdown");
   dropdown.classList.toggle("show");
 }
 
-
-function resetNameGenerator() {
-  // Remove all name elements from the container element
-  let containerElement = document.getElementById('container');
-  containerElement.innerHTML = '';
-
-  // Reset the name element
-  let nameElement = document.getElementById('name');
-  nameElement.innerText = 'Click the button to generate a name!';
-  nameElement.style.setProperty('--wght', '400');
-  nameElement.style.color = '#808080';
-  nameElement.removeAttribute('data-babyname');
-  nameElement.removeAttribute('data-rnk'); // remove data-rnk attribute
-  nameElement.removeEventListener('mouseenter', showDetail);
-}
 
 function toggleYearDropdown() {
   var dropdown = document.getElementById("yearDropdown");
@@ -98,7 +85,6 @@ function getColorForEthnicity(ethcty) {
       return '#808080'; // gray
   }
 }
-
 function processBabynameData(data) {
   console.log(data);
 
@@ -106,6 +92,7 @@ function processBabynameData(data) {
   let maxCnt = Math.max(...data.map(obj => obj.cnt));
 
   // Iterate over the array of objects and process each object
+  for (let i = 0; i < data.length; i++) {
     let cnt = data[i].cnt;
     let ratio = cnt / maxCnt;
     let fontWeight = ratio * (800 - 200) + 200; // calculate font weight based on count
@@ -114,9 +101,12 @@ function processBabynameData(data) {
 
     let color = getColorForEthnicity(ethnicity);
 
+    
     // Create a new element to display the baby name and 'rnk' value
     let nameElement = document.createElement('div');
     nameElement.classList.add('name');
+
+    let babyname = data[i].nm.toLowerCase().replace(/(?:^|\s)\w/g, c => c.toUpperCase());
 
     nameElement.innerText = babyname;
 
@@ -130,20 +120,23 @@ function processBabynameData(data) {
     let containerElement = document.getElementById('container');
     containerElement.appendChild(nameElement);
 
-    nameElement.addEventListener('mouseenter', (event) => {
-      event.target.setAttribute('data-babyname', babyname);
-      showDetail(event);
-    });
-  }
 
+
+
+  }
+}
 
 
 
 function generateRandomName(data) {
+  console.log(data, 'randomnamegenerate');
+  capitalizeNames(data);
+  
   let randomIndex = Math.floor(Math.random() * data.length);
   let randomObject = data[randomIndex];
   let babyname = randomObject.nm;
   let cnt = randomObject.cnt;
+  let rnk = randomObject.rnk;
   let maxCnt = Math.max(...data.map(obj => obj.cnt));
   let ratio = cnt / maxCnt;
   let fontWeight = ratio * (800-200) + 300; // calculate font weight based on count
@@ -152,10 +145,13 @@ function generateRandomName(data) {
 
   nameElement.innerText = babyname;
   nameElement.dataset.babyname = babyname; // add data attribute to store baby name
-  nameElement.addEventListener('mouseenter', showDetail); // add event listener to the name element
+
 
   nameElement.style.setProperty('--wght', fontWeight);
   nameElement.style.color = getColorForEthnicity(randomObject.ethcty);
+
+  let detailElement = document.querySelector('.detail');
+  detailElement.innerHTML = `Count: ${cnt} <br>Rank: ${rnk}`;
 }
 
 function capitalizeNames(data) {
@@ -167,49 +163,16 @@ function capitalizeNames(data) {
   return data;
 }
 
-let generateButton = document.getElementById('button');
-generateButton.addEventListener('click', function() {
-  data = capitalizeNames(data);
-  generateRandomName(data);
-});
 
 
-function showDetail(event) {
-  // Get the baby name from the data attribute
-  let babyname = event.target.dataset.babyname;
-  // Make an API request to get the 'rnk' and 'cnt' data for the current baby name
-  fetch(`https://data.cityofnewyork.us/resource/25th-nujf.json?brth_yr=${selected_year}&nm=${babyname}`)
-    .then(response => response.json())
-    .then(data => {
-      // Check whether the data array is empty
-      if (data.length === 0) {
-        console.log('No data found for ' + babyname);
-        return;
-      }
-      // Get the 'rnk' and 'cnt' values from the data object
-      let rnk = data[0].rnk;
-      let cnt = data[0].cnt;
-
-      // Create a new element to display the 'rnk' and 'cnt' data
-      let detailElement = document.createElement('div');
-      detailElement.classList.add('detail');
-      detailElement.innerHTML = `
-        <p>Rank: ${rnk}</p>
-        <p>Count: ${cnt}</p>
-      `;
-
-      // Add the detail element to the container element
-      let containerElement = document.getElementById('container');
-      containerElement.appendChild(detailElement);
-    });
-}
 
 function fetchNames(year){
   fetch(`https://data.cityofnewyork.us/resource/25th-nujf.json?brth_yr=${year}`)
     .then(response => response.json())
-    .then(data => {
+    .then(jsondata => {
+      data = jsondata;
       generateRandomName(data);
-      updateYearName(year); // update year name in UI
+      updateYearName(year); 
     })
     .catch(error => console.error(error));
 }
@@ -218,7 +181,7 @@ function updateYearName(year) {
   document.getElementById('yearname').textContent = year;
 }
 
-// Get the year options and attach event listeners
+
 let options = document.querySelectorAll('.year');
 options.forEach(option => {
   option.addEventListener('click', function(event){
@@ -227,54 +190,15 @@ options.forEach(option => {
   });
 });
 
-let data = [];
-
-function fetchNames(year) {
-  let url = `https://data.cityofnewyork.us/resource/25th-nujf.json?brth_yr=${year}`;
-  fetch(url)
-    .then(response => response.json())
-    .then(result => {
-      data = result;
-      console.log('Data loaded successfully');
-    })
-    .catch(error => {
-      console.error('Error loading data:', error);
-    });
-}
 
 fetchNames(2019);
 
 
-function showDetail(event) {
-  let babyname = event.target.dataset.babyname;
-  let rnk = event.target.dataset.rnk;
-  let year = selected_year;
 
-  // Find the data array that matches the baby name, rank, and year
-  let dataArray = data.find(obj => obj.nm === babyname && obj.rnk === rnk && obj.yr === year);
 
-  if (dataArray) {
-    // Display the data array in the .detail div
-    let detailElement = document.querySelector('.detail');
-    detailElement.innerHTML = '';
 
-    let headingElement = document.createElement('h3');
-    headingElement.innerText = `${babyname} (${year})`;
-    detailElement.appendChild(headingElement);
-
-    let listElement = document.createElement('ul');
-
-    Object.entries(dataArray).forEach(([key, value]) => {
-      if (key !== 'nm' && key !== 'rnk' && key !== 'yr' && key !== 'cnt') {
-        let listItemElement = document.createElement('li');
-        listItemElement.innerHTML = `<strong>${key}:</strong> ${value}`;
-        listElement.appendChild(listItemElement);
-      }
-    });
-
-    detailElement.appendChild(listElement);
-
-    // Show the .detail div
-    detailElement.style.display = 'block';
-  }
-}
+let button = document.querySelector('#button');
+button.addEventListener('click', function() {
+  console.log('Button clicked!');
+  generateRandomName(data);
+});
