@@ -151,8 +151,10 @@ function generateRandomName(data) {
   nameElement.style.color = getColorForEthnicity(randomObject.ethcty);
 
   let detailElement = document.querySelector('.detail');
+  detailElement.style.borderColor = getColorForEthnicity(randomObject.ethcty);
   detailElement.innerHTML = `Count: ${cnt} <br>Rank: ${rnk}`;
   detailElement.style.color = getColorForEthnicity(randomObject.ethcty);
+
 }
 
 

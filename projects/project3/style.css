@@ -193,12 +193,13 @@ display: none;
   .detail {
     display: none;
     position: absolute;
-top: 0;
-    left: 100%;
-    width: 200px;
-    padding: 10px;
+    bottom: -1vw; 
+    right: -11vw; 
+    padding: 0.8vw;
     background-color: #FCFBF6;
-    border-radius: 1vw;
+    border-radius: 1.5vw;
+    border: 0.18vw solid black;
+    min-width: 7vw;
   }
   
   #name:hover + .detail {
@@ -428,20 +429,21 @@ font-weight: 300;
 }
   
 
+
 .detail {
   display: none;
   position: absolute;
-top: 0;
-align-items: center;
-align-self: center;
-align-content: center;
-  width: 200px;
-  padding: 10px;
+  bottom: -12vw; 
+  right: -12vw; 
+  padding: 0.8vw;
   background-color: #FCFBF6;
-  border-radius: 1vw;
+  border-radius: 1.5vw;
+  border: 0.3vw solid black;
+  width: 20vw;
+}
+  
 }
 
 
 
 
-}
