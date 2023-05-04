@@ -85,11 +85,15 @@ function getColorForEthnicity(ethcty) {
       return '#808080'; // gray
   }
 }
+
 function processBabynameData(data) {
   console.log(data);
 
   // Get the maximum value of the cnt property in the data array
   let maxCnt = Math.max(...data.map(obj => obj.cnt));
+
+  // Get the name-wrapper element
+  let nameWrapper = document.querySelector('.name-wrapper');
 
   // Iterate over the array of objects and process each object
   for (let i = 0; i < data.length; i++) {
@@ -101,7 +105,6 @@ function processBabynameData(data) {
 
     let color = getColorForEthnicity(ethnicity);
 
-    
     // Create a new element to display the baby name and 'rnk' value
     let nameElement = document.createElement('div');
     nameElement.classList.add('name');
@@ -112,15 +115,12 @@ function processBabynameData(data) {
 
     nameElement.setAttribute('data-rnk', rnk); // store 'rnk' value as a data attribute
 
-    // Update the font weight and color of the name element
+    // Update the font weight of the name element
     nameElement.style.setProperty('--wght', fontWeight);
-    nameElement.style.color = color;
 
     // Add the name element to the container element
     let containerElement = document.getElementById('container');
     containerElement.appendChild(nameElement);
-
-
 
 
   }
@@ -131,12 +131,13 @@ function processBabynameData(data) {
 function generateRandomName(data) {
   console.log(data, 'randomnamegenerate');
   capitalizeNames(data);
-  
+
   let randomIndex = Math.floor(Math.random() * data.length);
   let randomObject = data[randomIndex];
   let babyname = randomObject.nm;
   let cnt = randomObject.cnt;
   let rnk = randomObject.rnk;
+  let brth_yr = randomObject.brth_yr;
   let maxCnt = Math.max(...data.map(obj => obj.cnt));
   let ratio = cnt / maxCnt;
   let fontWeight = ratio * (800-200) + 300; // calculate font weight based on count
@@ -146,13 +147,14 @@ function generateRandomName(data) {
   nameElement.innerText = babyname;
   nameElement.dataset.babyname = babyname; // add data attribute to store baby name
 
-
   nameElement.style.setProperty('--wght', fontWeight);
   nameElement.style.color = getColorForEthnicity(randomObject.ethcty);
 
   let detailElement = document.querySelector('.detail');
   detailElement.innerHTML = `Count: ${cnt} <br>Rank: ${rnk}`;
+  detailElement.style.color = getColorForEthnicity(randomObject.ethcty);
 }
+
 
 function capitalizeNames(data) {
   for (var i = 0; i < data.length; i++) {
