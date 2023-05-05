@@ -200,6 +200,7 @@ display: none;
     border-radius: 1.5vw;
     border: 0.18vw solid black;
     min-width: 7vw;
+    font-size:1.2vw;
   }
   
   #name:hover + .detail {
@@ -412,11 +413,7 @@ font-weight: 300;
       padding-top: 4.5rem;
     }
     
-    .detail {
-      width: 100%;
-      left: 0;
 
-    }
   
 
   .namegenerator{
@@ -435,11 +432,13 @@ font-weight: 300;
   position: absolute;
   bottom: -12vw; 
   right: -12vw; 
-  padding: 0.8vw;
+  padding: 1.5vw;
   background-color: #FCFBF6;
-  border-radius: 1.5vw;
-  border: 0.3vw solid black;
+  border-radius: 2.4vw;
+  border: 0.38vw solid black;
   width: 20vw;
+  min-width: 6vw;
+  font-size:3.2vw;
 }
   
 }

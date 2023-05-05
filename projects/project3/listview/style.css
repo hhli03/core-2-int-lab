@@ -171,13 +171,7 @@ display: none;
   margin-top:2.5vw;
   }
 
-.names{
- padding:1.4vw;
-    text-align: center;
-    font-variation-settings: 'wght' var(--wght);
-    font-size:1.65vw;
-    margin-top:2.8vw;
-  }
+
 
  
   input[type="text"], button[type="submit"] {
@@ -398,25 +392,53 @@ font-weight: 300;
     font-size:1.2vw;
 }
 
-#detail {
-  position: absolute;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
 
-.names:hover + #detail{
-  display: block;
-}
 
 
 #ethnicity{
   font-family: "sonovariablefont";
   font-size:1.2vw;
 }
+
+
+
+.detail {
+  display: none;
+  position: absolute;
+  bottom: -1vw; 
+  right: -3vw; 
+  padding: 0.8vw;
+  background-color: #FCFBF6;
+  border-radius: 1.5vw;
+  border: 0.18vw solid black;
+  min-width: 7vw;
+  font-size:1.2vw;
+  text-align:left;
+}
+
+.names{
+  padding:1.4vw;
+     text-align: center;
+     font-variation-settings: 'wght' var(--wght);
+     font-size:1.65vw;
+     margin-top:2.8vw;
+     position: relative;
+     
+   }
+
+.babyname{
+  display: inline-block;
+    padding: 0;
+    margin: 0;
+  position:relative;
+}
+
+.babyname:hover + .detail {
+  display: block;
+}
+
+
+
 
 @media screen and (max-width: 1024px) {
 body{
@@ -515,6 +537,7 @@ padding:4.2vw;
   font-variation-settings: 'wght' var(--wght);
   font-size:5vw;
   margin-top:2.3vw;
+  position: relative;
 }
 
 
@@ -614,19 +637,6 @@ font-size:2vw;
     font-size:2vw;
 }
 
-#detail {
-  position: absolute;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-.names:hover + #detail{
-  display: block;
-}
 
 
 #ethnicity{

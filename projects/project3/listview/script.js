@@ -1,4 +1,25 @@
+/*
+const detailElement = document.querySelector('.detail');
 
+// Add an event listener to each .names element
+const namesElements = document.querySelectorAll('.names');
+namesElements.forEach(nameElement => {
+  nameElement.addEventListener('mouseenter', () => {
+    const randomObject = generateRandomObject(); // generate a random object
+    const cnt = randomObject.cnt.toLocaleString(); // get the count property formatted with comma separators
+    const rnk = randomObject.rnk.toLocaleString(); // get the rank property formatted with comma separators
+    detailElement.style.borderColor = getColorForEthnicity(randomObject.ethcty);
+    detailElement.innerHTML = `Count: ${cnt} <br>Rank: ${rnk}`;
+    detailElement.style.color = getColorForEthnicity(randomObject.ethcty);
+    detailElement.style.display = 'block'; // show the detail element
+  });
+
+  nameElement.addEventListener('mouseleave', () => {
+    detailElement.style.display = 'none'; // hide the detail element
+  });
+});
+*/
+let nameElements;
 
 function myFunction() {
   var dropdown = document.getElementById("myDropdown");
@@ -21,7 +42,7 @@ function toggleRankByDropdown() {
     // Add an event listener to the "Alphabetical Order" option
     rankbyDropdown.children[1].addEventListener('click', () => {
       const names = document.querySelectorAll('.names');
-      const sortedNames = Array.from(names).sort((a, b) => a.textContent.localeCompare(b.textContent));
+      const sortedNames = Array.from(names).sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
       namesContainer.innerHTML = ''; // clear the names container
       sortedNames.forEach(name => namesContainer.appendChild(name));
     });
@@ -64,7 +85,9 @@ function toggleRankByDropdown() {
 
 
   
+  
 }
+
 
 // Close the ethnicity dropdown if the user clicks outside of it
 window.addEventListener('click', function(event) {
@@ -135,7 +158,7 @@ rankbyOptions.forEach(option => {
     const rankby = option.getAttribute('data-rankby');
     if (rankby === 'alphabetical') {
       const nameElements = Array.from(namesContainer.children);
-      nameElements.sort((a, b) => a.textContent.localeCompare(b.textContent));
+      nameElements.sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
       nameElements.forEach(nameElement => namesContainer.appendChild(nameElement));
     }
   });
@@ -149,11 +172,12 @@ const namesContainer = document.getElementById('names-container');
 
 
 function processBabynameData(data){
+  console.log('processnames');
   data.sort((a, b) => b.cnt - a.cnt);
   
   let maxCnt = Math.max(...data.map(obj => obj.cnt));
 
-  const nameElements = data.map(obj => {
+  nameElements = data.map(obj => {
     let babyname = obj.nm;
     let cnt = obj.cnt;
     let ratio = cnt / maxCnt;
@@ -162,13 +186,21 @@ function processBabynameData(data){
     let rnk = obj.rnk;
 
     let color = getColorForEthnicity(ethnicity);
-
+          // Check if the name needs to be transformed
+    if (babyname.toLowerCase() !== babyname) {
+      // Transform the name to be lowercase with the first letter capitalized
+      const transformedName = babyname.charAt(0).toUpperCase() + babyname.slice(1).toLowerCase();
+      babyname = transformedName;
+    }
     const nameElement = document.createElement('div');
     nameElement.classList.add('names');
-    nameElement.textContent = babyname;
+    nameElement.dataset.name = babyname;
+    nameElement.innerHTML = `<div class="babyname">${babyname}</div><div class="detail">Count: ${obj.cnt}<br> Rank: ${obj.rnk}</div>`;
     nameElement.style.setProperty('--wght', fontWeight);
     nameElement.style.color = '#000000';
     nameElement.setAttribute('data-rnk', rnk);
+
+    
 
     // Add a mouseover event listener to change the color when hovered over
     nameElement.addEventListener('mouseover', () => {
@@ -186,77 +218,40 @@ function processBabynameData(data){
       nameElement.style.color = '#000000';
     });
 
-      // Check if the name needs to be transformed
-      if (babyname.toLowerCase() !== babyname) {
-        // Transform the name to be lowercase with the first letter capitalized
-        const transformedName = babyname.charAt(0).toUpperCase() + babyname.slice(1).toLowerCase();
-        nameElement.textContent = transformedName;
-      }
-
       
     return nameElement;
   });
 
   displayNames(nameElements);
 
+    // add event listener to namesContainer for mouseover
+    function showDetails(event) {
+      const nameElement = event.currentTarget;
+      const detailElement = nameElement.closest('.names').querySelector('.detail');
+    }
+    function hideDetails(event) {
+      const nameElement = event.currentTarget;
+      const detailElement = nameElement.closest('.names').querySelector('.detail');
 
-// get elements
-const namesContainer = document.querySelector('.names');
-const detailDiv = document.querySelector('.detail');
-
-// retrieve data from API
-fetch('https://data.cityofnewyork.us/resource/25th-nujf.json?brth_yr='+year)
-  .then(response => response.json())
-  .then(data => {
-    // add event listeners to names
-    const names = document.querySelectorAll('.names');
-    names.forEach((name, index) => {
-      name.addEventListener('click', () => {
-        // get data from the clicked name
-        const cnt = data[index].cnt;
-        const rnk = data[index].rnk;
-        const ethcty = data[index].ethcty;
-
-        // update detailDiv content
-        detailDiv.innerHTML = `
-          <p>Count: ${cnt}</p>
-          <p>Rank: ${rnk}</p>
-          <p>Ethnicity: ${ethcty}</p>
-        `;
-      });
-      // update name element content
-      name.innerHTML = `
-        <p>Count: ${data[index].cnt}</p>
-        <p>Rank: ${data[index].rnk}</p>
-        <p>Ethnicity: ${data[index].ethcty}</p>
-      `;
-    });
-  });
-
-// add event listener to namesContainer for mouseover
-function showDetails(event) {
-  const nameElement = event.currentTarget;
-  const detailElement = nameElement.closest('.names').querySelector('.detail');
-  detailElement.style.display = 'block';
-}
-function hideDetails(event) {
-  const nameElement = event.currentTarget;
-  const detailElement = nameElement.closest('.names').querySelector('.detail');
-  detailElement.style.display = 'none';
-}
+    }
 
 }
 
 
 function displayNames(nameElements) {
+  console.log('displaynames');
   namesContainer.innerHTML = ''; // clear previous content
   for (let nameElement of nameElements) {
     namesContainer.appendChild(nameElement);
   }
+
+
 }
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
 let searchTerm = '';
+
+
 
 searchInput.addEventListener('input', () => {
   searchTerm = searchInput.value.trim().toLowerCase();
@@ -353,7 +348,10 @@ options.forEach(option => {
   option.addEventListener('click', function(event){
     let selected_year = event.target.dataset.year;
     fetchNames(selected_year);
+
+    
   });
+
 });
 
 const scrollToTopButton = document.getElementById('scroll-to-top');
@@ -379,7 +377,6 @@ yearElements.forEach(yearElement => {
     document.getElementById('yearname').textContent = year;
   });
 });
-
 
 
 
