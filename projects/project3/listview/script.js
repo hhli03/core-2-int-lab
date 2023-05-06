@@ -1,24 +1,4 @@
-/*
-const detailElement = document.querySelector('.detail');
 
-// Add an event listener to each .names element
-const namesElements = document.querySelectorAll('.names');
-namesElements.forEach(nameElement => {
-  nameElement.addEventListener('mouseenter', () => {
-    const randomObject = generateRandomObject(); // generate a random object
-    const cnt = randomObject.cnt.toLocaleString(); // get the count property formatted with comma separators
-    const rnk = randomObject.rnk.toLocaleString(); // get the rank property formatted with comma separators
-    detailElement.style.borderColor = getColorForEthnicity(randomObject.ethcty);
-    detailElement.innerHTML = `Count: ${cnt} <br>Rank: ${rnk}`;
-    detailElement.style.color = getColorForEthnicity(randomObject.ethcty);
-    detailElement.style.display = 'block'; // show the detail element
-  });
-
-  nameElement.addEventListener('mouseleave', () => {
-    detailElement.style.display = 'none'; // hide the detail element
-  });
-});
-*/
 let nameElements;
 
 function myFunction() {
@@ -32,6 +12,8 @@ var ethnicityDropdown = document.getElementById("ethnicityDropdown");
 // Add event listener to toggle the dropdown content
 function toggleEthnicityDropdown() {
   ethnicityDropdown.classList.toggle("show-ethnicity-dropdown");
+
+  
 }
 
 function toggleRankByDropdown() {
@@ -185,6 +167,7 @@ function processBabynameData(data){
     let ethnicity = obj.ethcty;
     let rnk = obj.rnk;
 
+    
     let color = getColorForEthnicity(ethnicity);
           // Check if the name needs to be transformed
     if (babyname.toLowerCase() !== babyname) {
@@ -192,10 +175,11 @@ function processBabynameData(data){
       const transformedName = babyname.charAt(0).toUpperCase() + babyname.slice(1).toLowerCase();
       babyname = transformedName;
     }
+    
     const nameElement = document.createElement('div');
     nameElement.classList.add('names');
     nameElement.dataset.name = babyname;
-    nameElement.innerHTML = `<div class="babyname">${babyname}</div><div class="detail">Count: ${obj.cnt}<br> Rank: ${obj.rnk}</div>`;
+    nameElement.innerHTML = `<div class="babyname font-var">${babyname}</div><div class="detail">Count: ${obj.cnt}<br> Rank: ${obj.rnk}</div>`;
     nameElement.style.setProperty('--wght', fontWeight);
     nameElement.style.color = '#000000';
     nameElement.setAttribute('data-rnk', rnk);
@@ -206,6 +190,18 @@ function processBabynameData(data){
     nameElement.addEventListener('mouseover', () => {
       let hoverColor = getColorForEthnicity(ethnicity);
       nameElement.style.color = hoverColor;
+      let detailElement = nameElement.querySelector('.detail');
+      if (detailElement) {
+        detailElement.style.borderColor = hoverColor;
+      }
+    });
+
+    nameElement.addEventListener('mouseout', () => {
+      nameElement.style.color = '#000000';
+      let detailElement = nameElement.querySelector('.detail');
+      if (detailElement) {
+        detailElement.style.borderColor = '#000000';
+      }
     });
 
     // check if the name matches the search term
