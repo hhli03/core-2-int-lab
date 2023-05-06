@@ -539,7 +539,6 @@ margin-top:2.5vw;
 .names{
 padding:4.2vw;
   text-align: center;
-  font-variation-settings: 'wght' var(--wght);
   font-size:5vw;
   margin-top:2.3vw;
   position: relative;
@@ -649,6 +648,25 @@ font-size:2vw;
   font-size:2vw;
 }
 
+
+.detail {
+  display: none;
+  position: absolute;
+  bottom: 1vw; 
+  right: 4vw; 
+  padding: 1.5vw;
+  background-color: #FCFBF6;
+  border-radius: 2.6vw;
+  border: 0.38vw solid black;
+  min-width: 6vw;
+  font-size:3.3vw;
+  text-align:left;
+  font-weight:400;
+}
+
+.names .babyname.font-var {
+  font-variation-settings: 'wght' var(--wght);
+}
 }
 
 
