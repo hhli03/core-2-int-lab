@@ -380,11 +380,16 @@ font-weight: 300;
       line-height: 5.1vw;
       font-size: 3.2vw;
     }
+
     #name {
-      font-size: 18vw;
+      font-size: 17.5vw;
+      max-width: 80%;
+      text-align: center;
+      margin: auto;
+      overflow-x: scroll;
     }
     
-    /* Adjust element widths */
+
     .navigationgrid {
       grid-template-columns: repeat(4, 1fr);
       display:grid;
@@ -409,11 +414,7 @@ font-weight: 300;
       padding: 0.5vw;
     }
     
-    /* Other adjustments */
-    #name {
-      padding-top: 4.5rem;
-    }
-    
+ 
 
   
 
@@ -445,7 +446,7 @@ max-width:22vw;
 
 .name-wrapper {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   text-align: center;
   width: 100%;
