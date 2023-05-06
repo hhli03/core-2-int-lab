@@ -310,6 +310,7 @@ font-weight: 300;
     align-items: center;
     justify-content: flex-start;
     height: 100vh; 
+    overflow-x: scroll;
   }
 
     #key {
@@ -383,10 +384,9 @@ font-weight: 300;
 
     #name {
       font-size: 17.5vw;
-      max-width: 80%;
       text-align: center;
       margin: auto;
-      overflow-x: scroll;
+
     }
     
 
