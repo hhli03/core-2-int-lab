@@ -7,6 +7,7 @@ body{
     background-color: #FCFBF6;
     font-family: "sonovariablefont";
     margin:2.5vw;
+    height:100%;
 }
 
 .navigationgrid{
@@ -430,15 +431,24 @@ font-weight: 300;
 .detail {
   display: none;
   position: absolute;
-  bottom: -12vw; 
-  right: -12vw; 
+  bottom: -18vw; 
+  left: 50%; 
+  transform: translateX(-50%);
   padding: 1.5vw;
   background-color: #FCFBF6;
-  border-radius: 2.4vw;
+  border-radius: 2.6vw;
   border: 0.38vw solid black;
-  width: 20vw;
-  min-width: 6vw;
-  font-size:3.2vw;
+max-width:22vw;
+  font-size:3.5vw;
+  text-align: left;
+}
+
+.name-wrapper {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
 }
   
 }
