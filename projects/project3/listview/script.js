@@ -270,7 +270,7 @@ const ethnicityColors = {
 // Function to perform the search
 function performSearch() {
   const searchTerm = searchInput.value.toLowerCase();
-  const names = document.querySelectorAll('.names');
+  const names = document.querySelectorAll('.babyname');
   let nameFound = false;
   for (let i = 0; i < names.length; i++) {
     const nameText = names[i].textContent.toLowerCase();
