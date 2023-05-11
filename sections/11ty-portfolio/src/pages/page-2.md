@@ -6,7 +6,7 @@ detail: |
   Core 2 Interaction Studio
   Feb–Mar 2023
   HTML, CSS, JS, JSON
-description: A website that collects my 30 favorite childhood snacks from Hong Kong using JSON. The website is not only a showcase of my favorite snacks but also a personal archive of my memories. Viewers should experience a sense of nostalgia through the design and layout, including the color palette and hand-drawn illustrations.
+description: This website presents a curated collection of 30 of my childhood snacks from Hong Kong. Each snack holds personal significance and evokes nostalgic memories. Serving as both a showcase and a personal archive, the website aims to create a nostalgic experience for visitors through its design. Accompanied by anecdotes, the snacks carry a personal touch, adding depth to the overall experience. 
 image: ../../img/page1.jpg
 ---
 

@@ -107,7 +107,7 @@ p {
 
 .left-div-grid{
   display:grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: 1fr 1fr 3fr;
 }
 
 .header{
@@ -121,4 +121,10 @@ p {
 .image{
   padding:2vw;
   border-right: black 0.2vw solid;
+}
+
+.project-link{
+  padding:2vw;
+  border-right: black 0.2vw solid;
+  font-size:1.2vw;
 }

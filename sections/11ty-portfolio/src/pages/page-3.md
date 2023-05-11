@@ -6,7 +6,7 @@ detail: |
   Core 2 Interaction Studio
   Apr–May 2023
   HTML, CSS, JS
-description: I designed a website based on the short story "The Year of Spaghetti" by Haruki Murakami. The story follows a person who cooks spaghetti daily for a year, finding meaning and distraction from personal struggles through this obsession. The website consists of 5 pages, each with a unique layout and composition that corresponds to the content of the respective chapter. Through typography and interactive elements, I aimed to immerse viewers in the main character's perspective and thoughts.
+description: This project visualizes the Popular Baby Names dataset from NYC Open Data, showcasing the frequency and popularity of baby names in New York City based on civil birth registration. The website offers a random name generator to explore popular names using data from 2011 to 2019. It provides an overview and trends in baby names during that period, allowing users to select specific years and ranking options. 
 image:
 ---
 
