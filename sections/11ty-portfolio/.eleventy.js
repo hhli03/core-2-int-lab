@@ -1,13 +1,19 @@
-module.exports = function(eleventyConfig) {
-    // Return your Object options:
+const markdownIt = require('markdown-it');
 
-    eleventyConfig.addPassthroughCopy("./src/css/");
-    eleventyConfig.addWatchTarget("./src/css/");
+module.exports = function (eleventyConfig) {
+  // Return your Object options:
+  eleventyConfig.addPassthroughCopy("./src/css/");
+  eleventyConfig.addWatchTarget("./src/css/");
 
-    return {
-      dir: {
-        input: "src",
-        output: "public"
-      }
-    }
+  eleventyConfig.addFilter("markdownify", function (content) {
+    const md = new markdownIt();
+    return md.render(content);
+  });
+
+  return {
+    dir: {
+      input: "src",
+      output: "public",
+    },
   };
+};

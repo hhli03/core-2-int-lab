@@ -99,3 +99,7 @@ p {
   font-size: 1.3vw;
   margin: 0; /* Updated */
 }
+
+.line-break-code {
+  white-space: pre-wrap;
+}
