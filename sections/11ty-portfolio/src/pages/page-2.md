@@ -2,8 +2,8 @@
 title: 02.
 layout: page.njk
 project: Elastic Collections
-detail: Core 2 Interaction Studio Jan-Feb 2023 HTML, CSS, JS
-description: I designed a website based on the short story "The Year of Spaghetti" by Haruki Murakami. The story follows a person who cooks spaghetti daily for a year, finding meaning and distraction from personal struggles through this obsession. The website consists of 5 pages, each with a unique layout and composition that corresponds to the content of the respective chapter. Through typography and interactive elements, I aimed to immerse viewers in the main character's perspective and thoughts.
+detail: Core 2 Interaction Studio Feb-Mar 2023 HTML, CSS, JS, JSON
+description: I designed a website that collects my 30 favorite childhood snacks from Hong Kong. The website is not only a showcase of my favorite snacks but also a personal archive of my memories. Viewers should experience a sense of nostalgia through the design and layout, including the color palette and hand-drawn illustrations.
 ---
 
 

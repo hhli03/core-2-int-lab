@@ -27,7 +27,7 @@ h2 {
 .grid {
   border: black 0.2vw solid;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 4fr 4fr;
   height: 90vh;
 }
 
