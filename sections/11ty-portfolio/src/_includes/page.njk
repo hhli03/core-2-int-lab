@@ -1,9 +1,35 @@
----
-layout: base.njk 
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{'/css/main.css' | url}}">
+</head>
+<body>
+<div class="grid">
+    <div class="project-grid">
+        <ul>
+        {% for page in collections.pages %}
+            <div class="projectlink"><a href="{{ page.url }}">{{ page.data.title }}</a></div>
+        {%- endfor %}
+        </ul>
+    </div>
 
-{{ content | safe }}
+    <header>
+        <h1>{{ title }}</h1>  
+        <h2 class="name">{{ name }}</h2>  
+    </header>
 
+
+    <div class="text">
+        <div id="text1">Core 2: Interaction Lab</div>
+        <div id="text2">A Porfolio created by 11ty</div>
+    </div>
+</div>
 <footer>
-    <p> Published on: {{ page.date.toDateString() }}</p>
+    <p>&copy; 2023 11ty test</p>
 </footer>
+</body>
+</html>
