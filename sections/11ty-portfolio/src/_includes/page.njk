@@ -10,22 +10,27 @@
 <body>
 <div class="grid">
     <div class="project-grid">
-        <ul>
+     <p><a href="../../index.html">HOME</a></p>
         {% for page in collections.pages %}
             <div class="projectlink"><a href="{{ page.url }}">{{ page.data.title }}</a></div>
         {%- endfor %}
-        </ul>
+
     </div>
 
     <header>
-        <h1>{{ title }}</h1>  
+        <h1>{{ project }}</h1>  
         <h2 class="name">{{ name }}</h2>  
     </header>
 
 
     <div class="text">
-        <div id="text1">Core 2: Interaction Lab</div>
-        <div id="text2">A Porfolio created by 11ty</div>
+        <div id="text1">
+        {{ detail }}
+        </div>
+
+        <div id="text2">
+        {{ description }}
+        </div>
     </div>
 </div>
 <footer>

@@ -10,11 +10,10 @@
 <body>
 <div class="grid">
     <div class="project-grid">
-        <ul>
+    <p><a href="../index.html">HOME</a></p>
         {% for page in collections.pages %}
             <div class="projectlink"><a href="{{ page.url }}">{{ page.data.title }}</a></div>
         {%- endfor %}
-        </ul>
     </div>
 
     <header>
@@ -29,7 +28,7 @@
     </div>
 </div>
 <footer>
-    <p>&copy; 2023 11ty test</p>
+    <p>&copy; 2023 Hannah Li</p>
 </footer>
 </body>
 </html>
